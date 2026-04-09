@@ -4,14 +4,16 @@
 
 ## Project Overview
 
-**Client:** Gina Grek (product owner) / AI Acrobatics (agency)
+**Owner:** Gina Grek (her personal side project — Julian is helping as mentor, NOT an AI Acrobatics client)
+**Product:** Sea moss-based moisturizing lubricant ("Naturally Intimate" product line)
 **Domain:** TBD
 **Stack:** Next.js 14 (App Router), Tailwind CSS, Vercel
+**Telegram:** -1003903452659 (AI Acrobatics | Seaduced)
 **Linear Project:** https://linear.app/ai-acrobatics/project/seaduced-sports-drink-brand-bc3216cd4638
 
 ## Brand
 
-Seaduced is a sports drink brand. Brand assets, product photos, ingredients, and messaging are pending from Gina.
+Seaduced is a natural intimate wellness brand. The core product is a sea moss-based moisturizing lubricant — clean, plant-based, pH-balanced. Part of the "Naturally Intimate" product line. Brand assets and product photos are pending from Gina.
 
 ## Deployment
 
