@@ -5,7 +5,7 @@ import { Gift } from "lucide-react";
 
 export function CTABand() {
   return (
-    <section className="relative py-20 md:py-28 bg-[#FDF8F0] overflow-hidden">
+    <section className="relative py-20 md:py-28 bg-luxe-cream noise-overlay overflow-hidden">
       <motion.div
         className="absolute top-0 left-1/2 -translate-x-1/2 w-[80vw] h-[80vw] rounded-full bg-[#AACAD1]/50 blur-3xl"
         animate={{ scale: [1, 1.05, 1], opacity: [0.4, 0.55, 0.4] }}

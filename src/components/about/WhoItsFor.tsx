@@ -35,17 +35,15 @@ const personas: Persona[] = [
 
 export function WhoItsFor() {
   return (
-    <section className="relative py-20 md:py-28 bg-[#263747] overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-[#263747] via-[#1a2a3a] to-[#263747]" />
-
-      {/* Ambient blobs */}
+    <section className="bg-luxe-deep noise-overlay text-[#263747] relative py-20 md:py-28 overflow-hidden">
+            {/* Ambient blobs */}
       <motion.div
-        className="absolute top-20 -left-20 w-96 h-96 rounded-full bg-[#6793A0]/15 blur-[100px]"
+        className="absolute top-20 -left-20 w-96 h-96 rounded-full bg-[#6793A0]/25 blur-[100px]"
         animate={{ x: [0, 40, 0], y: [0, -30, 0] }}
         transition={{ duration: 16, repeat: Infinity, ease: "easeInOut" }}
       />
       <motion.div
-        className="absolute bottom-20 -right-20 w-96 h-96 rounded-full bg-[#AD9952]/10 blur-[100px]"
+        className="absolute bottom-20 -right-20 w-96 h-96 rounded-full bg-[#AD9952]/18 blur-[100px]"
         animate={{ x: [0, -40, 0], y: [0, 30, 0] }}
         transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
       />
@@ -64,7 +62,7 @@ export function WhoItsFor() {
 
           <div className="overflow-hidden">
             <motion.h2
-              className="text-4xl md:text-5xl lg:text-6xl text-[#FAFBFB] tracking-tight"
+              className="text-4xl md:text-5xl lg:text-6xl text-[#263747] tracking-tight"
               style={{ fontFamily: "var(--font-serif), 'Playfair Display', serif", fontWeight: 800 }}
               initial={{ y: 60, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
@@ -76,7 +74,7 @@ export function WhoItsFor() {
           </div>
 
           <motion.p
-            className="mt-5 text-base md:text-lg text-[#FAFBFB]/70 max-w-2xl mx-auto leading-relaxed"
+            className="mt-5 text-base md:text-lg text-[#263747]/75 max-w-2xl mx-auto leading-relaxed"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -107,7 +105,7 @@ export function WhoItsFor() {
                 </span>
                 <div className="h-[1px] md:h-10 w-10 md:w-[1px]" style={{ backgroundColor: persona.accent, opacity: 0.4 }} />
                 <span
-                  className="font-mono text-xs tracking-[0.2em] text-[#FAFBFB]/30"
+                  className="font-mono text-xs tracking-[0.2em] text-[#325360]/50"
                 >
                   0{i + 1} / 03
                 </span>
@@ -116,12 +114,12 @@ export function WhoItsFor() {
               {/* Body */}
               <div>
                 <h3
-                  className="text-3xl md:text-4xl text-[#FAFBFB] leading-[1.05] tracking-tight mb-4"
+                  className="text-3xl md:text-4xl text-[#263747] leading-[1.05] tracking-tight mb-4"
                   style={{ fontFamily: "var(--font-serif), 'Playfair Display', serif", fontWeight: 700 }}
                 >
                   {persona.heading}
                 </h3>
-                <p className="text-base md:text-lg text-[#FAFBFB]/80 leading-relaxed max-w-2xl">
+                <p className="text-base md:text-lg text-[#263747]/80 leading-relaxed max-w-2xl">
                   {persona.body}
                 </p>
               </div>

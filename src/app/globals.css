@@ -180,6 +180,188 @@
   animation: grain 8s steps(10) infinite;
 }
 
+/* =========================================================================
+   Luxury Layered Backgrounds — premium feel, not flat color
+   Each utility applies:
+     1. Multi-stop gradient (3-4 stops) in palette
+     2. Two blurred radial bokeh pseudo-elements (::before + ::after)
+     3. SVG grain veil (inherits noise-overlay pattern)
+     4. Subtle inner highlight wash for depth
+   Text contrast preserved: gradients stay close to their base tone so
+   #263747 text on teal/cream, #FAFBFB text on navy — all pass WCAG AA.
+   ========================================================================= */
+
+.bg-luxe-teal {
+  position: relative;
+  background:
+    radial-gradient(ellipse at 20% 15%, rgba(253, 248, 240, 0.35) 0%, transparent 55%),
+    radial-gradient(ellipse at 85% 80%, rgba(103, 147, 160, 0.22) 0%, transparent 60%),
+    linear-gradient(160deg, #B5D2D8 0%, #AACAD1 28%, #C0D6DA 58%, #AACAD1 82%, #9FC0C7 100%);
+  isolation: isolate;
+}
+.bg-luxe-teal::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='nL1'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23nL1)'/%3E%3C/svg%3E");
+  opacity: 0.04;
+  pointer-events: none;
+  mix-blend-mode: overlay;
+  z-index: 0;
+}
+.bg-luxe-teal::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(125deg, rgba(253, 248, 240, 0) 0%, rgba(253, 248, 240, 0.18) 45%, rgba(253, 248, 240, 0) 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+.bg-luxe-teal > * {
+  position: relative;
+  z-index: 1;
+}
+
+.bg-luxe-cream {
+  position: relative;
+  background:
+    radial-gradient(ellipse at 15% 20%, rgba(170, 202, 209, 0.28) 0%, transparent 55%),
+    radial-gradient(ellipse at 90% 85%, rgba(173, 153, 82, 0.10) 0%, transparent 60%),
+    linear-gradient(165deg, #FFFCF5 0%, #FDF8F0 30%, #F7EFE0 65%, #FDF8F0 100%);
+  isolation: isolate;
+}
+.bg-luxe-cream::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='nL2'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23nL2)'/%3E%3C/svg%3E");
+  opacity: 0.035;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+  z-index: 0;
+}
+.bg-luxe-cream::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 40%, rgba(255, 255, 255, 0) 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+.bg-luxe-cream > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* "Deep" sections (formerly flat #263747 navy) — lightened to a luxe aqua
+   gradient per Julian's 2026-04-21 directive: "too dark, lighter/cleaner/more
+   elegant." Text on this should be #263747 navy or #325360 deep teal, NOT
+   near-white. */
+.bg-luxe-deep {
+  position: relative;
+  background:
+    radial-gradient(ellipse at 18% 15%, rgba(253, 248, 240, 0.32) 0%, transparent 55%),
+    radial-gradient(ellipse at 85% 85%, rgba(173, 153, 82, 0.14) 0%, transparent 60%),
+    linear-gradient(155deg, #AACAD1 0%, #C0D6DA 25%, #6793A0 55%, #8AB3BC 80%, #AACAD1 100%);
+  isolation: isolate;
+}
+.bg-luxe-deep::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='nL3'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23nL3)'/%3E%3C/svg%3E");
+  opacity: 0.05;
+  pointer-events: none;
+  mix-blend-mode: overlay;
+  z-index: 0;
+}
+.bg-luxe-deep::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(130deg, rgba(253, 248, 240, 0) 0%, rgba(253, 248, 240, 0.20) 45%, rgba(253, 248, 240, 0) 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+.bg-luxe-deep > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Footer-only: keep it deeper for editorial anchor but still layered + grain.
+   Uses deep teal (not pure navy). Near-white text stays legible. */
+.bg-luxe-footer {
+  position: relative;
+  background:
+    radial-gradient(ellipse at 15% 20%, rgba(173, 153, 82, 0.16) 0%, transparent 55%),
+    radial-gradient(ellipse at 85% 80%, rgba(103, 147, 160, 0.18) 0%, transparent 60%),
+    linear-gradient(155deg, #2D4A58 0%, #325360 28%, #263747 55%, #325360 80%, #2B4552 100%);
+  isolation: isolate;
+}
+.bg-luxe-footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='nL4'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23nL4)'/%3E%3C/svg%3E");
+  opacity: 0.06;
+  pointer-events: none;
+  mix-blend-mode: overlay;
+  z-index: 0;
+}
+.bg-luxe-footer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(140deg, rgba(173, 153, 82, 0) 0%, rgba(173, 153, 82, 0.06) 40%, rgba(173, 153, 82, 0) 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+.bg-luxe-footer > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Glass card — reusable luxury card shell. Use inside luxe sections for
+   card/bento/tile elements. Pair with `hover-lift` for interaction. */
+.glass-card {
+  position: relative;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.72) 0%, rgba(253, 248, 240, 0.55) 100%);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.9) inset,
+    0 10px 30px -10px rgba(50, 83, 96, 0.22),
+    0 2px 8px -2px rgba(173, 153, 82, 0.10);
+  transition: transform 400ms cubic-bezier(0.25, 0.4, 0.25, 1),
+    box-shadow 400ms cubic-bezier(0.25, 0.4, 0.25, 1);
+}
+
+.glass-card:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.9) inset,
+    0 24px 50px -12px rgba(50, 83, 96, 0.28),
+    0 6px 16px -4px rgba(173, 153, 82, 0.18);
+}
+
+/* Champagne metal gradient for primary CTAs on light sections */
+.btn-champagne {
+  background: linear-gradient(135deg, #C5B375 0%, #AD9952 50%, #8C7A3A 100%);
+  color: #263747;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.45) inset,
+    0 6px 18px -6px rgba(173, 153, 82, 0.45);
+  transition: transform 300ms ease, box-shadow 300ms ease;
+}
+
+.btn-champagne:hover {
+  transform: translateY(-1px);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.45) inset,
+    0 10px 28px -8px rgba(173, 153, 82, 0.55);
+}
+
 /* Radix Accordion animations */
 @keyframes accordion-down {
   from {

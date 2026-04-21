@@ -32,9 +32,8 @@ const BANNED = [
 
 export function WhatNotInIt() {
   return (
-    <section className="bg-[#263747] text-[#FAFBFB] py-24 md:py-32 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-[#263747] via-[#212837] to-[#263747]" />
-      <div className="absolute -top-32 -right-20 w-[32rem] h-[32rem] rounded-full bg-[#6793A0]/10 blur-3xl" />
+    <section className="bg-luxe-deep noise-overlay text-[#263747] py-24 md:py-32 relative overflow-hidden">
+            <div className="absolute -top-32 -right-20 w-[32rem] h-[32rem] rounded-full bg-[#6793A0]/22 blur-3xl" />
 
       <div className="relative max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
@@ -76,7 +75,7 @@ export function WhatNotInIt() {
                 ease: [0.25, 0.4, 0.25, 1],
               }}
               whileHover={{ y: -4 }}
-              className="rounded-xl bg-[#FAFBFB]/5 border border-[#FAFBFB]/10 p-6 md:p-7 backdrop-blur-sm hover:border-[#AD9952]/50 transition-colors"
+              className="rounded-xl bg-white/55 border border-white/65 backdrop-blur-md shadow-md p-6 md:p-7 backdrop-blur-sm hover:border-[#AD9952]/50 transition-colors"
             >
               <div className="relative mb-4 inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#AD9952]/15 ring-1 ring-[#AD9952]/40">
                 <X className="w-6 h-6 text-[#AD9952]" strokeWidth={2.5} />
@@ -87,7 +86,7 @@ export function WhatNotInIt() {
               >
                 {item.name}
               </h3>
-              <p className="text-sm text-[#FAFBFB]/75 leading-relaxed">
+              <p className="text-sm text-[#263747]/75 leading-relaxed">
                 {item.body}
               </p>
             </motion.div>

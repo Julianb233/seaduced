@@ -5,7 +5,7 @@ import { Cookie } from "lucide-react";
 
 export function CookieNotice() {
   return (
-    <section className="bg-[#FDF8F0] py-20 md:py-24">
+    <section className="relative bg-luxe-cream noise-overlay py-20 md:py-24 overflow-hidden">
       <div className="max-w-3xl mx-auto px-6">
         <motion.div
           className="flex flex-col md:flex-row gap-6 md:items-start rounded-2xl bg-white border border-[#263747]/10 px-7 py-7 shadow-sm"

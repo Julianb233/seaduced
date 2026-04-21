@@ -15,8 +15,7 @@ export function SubpageHero({
   children?: ReactNode;
 }) {
   return (
-    <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden noise-overlay pt-32 pb-20 bg-[#AACAD1]">
-      <div className="absolute inset-0 bg-gradient-to-br from-[#AACAD1] via-[#FDF8F0]/30 to-[#AACAD1]" />
+    <section className="bg-luxe-teal relative min-h-[70vh] flex items-center justify-center overflow-hidden noise-overlay pt-32 pb-20">
       <motion.div
         className="absolute top-24 left-12 w-32 h-32 rounded-full bg-[#6793A0]/25 blur-3xl"
         animate={{ x: [0, 30, 0], y: [0, -20, 0], scale: [1, 1.1, 1] }}

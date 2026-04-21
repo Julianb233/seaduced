@@ -9,10 +9,10 @@ import type { BlogPost } from "@/lib/blog-posts";
 // and each post's `ctaLabel` / `ctaHref` fields in src/lib/blog-posts.ts).
 export function ArticleCTA({ post }: { post: BlogPost }) {
   return (
-    <section className="bg-[#263747] py-20 md:py-28 relative overflow-hidden">
+    <section className="bg-luxe-deep noise-overlay text-[#263747] py-20 md:py-28 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-[#263747] via-[#325360]/70 to-[#263747]" />
       <motion.div
-        className="absolute top-0 left-1/4 w-72 h-72 rounded-full bg-[#AD9952]/10 blur-3xl"
+        className="absolute top-0 left-1/4 w-72 h-72 rounded-full bg-[#AD9952]/18 blur-3xl"
         animate={{ scale: [1, 1.2, 1] }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
       />

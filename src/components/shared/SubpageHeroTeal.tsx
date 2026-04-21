@@ -15,12 +15,7 @@ export function SubpageHeroTeal({
   children?: ReactNode;
 }) {
   return (
-    <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden noise-overlay pt-32 pb-20">
-      {/* Primary LIGHT background per DESIGN.md (updated 2026-04-21):
-          light teal #AACAD1 with a subtle cream-mist gradient. Cream is a
-          secondary accent, not the primary surface. */}
-      <div className="absolute inset-0 bg-[#AACAD1]" />
-      <div className="absolute inset-0 bg-gradient-to-br from-[#AACAD1] via-[#FDF8F0]/30 to-[#AACAD1]" />
+    <section className="bg-luxe-teal relative min-h-[60vh] flex items-center justify-center overflow-hidden noise-overlay pt-32 pb-20">
 
       <motion.div
         className="absolute top-24 left-12 w-40 h-40 rounded-full bg-[#FDF8F0]/50 blur-3xl"

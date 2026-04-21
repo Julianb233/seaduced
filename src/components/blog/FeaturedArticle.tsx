@@ -7,10 +7,10 @@ import type { BlogPost } from "@/lib/blog-posts";
 
 export function FeaturedArticle({ post }: { post: BlogPost }) {
   return (
-    <section className="bg-[#AACAD1] py-16 md:py-24">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="bg-luxe-teal noise-overlay relative py-16 md:py-24 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 relative">
         <motion.div
-          className="grid md:grid-cols-2 gap-8 md:gap-12 items-stretch bg-[#FDF8F0] rounded-3xl overflow-hidden shadow-xl"
+          className="glass-card grid md:grid-cols-2 gap-8 md:gap-12 items-stretch rounded-3xl overflow-hidden"
           initial={{ opacity: 0, y: 60 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}

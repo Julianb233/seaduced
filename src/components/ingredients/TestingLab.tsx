@@ -12,7 +12,7 @@ const PANELS = [
 
 export function TestingLab() {
   return (
-    <section className="bg-[#AACAD1] py-24 md:py-32 relative overflow-hidden">
+    <section className="bg-luxe-teal noise-overlay py-24 md:py-32 relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 md:gap-16 items-center">
         {/* Lab image with overlay panel card */}
         <motion.div

@@ -21,7 +21,7 @@ export function CTABand() {
   };
 
   return (
-    <section className="relative py-24 md:py-32 bg-[#263747] overflow-hidden">
+    <section className="bg-luxe-deep noise-overlay text-[#263747] relative py-24 md:py-32 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-[#263747] via-[#1a2a3a] to-[#263747]" />
 
       {/* Ambient color blobs */}
@@ -49,7 +49,7 @@ export function CTABand() {
 
         <div className="overflow-hidden">
           <motion.h2
-            className="text-4xl md:text-6xl lg:text-7xl text-[#FAFBFB] tracking-tight leading-[1]"
+            className="text-4xl md:text-6xl lg:text-7xl text-[#263747] tracking-tight leading-[1]"
             style={{ fontFamily: "var(--font-serif), 'Playfair Display', serif", fontWeight: 800 }}
             initial={{ y: 70, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
@@ -61,7 +61,7 @@ export function CTABand() {
         </div>
 
         <motion.p
-          className="mt-6 text-base md:text-lg text-[#FAFBFB]/75 max-w-xl mx-auto leading-relaxed"
+          className="mt-6 text-base md:text-lg text-[#263747]/75 max-w-xl mx-auto leading-relaxed"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -91,7 +91,7 @@ export function CTABand() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             disabled={submitted}
-            className="flex-1 bg-[#FAFBFB]/10 border border-[#FAFBFB]/20 text-[#FAFBFB] placeholder-[#FAFBFB]/40 rounded-full px-5 py-3.5 text-sm font-mono tracking-wide focus:outline-none focus:border-[#AD9952] focus:bg-[#FAFBFB]/15 transition-all disabled:opacity-50"
+            className="flex-1 bg-white/55 backdrop-blur-md border border-white/65 text-[#263747] placeholder-[#263747]/45 rounded-full px-5 py-3.5 text-sm font-mono tracking-wide focus:outline-none focus:border-[#AD9952] focus:bg-white/70 transition-all disabled:opacity-50"
           />
           <motion.button
             type="submit"
@@ -126,7 +126,7 @@ export function CTABand() {
           </motion.p>
         )}
 
-        <p className="mt-8 font-mono text-[10px] tracking-[0.2em] uppercase text-[#FAFBFB]/40">
+        <p className="mt-8 font-mono text-[10px] tracking-[0.2em] uppercase text-[#325360]/55">
           By joining you agree to receive occasional emails from Seaduced.
         </p>
       </div>

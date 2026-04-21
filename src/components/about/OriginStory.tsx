@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export function OriginStory() {
   return (
-    <section className="relative py-20 md:py-28 bg-[#AACAD1]">
+    <section className=" relative py-20 md:py-28 bg-luxe-teal noise-overlay overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-[#AACAD1] via-[#FDF8F0]/20 to-[#AACAD1]" />
 
       <div className="relative z-10 max-w-6xl mx-auto px-6">

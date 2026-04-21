@@ -40,7 +40,7 @@ const cards: Card[] = [
 
 export function ThreeCards() {
   return (
-    <section className="bg-[#AACAD1] py-20 md:py-24">
+    <section className=" relative bg-luxe-teal noise-overlay py-20 md:py-24 overflow-hidden">
       <div className="max-w-6xl mx-auto px-6">
         <motion.div
           className="max-w-2xl mx-auto text-center mb-12"

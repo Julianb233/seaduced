@@ -28,9 +28,9 @@ const points = [
 
 export function ProductUse() {
   return (
-    <section className="bg-[#263747] py-20 md:py-28 relative overflow-hidden">
+    <section className="bg-luxe-deep noise-overlay text-[#263747] py-20 md:py-28 relative overflow-hidden">
       <motion.div
-        className="absolute -right-20 -top-20 w-80 h-80 rounded-full bg-[#6793A0]/10 blur-3xl pointer-events-none"
+        className="absolute -right-20 -top-20 w-80 h-80 rounded-full bg-[#6793A0]/22 blur-3xl pointer-events-none"
         animate={{ scale: [1, 1.1, 1], opacity: [0.8, 1, 0.8] }}
         transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
       />
@@ -45,7 +45,7 @@ export function ProductUse() {
           Using the product
         </motion.span>
         <motion.h2
-          className="text-3xl md:text-4xl font-serif text-[#FAFBFB] tracking-tight mb-4"
+          className="text-3xl md:text-4xl font-serif text-[#263747] tracking-tight mb-4"
           style={{ fontFamily: "'Playfair Display', serif" }}
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -55,7 +55,7 @@ export function ProductUse() {
           Clean, considered, and made for adult personal care.
         </motion.h2>
         <motion.p
-          className="text-[#FAFBFB]/75 max-w-2xl text-base md:text-lg mb-10"
+          className="text-[#263747]/75 max-w-2xl text-base md:text-lg mb-10"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -70,7 +70,7 @@ export function ProductUse() {
             return (
               <motion.div
                 key={p.title}
-                className="rounded-2xl bg-[#FAFBFB]/5 border border-[#FAFBFB]/12 p-6"
+                className="rounded-2xl bg-white/55 backdrop-blur-md border border-white/65 p-6"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-60px" }}
@@ -80,11 +80,11 @@ export function ProductUse() {
                   <div className="w-10 h-10 rounded-full bg-[#AD9952]/15 flex items-center justify-center">
                     <Icon className="w-5 h-5 text-[#AD9952]" />
                   </div>
-                  <h3 className="text-lg font-semibold text-[#FAFBFB]">
+                  <h3 className="text-lg font-semibold text-[#263747]">
                     {p.title}
                   </h3>
                 </div>
-                <p className="text-sm text-[#FAFBFB]/75 leading-relaxed">
+                <p className="text-sm text-[#263747]/75 leading-relaxed">
                   {p.body}
                 </p>
               </motion.div>

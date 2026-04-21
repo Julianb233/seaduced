@@ -19,7 +19,7 @@ export function FAQ({
   eyebrow?: string;
 }) {
   return (
-    <section className="bg-[#AACAD1] py-20 md:py-28 relative overflow-hidden">
+    <section className="bg-luxe-teal noise-overlay py-20 md:py-28 relative overflow-hidden">
       <motion.div
         className="absolute -top-12 -right-12 w-56 h-56 rounded-full bg-[#FDF8F0]/40 blur-3xl pointer-events-none"
         animate={{ x: [0, 20, 0], y: [0, -12, 0] }}
