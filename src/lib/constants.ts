@@ -46,6 +46,7 @@ export const FOOTER_LINKS = {
   legal: [
     { href: '/privacy', label: 'Privacy Policy' },
     { href: '/terms', label: 'Terms of Service' },
+    { href: '/shipping', label: 'Shipping Policy' },
     { href: '/privacy#cookies', label: 'Cookie Policy' },
   ],
 } as const;
