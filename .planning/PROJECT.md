@@ -44,16 +44,13 @@ A visually stunning product website that makes Seaduced look premium and trustwo
 
 - **Product:** Sea moss-based moisturizing lubricant, 5 oz / 148 ml pump bottle with gold collar
 - **Brand identity:** Premium, elegant, oceanic, natural, body-positive. Mermaid/siren "S" monogram logo.
-- **Label comps (3 variations from designer, Aug 2024):**
-  - V1: Blue bottle, gold print directly — luxury/minimalist
-  - V2: White bottle, matte shrink wrap with sea moss/ocean texture — natural/organic
-  - V3: Blue bottle, textured paper label, embossed logo + metallic gold stamp — premium/tactile
+- **Bottle / SKU:** ONE bottle design ships. The Aug 2024 label comp variations (blue/gold print, white sea-moss wrap, embossed-gold) were exploratory design directions — NOT separate SKUs. The site sells a single bottle in four pack configurations (Single $28, Ritual 3-Pack $75, Wave 6-Pack $140, Gift Set $45).
 - **Brand colors:** Royal blue (#3B5EAB), metallic gold (#C5A55A), white (#FFFFFF), ocean teal (#1A6B5C)
 - **Typography:** "SEADUCED" in custom elegant serif, "Naturally Intimate!" in cursive script
 - **Tagline:** "Sea Moss Infused Personal Lubricant"
 - **Owner:** Gina Grek — personal side project, Julian mentoring (NOT billable AA client)
 - **Telegram group:** -1003903452659 (AI Acrobatics | Seaduced)
-- **Still needed from Gina:** Final bottle version preference (V1/V2/V3), pricing, domain name, product photos (real not mockups), competitor references, any additional copy
+- **Still needed from Gina:** Final approval on bundle pricing + copy, real product photos (current site uses isolated bottle cutout), gift-set packaging photography, competitor references, any additional copy
 
 ## Constraints
 
@@ -72,6 +69,7 @@ A visually stunning product website that makes Seaduced look premium and trustwo
 | Single-product focus (5 oz lubricant) | First launch, keep scope tight | — Pending |
 | Brand-forward design over e-commerce | The website IS the brand experience — checkout offloaded to Shopify/Stripe | — Pending |
 | Use label comp V1 aesthetic as primary web design direction | Blue + gold is most premium, translates best to digital | — Pending |
+| Sell a single SKU in four bundle tiers (Single / Ritual 3-Pack / Wave 6-Pack / Gift Set) instead of exposing label variants as separate products | Simpler merchandising, higher AOV via 3-Pack/6-Pack, gift positioning at $45 | 2026-04-21 — Shipped |
 | No PPP/client portal | Gina is NOT an AA client — Julian is mentoring as a personal favor | — Pending |
 
 ---
