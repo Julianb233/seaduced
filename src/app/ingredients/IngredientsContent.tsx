@@ -21,7 +21,7 @@ import {
   tiltSpring,
 } from '@/lib/motion';
 
-/* ─── Data ───────────────────────────────────────── */
+/* --- Data ----------------------------------------- */
 
 const ingredients = [
   {
@@ -98,7 +98,7 @@ const ingredients = [
   },
 ];
 
-/* ─── TiltCard ───────────────────────────────────── */
+/* --- TiltCard ------------------------------------- */
 
 function TiltCard({
   children,
@@ -146,7 +146,7 @@ function TiltCard({
   );
 }
 
-/* ─── Detail Modal ───────────────────────────────── */
+/* --- Detail Modal --------------------------------- */
 
 function DetailModal({
   ingredient,
@@ -213,7 +213,7 @@ function DetailModal({
   );
 }
 
-/* ─── Page Export ─────────────────────────────────── */
+/* --- Page Export ----------------------------------- */
 
 export default function IngredientsContent() {
   const [selected, setSelected] = useState<string | null>(null);

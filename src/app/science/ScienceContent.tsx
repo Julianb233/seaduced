@@ -4,7 +4,7 @@ import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 import { useRef, useState, useEffect } from 'react';
 import { viewportOnce, fadeUp, easeSmooth, staggerContainer, staggerItem } from '@/lib/motion';
 
-/* ─── Data ───────────────────────────────────────── */
+/* --- Data ----------------------------------------- */
 
 const sections = [
   {
@@ -65,7 +65,7 @@ const footnotes = [
   'Biocompatible: compatible with living tissue or a living system by not being toxic, injurious, or physiologically reactive.',
 ];
 
-/* ─── Sticky Sub-Nav ─────────────────────────────── */
+/* --- Sticky Sub-Nav ------------------------------- */
 
 function StickyNav() {
   const [active, setActive] = useState('carrageenan');
@@ -116,7 +116,7 @@ function StickyNav() {
   );
 }
 
-/* ─── Pull Quote ─────────────────────────────────── */
+/* --- Pull Quote ----------------------------------- */
 
 function PullQuote({ text }: { text: string }) {
   return (
@@ -141,7 +141,7 @@ function PullQuote({ text }: { text: string }) {
   );
 }
 
-/* ─── Science Section ────────────────────────────── */
+/* --- Science Section ------------------------------ */
 
 function ScienceSection({
   section,
@@ -203,7 +203,7 @@ function ScienceSection({
   );
 }
 
-/* ─── Footnotes with Parallax ────────────────────── */
+/* --- Footnotes with Parallax ---------------------- */
 
 function Footnotes() {
   const ref = useRef<HTMLDivElement>(null);
@@ -254,7 +254,7 @@ function Footnotes() {
   );
 }
 
-/* ─── Page Export ─────────────────────────────────── */
+/* --- Page Export ----------------------------------- */
 
 export default function ScienceContent() {
   return (

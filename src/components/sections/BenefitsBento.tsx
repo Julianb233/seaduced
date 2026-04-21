@@ -11,7 +11,7 @@ import {
 import { useRef, useState } from "react";
 import { Droplets, Scale, Leaf, Heart } from "lucide-react";
 
-/* ─── feature data ─── */
+/* --- feature data --- */
 
 const features = [
   {
@@ -44,7 +44,7 @@ const features = [
   },
 ];
 
-/* ─── individual card ─── */
+/* --- individual card --- */
 
 function FeatureCard({
   feature,
@@ -192,7 +192,7 @@ function FeatureCard({
   );
 }
 
-/* ─── section ─── */
+/* --- section --- */
 
 export default function BenefitsBento() {
   const ref = useRef(null);

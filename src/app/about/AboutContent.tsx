@@ -13,7 +13,7 @@ import {
   tiltSpring,
 } from '@/lib/motion';
 
-/* ─── Parallax Hero ──────────────────────────────── */
+/* --- Parallax Hero -------------------------------- */
 
 function HeroSection() {
   const ref = useRef<HTMLDivElement>(null);
@@ -81,7 +81,7 @@ function HeroSection() {
   );
 }
 
-/* ─── Story Section (staggered paragraphs) ───────── */
+/* --- Story Section (staggered paragraphs) --------- */
 
 const storyParagraphs = [
   'Seaduced started with a simple question: why are so many intimate products filled with synthetic chemicals and harsh preservatives? We believed there had to be a better way — something that works with your body, not against it.',
@@ -139,7 +139,7 @@ function StorySection() {
   );
 }
 
-/* ─── Values Bento Grid with 3D Tilt ─────────────── */
+/* --- Values Bento Grid with 3D Tilt --------------- */
 
 const values = [
   {
@@ -327,7 +327,7 @@ function ValuesSection() {
   );
 }
 
-/* ─── Page Export ─────────────────────────────────── */
+/* --- Page Export ----------------------------------- */
 
 export default function AboutContent() {
   return (

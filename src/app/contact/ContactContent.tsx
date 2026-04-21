@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { Send, Mail, MapPin } from 'lucide-react';
 import { viewportOnce, fadeUp, easeSmooth, staggerContainer, staggerItem } from '@/lib/motion';
 
-/* ─── Shimmer Button ─────────────────────────────── */
+/* --- Shimmer Button ------------------------------- */
 
 function ShimmerButton({
   children,
@@ -33,7 +33,7 @@ function ShimmerButton({
   );
 }
 
-/* ─── Focus-Glow Input ───────────────────────────── */
+/* --- Focus-Glow Input ----------------------------- */
 
 function GlowInput({
   label,
@@ -111,7 +111,7 @@ function GlowTextarea({
   );
 }
 
-/* ─── Contact Info ───────────────────────────────── */
+/* --- Contact Info --------------------------------- */
 
 function ContactInfo() {
   return (
@@ -181,7 +181,7 @@ function ContactInfo() {
   );
 }
 
-/* ─── Page Export ─────────────────────────────────── */
+/* --- Page Export ----------------------------------- */
 
 export default function ContactContent() {
   const [name, setName] = useState('');
