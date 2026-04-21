@@ -172,9 +172,7 @@ function ContactInfo() {
         variants={staggerItem}
       >
         <p className="text-xs leading-relaxed text-white/40">
-          <strong className="text-white/60">Response time:</strong> We typically
-          respond within 24 hours during business days. For urgent inquiries,
-          please include &quot;URGENT&quot; in your subject.
+          <strong className="text-white/60">Response time:</strong>{" "}We typically respond within 24 hours during business days. For urgent inquiries, please include &quot;URGENT&quot; in your subject.
         </p>
       </motion.div>
     </motion.div>
