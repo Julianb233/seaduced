@@ -1,26 +1,176 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #1E1E2E;
+  --card: #ffffff;
+  --card-foreground: #1E1E2E;
+  --popover: #ffffff;
+  --popover-foreground: #1E1E2E;
+  --primary: #1E1E2E;
+  --primary-foreground: #ffffff;
+  --secondary: #f5f5f5;
+  --secondary-foreground: #1E1E2E;
+  --muted: #f5f5f5;
+  --muted-foreground: #666666;
+  --accent: #C5A55A;
+  --accent-foreground: #1E1E2E;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --border: #e5e5e5;
+  --input: #e5e5e5;
+  --ring: #C5A55A;
+  --radius: 0.5rem;
+
+  /* Seaduced brand palette */
+  --gold: #C5A55A;
+  --gold-rgb: 197, 165, 90;
+  --charcoal: #1E1E2E;
+  --royal: #1B2F6B;
+  --ocean: #0D7C8A;
+  --teal: #14B8A6;
+  --cream: #F5ECD9;
+}
+
+.dark {
+  --background: #1E1E2E;
+  --foreground: #F5ECD9;
+  --card: #1E1E2E;
+  --card-foreground: #F5ECD9;
+  --popover: #1E1E2E;
+  --popover-foreground: #F5ECD9;
+  --primary: #F5ECD9;
+  --primary-foreground: #1E1E2E;
+  --secondary: #2a2a3e;
+  --secondary-foreground: #F5ECD9;
+  --muted: #2a2a3e;
+  --muted-foreground: #a3a3a3;
+  --accent: #C5A55A;
+  --accent-foreground: #1E1E2E;
+  --border: #2a2a3e;
+  --input: #2a2a3e;
+  --ring: #C5A55A;
 }
 
 @theme inline {
+  --font-sans: var(--font-sans), "Inter", system-ui, sans-serif;
+  --font-mono: var(--font-mono), "JetBrains Mono", monospace;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  /* Seaduced theme colors */
+  --color-gold: var(--gold);
+  --color-charcoal: var(--charcoal);
+  --color-royal: var(--royal);
+  --color-ocean: var(--ocean);
+  --color-teal: var(--teal);
+  --color-cream: var(--cream);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+  body {
+    background: var(--background);
+    color: var(--foreground);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Seaduced custom keyframes */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(3deg);
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(197, 165, 90, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(197, 165, 90, 0.6);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes grain {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-5%, -10%);
+  }
+  30% {
+    transform: translate(3%, -15%);
+  }
+  50% {
+    transform: translate(12%, 9%);
+  }
+  70% {
+    transform: translate(9%, 4%);
+  }
+  90% {
+    transform: translate(-1%, 7%);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
+
+.noise-overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.03;
+  pointer-events: none;
+  animation: grain 8s steps(10) infinite;
 }
