@@ -230,6 +230,10 @@
   position: relative;
   z-index: 1;
 }
+.bg-luxe-teal > .sticky {
+  position: sticky !important;
+  z-index: 2;
+}
 
 .bg-luxe-cream {
   position: relative;
@@ -260,6 +264,10 @@
 .bg-luxe-cream > *:not(.sticky) {
   position: relative;
   z-index: 1;
+}
+.bg-luxe-cream > .sticky {
+  position: sticky !important;
+  z-index: 2;
 }
 
 /* "Deep" sections (formerly flat #263747 navy) — lightened to a luxe aqua
@@ -296,6 +304,10 @@
   position: relative;
   z-index: 1;
 }
+.bg-luxe-deep > .sticky {
+  position: sticky !important;
+  z-index: 2;
+}
 
 /* Footer-only: keep it deeper for editorial anchor but still layered + grain.
    Uses deep teal (not pure navy). Near-white text stays legible. */
@@ -328,6 +340,10 @@
 .bg-luxe-footer > *:not(.sticky) {
   position: relative;
   z-index: 1;
+}
+.bg-luxe-footer > .sticky {
+  position: sticky !important;
+  z-index: 2;
 }
 
 /* Glass card — reusable luxury card shell. Use inside luxe sections for
