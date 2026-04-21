@@ -81,7 +81,7 @@ export function Footer() {
   return (
     <footer
       ref={footerRef}
-      className="relative bg-[#1E1E2E] pt-16 pb-6 overflow-hidden"
+      className="relative bg-[#263747] pt-16 pb-6 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
@@ -141,7 +141,7 @@ export function Footer() {
               />
             </motion.div>
             <motion.button
-              className="bg-[#C5A55A] text-[#1E1E2E] px-6 py-3 rounded-xl font-bold text-sm tracking-wide whitespace-nowrap relative overflow-hidden"
+              className="bg-[#AD9952] text-[#FAFBFB] px-6 py-3 rounded-xl font-bold text-sm tracking-wide whitespace-nowrap relative overflow-hidden"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               transition={{ type: "spring", stiffness: 400, damping: 17 }}

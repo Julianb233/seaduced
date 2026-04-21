@@ -62,7 +62,7 @@ export function Social() {
   const isInView = useInView(ref, { once: true, margin: "-50px" });
 
   return (
-    <section id="community" className="relative py-16 bg-[#1E1E2E] overflow-hidden">
+    <section id="community" className="relative py-16 bg-gradient-to-br from-[#FDF8F0] via-[#AACAD1]/20 to-[#FDF8F0] overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -72,7 +72,7 @@ export function Social() {
           className="text-center mb-10"
         >
           <motion.span
-            className="font-mono text-[#C5A55A] text-xs tracking-widest inline-block"
+            className="font-mono text-[#AD9952] text-xs tracking-widest inline-block"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -80,7 +80,7 @@ export function Social() {
           >
             FOLLOW THE RITUAL
           </motion.span>
-          <h2 className="text-3xl md:text-5xl font-black text-white tracking-tighter mt-2 overflow-hidden">
+          <h2 className="text-3xl md:text-5xl font-black text-[#263747] tracking-tighter mt-2 overflow-hidden">
             <motion.span
               className="inline-block"
               initial={{ y: 100 }}
@@ -91,7 +91,7 @@ export function Social() {
               @SEADUCED
             </motion.span>
             <motion.span
-              className="text-[#C5A55A] inline-block"
+              className="text-[#6793A0] inline-block"
               initial={{ y: 100 }}
               whileInView={{ y: 0 }}
               viewport={{ once: true }}
@@ -159,7 +159,7 @@ export function Social() {
             href="https://instagram.com/seaduced"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 bg-[#C5A55A] text-[#1E1E2E] px-6 py-3 rounded-full font-bold text-sm tracking-wide relative overflow-hidden group"
+            className="flex items-center gap-2 bg-[#AD9952] text-[#FAFBFB] px-6 py-3 rounded-full font-bold text-sm tracking-wide relative overflow-hidden group"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             transition={{ type: "spring", stiffness: 400, damping: 17 }}

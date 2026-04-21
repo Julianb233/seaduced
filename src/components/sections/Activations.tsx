@@ -138,31 +138,31 @@ export function Activations() {
                   scale: 1.02,
                   transition: { type: "spring", stiffness: 400, damping: 17 },
                 }}
-                className="group bg-[#1E1E2E] rounded-2xl p-6 cursor-pointer relative overflow-hidden"
+                className="group bg-[#263747] rounded-2xl p-6 cursor-pointer relative overflow-hidden"
               >
                 <motion.div
-                  className="absolute inset-0 bg-[#C5A55A]/0 group-hover:bg-[#C5A55A]"
+                  className="absolute inset-0 bg-[#6793A0]/0 group-hover:bg-[#6793A0]"
                   transition={{ duration: 0.4 }}
                 />
 
                 <div className="relative z-10">
                   <motion.div
-                    className="w-11 h-11 rounded-xl bg-[#C5A55A] flex items-center justify-center mb-4 group-hover:bg-[#1E1E2E] transition-colors duration-300"
+                    className="w-11 h-11 rounded-xl bg-[#AD9952] flex items-center justify-center mb-4 group-hover:bg-[#263747] transition-colors duration-300"
                     whileHover={{ rotate: 10, scale: 1.1 }}
                     transition={{ type: "spring", stiffness: 400, damping: 17 }}
                   >
-                    <Icon className="w-5 h-5 text-[#1E1E2E] group-hover:text-[#C5A55A] transition-colors duration-300" />
+                    <Icon className="w-5 h-5 text-[#FAFBFB] group-hover:text-[#AD9952] transition-colors duration-300" />
                   </motion.div>
 
-                  <h3 className="text-lg font-black text-white group-hover:text-[#1E1E2E] tracking-tight mb-2 transition-colors duration-300">
+                  <h3 className="text-lg font-black text-[#FAFBFB] group-hover:text-[#263747] tracking-tight mb-2 transition-colors duration-300">
                     {activation.title}
                   </h3>
-                  <p className="text-white/60 group-hover:text-[#1E1E2E]/70 font-mono text-xs leading-relaxed mb-4 transition-colors duration-300">
+                  <p className="text-[#FAFBFB]/70 group-hover:text-[#263747]/80 font-mono text-xs leading-relaxed mb-4 transition-colors duration-300">
                     {activation.description}
                   </p>
 
                   <motion.button
-                    className="flex items-center gap-2 text-[#C5A55A] group-hover:text-[#1E1E2E] font-bold text-xs tracking-wide transition-colors duration-300"
+                    className="flex items-center gap-2 text-[#AD9952] group-hover:text-[#263747] font-bold text-xs tracking-wide transition-colors duration-300"
                     whileHover={{ x: 4 }}
                     transition={{ type: "spring", stiffness: 400, damping: 17 }}
                   >

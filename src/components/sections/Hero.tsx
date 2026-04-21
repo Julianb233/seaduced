@@ -66,7 +66,7 @@ export function Hero() {
       <div className="absolute inset-0 bg-gradient-to-br from-[#F5ECD9] via-[#C5A55A]/10 to-[#F5ECD9]" />
 
       <motion.div
-        className="absolute top-20 left-10 w-24 h-24 rounded-full bg-[#C5A55A]/20 blur-3xl"
+        className="absolute top-20 left-10 w-24 h-24 rounded-full bg-[#AD9952]/20 blur-3xl"
         animate={{
           x: [0, 30, 0],
           y: [0, -20, 0],
@@ -75,7 +75,7 @@ export function Hero() {
         transition={{ duration: 8, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
       />
       <motion.div
-        className="absolute bottom-40 right-20 w-32 h-32 rounded-full bg-[#1B2F6B]/15 blur-3xl"
+        className="absolute bottom-40 right-20 w-32 h-32 rounded-full bg-[#6793A0]/25 blur-3xl"
         animate={{
           x: [0, -40, 0],
           y: [0, 30, 0],
@@ -93,10 +93,10 @@ export function Hero() {
               initial="hidden"
               animate="visible"
               custom={0}
-              className="inline-flex items-center gap-2 bg-[#1E1E2E] text-white px-3 py-1.5 rounded-full text-xs font-mono tracking-wider"
+              className="inline-flex items-center gap-2 bg-[#263747] text-[#FAFBFB] px-3 py-1.5 rounded-full text-xs font-mono tracking-wider"
             >
               <motion.span
-                className="w-2 h-2 bg-[#C5A55A] rounded-full"
+                className="w-2 h-2 bg-[#AD9952] rounded-full"
                 animate={{ scale: [1, 1.2, 1], opacity: [1, 0.7, 1] }}
                 transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
               />
@@ -181,8 +181,8 @@ export function Hero() {
                 </motion.svg>
               </motion.button>
               <motion.button
-                className="border-2 border-[#1E1E2E] text-[#1E1E2E] px-6 py-3 rounded-full font-bold text-sm tracking-wide relative overflow-hidden"
-                whileHover={{ scale: 1.02, backgroundColor: "#1E1E2E", color: "#fff" }}
+                className="border-2 border-[#325360] text-[#325360] px-6 py-3 rounded-full font-bold text-sm tracking-wide relative overflow-hidden"
+                whileHover={{ scale: 1.02, backgroundColor: "#325360", color: "#fff" }}
                 whileTap={{ scale: 0.98 }}
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
               >

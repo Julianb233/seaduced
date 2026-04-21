@@ -12,28 +12,28 @@ const features = [
     title: "92",
     subtitle: "Essential Minerals",
     description: "Wild-harvested sea moss delivers what the body recognizes",
-    accent: "#C5A55A",
+    accent: "#AD9952",
   },
   {
     icon: Droplets,
     title: "pH",
     subtitle: "Balanced Formula",
     description: "Designed to work with you, never against",
-    accent: "#1B2F6B",
+    accent: "#6793A0",
   },
   {
     icon: Sparkles,
     title: "Zero",
     subtitle: "Parabens or Glycerin",
     description: "No fillers. No fragrance. No guessing.",
-    accent: "#14B8A6",
+    accent: "#325360",
   },
   {
     icon: Heart,
     title: "100%",
     subtitle: "Vegan & Cruelty-Free",
     description: "Plant-based care for every body, every pairing",
-    accent: "#C5A55A",
+    accent: "#AACAD1",
   },
 ];
 
@@ -177,8 +177,8 @@ export function BenefitsBento() {
   const isInView = useInView(ref, { once: true, margin: "-50px" });
 
   return (
-    <section id="benefits" className="relative py-16 bg-[#1E1E2E] overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-[#1E1E2E] via-[#14142a] to-[#1E1E2E]" />
+    <section id="benefits" className="relative py-16 bg-[#263747] overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-b from-[#263747] via-[#1a2a3a] to-[#263747]" />
 
       <div ref={ref} className="max-w-5xl mx-auto px-6 relative z-10">
         <motion.div

@@ -14,7 +14,7 @@ export function SubpageSection({
 }) {
   const bg =
     background === "charcoal"
-      ? "bg-[#1E1E2E] text-[#FDF8F0]"
+      ? "bg-[#263747] text-[#FDF8F0]"
       : background === "white"
       ? "bg-white text-[#1E1E2E]"
       : "bg-[#FDF8F0] text-[#1E1E2E]";
