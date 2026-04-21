@@ -1,11 +1,23 @@
 import type { Metadata } from "next";
 import { SubpageHero } from "@/components/layout/SubpageHero";
-import { SubpageSection } from "@/components/layout/SubpageSection";
+import { CTABand } from "@/components/layout/CTABand";
+import { IngredientCards } from "@/components/ingredients/IngredientCards";
+import { WhatNotInIt } from "@/components/ingredients/WhatNotInIt";
+import { SourcingStandards } from "@/components/ingredients/SourcingStandards";
+import { Allergens } from "@/components/ingredients/Allergens";
+import { TestingLab } from "@/components/ingredients/TestingLab";
+import { FullLabel } from "@/components/ingredients/FullLabel";
 
 export const metadata: Metadata = {
   title: "Ingredients — Seaduced",
   description:
-    "Every ingredient in Seaduced, and why it's there. Plant-based, pH-balanced, made for real bodies.",
+    "Every ingredient in Seaduced, named and explained. Plant-based, pH-balanced, third-party tested, made for real bodies.",
+  openGraph: {
+    title: "Ingredients — Seaduced",
+    description:
+      "Every ingredient in Seaduced, named and explained. Plant-based, pH-balanced, third-party tested, made for real bodies.",
+    type: "website",
+  },
 };
 
 export default function IngredientsPage() {
@@ -14,56 +26,21 @@ export default function IngredientsPage() {
       <SubpageHero
         eyebrow="Ingredients"
         title="Clean, on purpose."
-        subtitle="Every ingredient earns its place. Nothing hiding behind a label."
+        subtitle="Every ingredient earns its place. Nothing hiding behind a label — just five thoughtful components, sourced, tested, and named."
       />
-      <SubpageSection title="What&apos;s in every 5 oz bottle">
-        <ul className="space-y-5">
-          <li>
-            <strong className="text-[#AD9952]">Sea moss (Chondrus crispus) extract</strong>
-            <p className="mt-1">
-              The hero. A red algae that carries 92 of the 102 minerals your
-              body needs, and produces natural carrageenan — the silky gel
-              texture that makes our formula glide.
-            </p>
-          </li>
-          <li>
-            <strong className="text-[#AD9952]">Aloe barbadensis (aloe vera) leaf juice</strong>
-            <p className="mt-1">
-              Soothing, calming, and hydrating. Absorbs cleanly. No sticky
-              finish.
-            </p>
-          </li>
-          <li>
-            <strong className="text-[#AD9952]">Hyaluronic acid (plant-derived)</strong>
-            <p className="mt-1">
-              Holds up to 1,000 times its weight in water — keeps moisture
-              locked in where you need it.
-            </p>
-          </li>
-          <li>
-            <strong className="text-[#AD9952]">Vitamin E (tocopherol)</strong>
-            <p className="mt-1">
-              Antioxidant, natural preservative, skin-friendly.
-            </p>
-          </li>
-          <li>
-            <strong className="text-[#AD9952]">Purified water</strong>
-            <p className="mt-1">
-              The base. Nothing fancy — just clean.
-            </p>
-          </li>
-        </ul>
-      </SubpageSection>
-      <SubpageSection title="What&apos;s NOT in it" background="charcoal">
-        <ul className="space-y-2 text-[#FDF8F0]">
-          <li>No petroleum</li>
-          <li>No parabens</li>
-          <li>No glycerin</li>
-          <li>No artificial fragrance</li>
-          <li>No synthetic dyes</li>
-          <li>No animal products or testing</li>
-        </ul>
-      </SubpageSection>
+      <IngredientCards />
+      <WhatNotInIt />
+      <SourcingStandards />
+      <Allergens />
+      <TestingLab />
+      <FullLabel />
+      <CTABand
+        eyebrow="Shop Confidently"
+        title="Now you know what's in it."
+        subtitle="Plant-based. pH 4.2. Third-party tested. Made for how you actually want to feel."
+        primary={{ label: "Shop Seaduced", href: "/product" }}
+        secondary={{ label: "Read The Science", href: "/science" }}
+      />
     </>
   );
 }
