@@ -116,7 +116,7 @@ export function Hero() {
             <div className="space-y-1 overflow-hidden">
               <motion.h1
                 style={{ x: textX1 }}
-                className="text-5xl md:text-7xl font-black tracking-tighter text-[#263747] leading-[0.9]"
+                className="text-5xl md:text-7xl font-black tracking-tighter text-[#325360] leading-[0.9]"
               >
                 <motion.span
                   variants={fadeUpVariants}
@@ -130,14 +130,22 @@ export function Hero() {
               </motion.h1>
               <motion.h1
                 style={{ x: textX2 }}
-                className="text-5xl md:text-7xl font-black tracking-tighter text-[#263747] leading-[0.9]"
+                className="text-5xl md:text-7xl font-black tracking-tighter leading-[0.9]"
               >
                 <motion.span
                   variants={fadeUpVariants}
                   initial="hidden"
                   animate="visible"
                   custom={2}
-                  className="inline-block text-[#AD9952]"
+                  className="inline-block"
+                  style={{
+                    backgroundImage:
+                      "linear-gradient(90deg, #325360 0%, #325360 18%, #FAFBFB 50%, #325360 82%, #325360 100%)",
+                    WebkitBackgroundClip: "text",
+                    backgroundClip: "text",
+                    color: "transparent",
+                    WebkitTextFillColor: "transparent",
+                  }}
                 >
                   SEADUCED
                 </motion.span>

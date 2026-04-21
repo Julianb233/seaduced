@@ -53,8 +53,8 @@ export function FAQ() {
           </span>
           <div className="overflow-hidden mt-2">
             <motion.h2
-              className="text-3xl md:text-5xl font-serif text-[#263747] tracking-tight"
-              style={{ fontFamily: "'Playfair Display', serif" }}
+              className="text-3xl md:text-5xl font-black text-[#263747] tracking-tight"
+              style={{ fontFamily: "var(--font-sans)" }}
               initial={{ y: 80 }}
               whileInView={{ y: 0 }}
               viewport={{ once: true }}
@@ -84,7 +84,7 @@ export function FAQ() {
               >
                 <Accordion.Header>
                   <Accordion.Trigger className="group w-full flex items-center justify-between gap-4 px-6 py-5 text-left hover:bg-[#AACAD1]/10 transition-colors">
-                    <span className="font-serif text-base md:text-lg text-[#263747] tracking-tight" style={{ fontFamily: "'Playfair Display', serif" }}>
+                    <span className="font-black text-base md:text-lg text-[#263747] tracking-tight" style={{ fontFamily: "var(--font-sans)" }}>
                       {faq.q}
                     </span>
                     <span className="flex-shrink-0 w-8 h-8 rounded-full border border-[#325360]/30 text-[#325360] flex items-center justify-center group-data-[state=open]:rotate-45 group-data-[state=open]:bg-[#325360] group-data-[state=open]:text-[#FAFBFB] transition-all">

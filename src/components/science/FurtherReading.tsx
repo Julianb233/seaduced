@@ -52,7 +52,7 @@ export function FurtherReading() {
           <div className="overflow-hidden">
             <motion.h2
               className="text-4xl md:text-5xl text-[#263747] leading-[1.05] tracking-tight max-w-2xl mx-auto"
-              style={{ fontFamily: "'Playfair Display', serif" }}
+              style={{ fontFamily: "var(--font-sans)" }}
               initial={{ y: 80, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
@@ -96,7 +96,7 @@ export function FurtherReading() {
               </div>
               <h3
                 className="text-xl text-[#263747] leading-snug mb-4 tracking-tight"
-                style={{ fontFamily: "'Playfair Display', serif" }}
+                style={{ fontFamily: "var(--font-sans)" }}
               >
                 {ref.title}
               </h3>

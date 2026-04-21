@@ -60,8 +60,8 @@ export function IngredientsTeaser() {
                 Hero ingredient
               </div>
               <div
-                className="text-xl md:text-2xl font-serif text-[#263747] tracking-tight mt-1"
-                style={{ fontFamily: "'Playfair Display', serif" }}
+                className="text-xl md:text-2xl font-black text-[#263747] tracking-tight mt-1"
+                style={{ fontFamily: "var(--font-sans)" }}
               >
                 Chondrus crispus
               </div>
@@ -83,8 +83,8 @@ export function IngredientsTeaser() {
             </motion.span>
             <div className="overflow-hidden mt-2">
               <motion.h2
-                className="text-3xl md:text-5xl font-serif text-[#263747] tracking-tight"
-                style={{ fontFamily: "'Playfair Display', serif" }}
+                className="text-3xl md:text-5xl font-black text-[#263747] tracking-tight"
+                style={{ fontFamily: "var(--font-sans)" }}
                 initial={{ y: 80 }}
                 whileInView={{ y: 0 }}
                 viewport={{ once: true }}

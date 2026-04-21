@@ -51,7 +51,7 @@ export function WhatNotInIt() {
           <div className="overflow-hidden">
             <motion.h2
               className="text-4xl md:text-6xl leading-[1.05] tracking-tight max-w-3xl mx-auto"
-              style={{ fontFamily: "'Playfair Display', serif" }}
+              style={{ fontFamily: "var(--font-sans)" }}
               initial={{ y: 80, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
@@ -82,7 +82,7 @@ export function WhatNotInIt() {
               </div>
               <h3
                 className="text-2xl tracking-tight mb-2"
-                style={{ fontFamily: "'Playfair Display', serif" }}
+                style={{ fontFamily: "var(--font-sans)" }}
               >
                 {item.name}
               </h3>

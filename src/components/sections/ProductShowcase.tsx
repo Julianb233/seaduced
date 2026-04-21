@@ -250,8 +250,8 @@ function BundleCard({ bundle, index }: { bundle: Bundle; index: number }) {
           </div>
 
           <h3
-            className="text-xl md:text-2xl font-serif text-[#263747] tracking-tight"
-            style={{ fontFamily: "'Playfair Display', serif" }}
+            className="text-xl md:text-2xl font-black text-[#263747] tracking-tight"
+            style={{ fontFamily: "var(--font-sans)" }}
           >
             {bundle.name}
           </h3>
@@ -266,8 +266,8 @@ function BundleCard({ bundle, index }: { bundle: Bundle; index: number }) {
 
           <div className="flex items-baseline gap-2 mt-auto pt-3">
             <span
-              className="text-3xl md:text-4xl font-serif text-[#263747] tracking-tight"
-              style={{ fontFamily: "'Playfair Display', serif" }}
+              className="text-3xl md:text-4xl font-black text-[#263747] tracking-tight"
+              style={{ fontFamily: "var(--font-sans)" }}
             >
               ${bundle.price}
             </span>
@@ -322,7 +322,7 @@ export function ProductShowcase() {
           className="text-center mb-12 md:mb-14"
         >
           <motion.span
-            className="font-mono text-[#325360]/70 text-[11px] tracking-[0.3em] uppercase"
+            className="font-mono text-[#325360]/80 text-base md:text-xl tracking-[0.22em] uppercase"
             style={{ fontFamily: "'JetBrains Mono', monospace" }}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -333,8 +333,8 @@ export function ProductShowcase() {
           </motion.span>
           <h2
             id="bundles-heading"
-            className="text-3xl md:text-5xl font-serif text-[#263747] tracking-tight mt-2 overflow-hidden"
-            style={{ fontFamily: "'Playfair Display', serif" }}
+            className="text-3xl md:text-5xl font-black text-[#263747] tracking-tight mt-2 overflow-hidden"
+            style={{ fontFamily: "var(--font-sans)" }}
           >
             <motion.span
               className="inline-block"

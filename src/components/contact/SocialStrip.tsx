@@ -29,8 +29,8 @@ export function SocialStrip() {
               Or come say hi on
             </span>
             <h2
-              className="text-3xl md:text-4xl font-serif text-[#263747] tracking-tight"
-              style={{ fontFamily: "'Playfair Display', serif" }}
+              className="text-3xl md:text-4xl font-black text-[#263747] tracking-tight"
+              style={{ fontFamily: "var(--font-sans)" }}
             >
               @seaduced
             </h2>

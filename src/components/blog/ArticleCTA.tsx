@@ -29,7 +29,7 @@ export function ArticleCTA({ post }: { post: BlogPost }) {
 
         <motion.p
           className="text-2xl md:text-4xl text-[#263747] leading-[1.15] tracking-tight mb-8 italic"
-          style={{ fontFamily: "'Playfair Display', serif", fontWeight: 500 }}
+          style={{ fontFamily: "var(--font-sans)", fontWeight: 500 }}
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

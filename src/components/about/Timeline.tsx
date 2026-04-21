@@ -81,7 +81,7 @@ function TimelineNode({
 
       <h3
         className="mt-5 text-2xl text-[#263747] tracking-tight"
-        style={{ fontFamily: "var(--font-serif), 'Playfair Display', serif", fontWeight: 700 }}
+        style={{ fontFamily: "var(--font-sans)", fontWeight: 700 }}
       >
         {node.title}
       </h3>
@@ -131,7 +131,7 @@ export function Timeline() {
           <div className="overflow-hidden">
             <motion.h2
               className="text-4xl md:text-5xl lg:text-6xl text-[#263747] tracking-tight"
-              style={{ fontFamily: "var(--font-serif), 'Playfair Display', serif", fontWeight: 800 }}
+              style={{ fontFamily: "var(--font-sans)", fontWeight: 800 }}
               initial={{ y: 60, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}

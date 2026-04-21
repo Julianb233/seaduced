@@ -71,7 +71,7 @@ export function IngredientCards() {
           <div className="overflow-hidden">
             <motion.h2
               className="text-4xl md:text-5xl text-[#263747] leading-[1.05] tracking-tight"
-              style={{ fontFamily: "'Playfair Display', serif" }}
+              style={{ fontFamily: "var(--font-sans)" }}
               initial={{ y: 80, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
@@ -108,7 +108,7 @@ export function IngredientCards() {
                       <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1">
                         <h3
                           className="text-2xl md:text-3xl text-[#263747] tracking-tight"
-                          style={{ fontFamily: "'Playfair Display', serif" }}
+                          style={{ fontFamily: "var(--font-sans)" }}
                         >
                           {ing.common}
                         </h3>

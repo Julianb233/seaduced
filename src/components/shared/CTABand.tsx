@@ -49,8 +49,8 @@ export function CTABand({
           </motion.span>
         )}
         <motion.h2
-          className={`text-4xl md:text-5xl font-serif tracking-tight ${heading}`}
-          style={{ fontFamily: "'Playfair Display', serif" }}
+          className={`text-4xl md:text-5xl font-black tracking-tight ${heading}`}
+          style={{ fontFamily: "var(--font-sans)" }}
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

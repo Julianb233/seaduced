@@ -22,8 +22,8 @@ export function CookieNotice() {
               Cookie notice
             </span>
             <h2
-              className="text-2xl md:text-3xl font-serif text-[#263747] tracking-tight mb-3"
-              style={{ fontFamily: "'Playfair Display', serif" }}
+              className="text-2xl md:text-3xl font-black text-[#263747] tracking-tight mb-3"
+              style={{ fontFamily: "var(--font-sans)" }}
             >
               Plain cookies, not the tracking kind.
             </h2>

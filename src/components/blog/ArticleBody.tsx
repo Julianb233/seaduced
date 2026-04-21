@@ -14,7 +14,7 @@ export function ArticleBody({ post }: { post: BlogPost }) {
           <article className="max-w-prose mx-auto md:mx-0">
             <motion.p
               className="text-xl md:text-2xl text-[#263747] leading-relaxed mb-10 font-medium"
-              style={{ fontFamily: "'Playfair Display', serif" }}
+              style={{ fontFamily: "var(--font-sans)" }}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -46,7 +46,7 @@ function SectionRenderer({ section }: { section: BlogSection }) {
     return (
       <motion.h2
         className="text-2xl md:text-3xl text-[#263747] mt-10 mb-4 tracking-tight"
-        style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700 }}
+        style={{ fontFamily: "var(--font-sans)", fontWeight: 700 }}
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -82,7 +82,7 @@ function SectionRenderer({ section }: { section: BlogSection }) {
       >
         <p
           className="text-xl md:text-2xl text-[#263747] leading-snug italic"
-          style={{ fontFamily: "'Playfair Display', serif", fontWeight: 500 }}
+          style={{ fontFamily: "var(--font-sans)", fontWeight: 500 }}
         >
           &ldquo;{section.text}&rdquo;
         </p>

@@ -23,7 +23,7 @@ export function SeaMossIntro() {
           <div className="overflow-hidden">
             <motion.h2
               className="text-4xl md:text-5xl text-[#263747] leading-[1.05] tracking-tight mb-6"
-              style={{ fontFamily: "'Playfair Display', serif" }}
+              style={{ fontFamily: "var(--font-sans)" }}
               initial={{ y: 80, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}

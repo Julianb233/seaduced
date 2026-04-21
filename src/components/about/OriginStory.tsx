@@ -30,7 +30,7 @@ export function OriginStory() {
 
             <h2
               className="text-4xl md:text-5xl text-[#263747] leading-[1.05] tracking-tight"
-              style={{ fontFamily: "var(--font-serif), 'Playfair Display', serif", fontWeight: 700 }}
+              style={{ fontFamily: "var(--font-sans)", fontWeight: 700 }}
             >
               Why we made this
             </h2>
