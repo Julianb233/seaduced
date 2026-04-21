@@ -28,8 +28,8 @@ const features = [
   },
   {
     stat: "0",
-    title: "Parabens & Glycerin",
-    description: "Clean plant-based formulation — nothing synthetic",
+    title: "Parabens, Glycerin, Petroleum",
+    description: "Clean plant-based formulation",
     icon: Leaf,
     accent: "#1A6B5C",
   },
@@ -178,6 +178,7 @@ export default function BenefitsBento() {
           <div className="overflow-hidden mt-2">
             <motion.h2
               className="text-3xl md:text-4xl font-extrabold text-white tracking-tight"
+              style={{ fontFamily: "'Playfair Display', serif" }}
               initial={{ y: 60 }}
               animate={isInView ? { y: 0 } : { y: 60 }}
               transition={{ duration: 0.6, ease: [0.25, 0.4, 0.25, 1], delay: 0.15 }}
@@ -193,7 +194,7 @@ export default function BenefitsBento() {
             transition={{ duration: 0.6, delay: 0.4, ease: [0.25, 0.4, 0.25, 1] }}
           />
         </motion.div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-[3px]">
           {features.map((feature, index) => (
             <FeatureCard key={feature.stat} feature={feature} index={index} />
           ))}
