@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 
 export default function ProductPage() {
   return (
-    <main className="min-h-screen bg-[#AACAD1]">
+    <main className="min-h-screen bg-[#AACAD1] overflow-x-hidden">
       <ProductHero />
       <ProductGallery />
       <BenefitsStrip />
