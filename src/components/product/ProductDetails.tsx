@@ -1,7 +1,7 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
-import * as Tabs from "@radix-ui/react-tabs";
 import { fadeUp, viewportOnce, easeSmooth } from "@/lib/motion";
 
 const tabs = [
@@ -106,6 +106,9 @@ const tabs = [
 ];
 
 export default function ProductDetails() {
+  const [active, setActive] = useState("details");
+  const activeTab = tabs.find((t) => t.value === active)!;
+
   return (
     <section className="relative py-20 sm:py-28 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-[#FDF8F0] via-[#FDF8F0] to-[#f5ede0]" />
@@ -139,46 +142,49 @@ export default function ProductDetails() {
           viewport={viewportOnce}
           transition={{ duration: 0.5, ease: easeSmooth, delay: 0.2 }}
         >
-          <Tabs.Root defaultValue="details" className="w-full">
-            <Tabs.List className="flex gap-1 rounded-xl bg-[#1E1E2E]/5 p-1 mb-6">
+          <div className="w-full">
+            <div className="flex gap-1 rounded-xl bg-[#1E1E2E]/5 p-1 mb-6" role="tablist">
               {tabs.map((tab) => (
-                <Tabs.Trigger
+                <button
                   key={tab.value}
-                  value={tab.value}
-                  className="flex-1 rounded-lg px-3 py-2.5 font-mono text-xs font-semibold uppercase tracking-wider text-[#1E1E2E]/50 transition-all duration-200 data-[state=active]:bg-[#1E1E2E] data-[state=active]:text-white data-[state=active]:shadow-md hover:text-[#1E1E2E]/80"
+                  role="tab"
+                  aria-selected={active === tab.value}
+                  onClick={() => setActive(tab.value)}
+                  className={`flex-1 rounded-lg px-3 py-2.5 font-mono text-xs font-semibold uppercase tracking-wider transition-all duration-200 ${
+                    active === tab.value
+                      ? "bg-[#1E1E2E] text-white shadow-md"
+                      : "text-[#1E1E2E]/50 hover:text-[#1E1E2E]/80"
+                  }`}
                 >
                   {tab.label}
-                </Tabs.Trigger>
+                </button>
               ))}
-            </Tabs.List>
+            </div>
 
-            {tabs.map((tab) => (
-              <Tabs.Content
-                key={tab.value}
-                value={tab.value}
-                className="rounded-2xl border border-[#1E1E2E]/10 bg-white p-6 shadow-sm focus:outline-none"
-              >
-                <h3 className="mb-4 text-lg font-bold text-[#1E1E2E]">
-                  {tab.content.heading}
-                </h3>
-                <dl className="space-y-3">
-                  {tab.content.items.map((item) => (
-                    <div
-                      key={item.label}
-                      className="flex flex-col gap-0.5 border-b border-[#1E1E2E]/5 pb-3 last:border-0 sm:flex-row sm:gap-4"
-                    >
-                      <dt className="w-32 shrink-0 font-mono text-xs font-semibold uppercase tracking-wider text-[#C5A55A]">
-                        {item.label}
-                      </dt>
-                      <dd className="text-sm leading-relaxed text-[#1E1E2E]/70">
-                        {item.value}
-                      </dd>
-                    </div>
-                  ))}
-                </dl>
-              </Tabs.Content>
-            ))}
-          </Tabs.Root>
+            <div
+              role="tabpanel"
+              className="rounded-2xl border border-[#1E1E2E]/10 bg-white p-6 shadow-sm"
+            >
+              <h3 className="mb-4 text-lg font-bold text-[#1E1E2E]">
+                {activeTab.content.heading}
+              </h3>
+              <dl className="space-y-3">
+                {activeTab.content.items.map((item) => (
+                  <div
+                    key={item.label}
+                    className="flex flex-col gap-0.5 border-b border-[#1E1E2E]/5 pb-3 last:border-0 sm:flex-row sm:gap-4"
+                  >
+                    <dt className="w-32 shrink-0 font-mono text-xs font-semibold uppercase tracking-wider text-[#C5A55A]">
+                      {item.label}
+                    </dt>
+                    <dd className="text-sm leading-relaxed text-[#1E1E2E]/70">
+                      {item.value}
+                    </dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          </div>
         </motion.div>
       </div>
     </section>
