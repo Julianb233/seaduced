@@ -66,7 +66,7 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${jetbrainsMono.variable} ${playfair.variable} ${dancing.variable} h-full antialiased overflow-x-clip`}
     >
-      <body className="min-h-full flex flex-col font-sans bg-background text-foreground overflow-x-clip">
+      <body className="min-h-full font-sans bg-background text-foreground overflow-x-clip">
         <ClickSpark
           sparkColor="#6793A0"
           sparkSize={12}
