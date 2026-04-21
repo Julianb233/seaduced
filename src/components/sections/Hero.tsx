@@ -60,10 +60,22 @@ export function Hero() {
     <section
       id="hero"
       ref={ref}
-      className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-[#AACAD1] noise-overlay"
+      className="relative min-h-[100vh] flex items-center justify-center overflow-hidden noise-overlay"
     >
-      {/* Subtle gradient background — light teal with cream mid-highlight */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#AACAD1] via-[#FDF8F0]/40 to-[#AACAD1]" />
+      {/* Clean top — pure white breathing room */}
+      <div className="absolute inset-x-0 top-0 h-[22vh] bg-white pointer-events-none z-[1]" />
+
+      {/* Ocean-flow gradient — white at top, easing down into the light teal of the next section */}
+      <motion.div
+        className="absolute inset-0"
+        style={{
+          background: "linear-gradient(to bottom, #FFFFFF 0%, #FFFFFF 18%, #E2ECEE 40%, #C8DCE0 70%, #AACAD1 100%)",
+          y: useTransform(scrollYProgress, [0, 1], ["0%", "-8%"]),
+        }}
+      />
+
+      {/* Subtle warm side-light wash for depth */}
+      <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-[#FDF8F0]/15 to-transparent" />
 
       <motion.div
         className="absolute top-20 left-10 w-24 h-24 rounded-full bg-[#AD9952]/20 blur-3xl"
