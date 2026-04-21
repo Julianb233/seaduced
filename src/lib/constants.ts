@@ -1,10 +1,10 @@
-/** Site-wide navigation links — anchor-scroll for homepage sections, route for Contact */
+/** Site-wide navigation links — all anchor-scroll for single-page layout */
 export const NAV_LINKS = [
   { label: 'Home', href: '#hero' },
   { label: 'Product', href: '#product' },
-  { label: 'Science', href: '#science' },
-  { label: 'About', href: '#about' },
-  { label: 'Contact', href: '/contact' },
+  { label: 'Science', href: '#benefits' },
+  { label: 'Activations', href: '#activations' },
+  { label: 'Community', href: '#community' },
 ] as const;
 
 /** Social media links (placeholders until Gina provides) */
@@ -24,28 +24,26 @@ export const BRAND = {
   year: new Date().getFullYear(),
 } as const;
 
-/** Footer link groups — 4-column layout */
+/** Footer link groups — 4-column layout (anchor-based for single-page) */
 export const FOOTER_LINKS = {
   products: [
-    { href: '/product', label: 'Seaduced 5 oz' },
-    { href: '/product#bundles', label: 'Bundles' },
-    { href: '/product#gift', label: 'Gift Set' },
+    { href: '#product', label: 'Seaduced 5 oz' },
+    { href: '#product', label: 'Bundles' },
+    { href: '#product', label: 'Gift Set' },
   ],
   quickLinks: [
-    { href: '/', label: 'Home' },
-    { href: '/product', label: 'Product' },
-    { href: '/science', label: 'Science' },
-    { href: '/about', label: 'About' },
+    { href: '#hero', label: 'Home' },
+    { href: '#product', label: 'Product' },
+    { href: '#benefits', label: 'Science' },
+    { href: '#activations', label: 'Activations' },
   ],
   company: [
-    { href: '/about', label: 'Our Story' },
-    { href: '/about#press', label: 'Press' },
-    { href: '/contact', label: 'Contact' },
-    { href: '/about#founder', label: 'Founder' },
+    { href: '#activations', label: 'Our Story' },
+    { href: '#activations', label: 'Press' },
+    { href: '#community', label: 'Community' },
   ],
   legal: [
     { href: '/privacy', label: 'Privacy Policy' },
     { href: '/terms', label: 'Terms of Service' },
-    { href: '/privacy#cookies', label: 'Cookie Policy' },
   ],
 } as const;
