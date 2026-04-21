@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { useLenis } from "lenis/react";
 import { Menu, X } from "lucide-react";
+import { CartTrigger } from "@/components/shop/CartDrawer";
 
 export function Navigation() {
   const [scrolled, setScrolled] = useState(false);
@@ -28,12 +29,11 @@ export function Navigation() {
   };
 
   const navLinks: { label: string; href: string; external?: boolean }[] = [
-    { label: "Home", href: "#hero" },
+    { label: "Shop", href: "/shop", external: true },
     { label: "Product", href: "#product" },
     { label: "Benefits", href: "#benefits" },
     { label: "Journal", href: "/blog", external: true },
     { label: "Activations", href: "#activations" },
-    { label: "Community", href: "#community" },
   ];
 
   return (
@@ -144,36 +144,40 @@ export function Navigation() {
           })}
         </div>
 
-        <motion.button
-          className="hidden md:block bg-[#AD9952] text-[#263747] px-6 py-2.5 rounded-full font-bold text-sm tracking-wide relative overflow-hidden"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          transition={{ type: "spring", stiffness: 400, damping: 17 }}
-        >
-          <motion.div
-            className="absolute inset-0 bg-white/30"
-            animate={{
-              boxShadow: [
-                "0 0 20px rgba(197,165,90,0.3)",
-                "0 0 40px rgba(197,165,90,0.6)",
-                "0 0 20px rgba(197,165,90,0.3)",
-              ],
-            }}
-            transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
-          />
-          <motion.div
-            className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full"
-            animate={{ x: ["-100%", "200%"] }}
-            transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY, repeatDelay: 3 }}
-          />
-          <span className="relative z-10">Shop Now</span>
-        </motion.button>
+        <div className="hidden md:flex items-center gap-2">
+          <Link
+            href="/shop"
+            className="relative inline-block bg-[#AD9952] text-[#263747] px-6 py-2.5 rounded-full font-bold text-sm tracking-wide overflow-hidden"
+          >
+            <motion.span
+              className="absolute inset-0 bg-white/30"
+              animate={{
+                boxShadow: [
+                  "0 0 20px rgba(197,165,90,0.3)",
+                  "0 0 40px rgba(197,165,90,0.6)",
+                  "0 0 20px rgba(197,165,90,0.3)",
+                ],
+              }}
+              transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
+            />
+            <motion.span
+              className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full"
+              animate={{ x: ["-100%", "200%"] }}
+              transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY, repeatDelay: 3 }}
+            />
+            <span className="relative z-10">Shop Now</span>
+          </Link>
+          <CartTrigger variant={scrolled ? "dark" : "light"} />
+        </div>
 
-        <motion.button
-          className="md:hidden p-2"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          whileTap={{ scale: 0.9 }}
-        >
+        <div className="md:hidden flex items-center gap-1">
+          <CartTrigger variant={scrolled ? "dark" : "light"} />
+          <motion.button
+            className="p-2"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            whileTap={{ scale: 0.9 }}
+            aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+          >
           <AnimatePresence mode="wait">
             {mobileMenuOpen ? (
               <motion.div
@@ -197,7 +201,8 @@ export function Navigation() {
               </motion.div>
             )}
           </AnimatePresence>
-        </motion.button>
+          </motion.button>
+        </div>
       </div>
 
       <AnimatePresence>
@@ -242,14 +247,19 @@ export function Navigation() {
                   </motion.button>
                 );
               })}
-              <motion.button
-                className="w-full bg-[#AD9952] text-[#263747] px-6 py-3 rounded-full font-bold text-sm tracking-wide mt-4"
+              <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
               >
-                Shop Now
-              </motion.button>
+                <Link
+                  href="/shop"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block w-full text-center bg-[#AD9952] text-[#263747] px-6 py-3 rounded-full font-bold text-sm tracking-wide mt-4"
+                >
+                  Shop Now
+                </Link>
+              </motion.div>
             </div>
           </motion.div>
         )}

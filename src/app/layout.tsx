@@ -4,6 +4,7 @@ import { LenisProvider } from "@/components/layout/LenisProvider";
 import ClickSpark from "@/components/layout/ClickSpark";
 import { Navigation } from "@/components/layout/Navigation";
 import { Footer } from "@/components/layout/Footer";
+import { ToasterHost } from "@/components/shop/ToasterHost";
 import "./globals.css";
 
 const inter = Inter({
@@ -79,6 +80,7 @@ export default function RootLayout({
             <Navigation />
             {children}
             <Footer />
+            <ToasterHost />
           </LenisProvider>
         </ClickSpark>
       </body>

@@ -1,5 +1,28 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## E-commerce Flow
+
+Full shop/cart/checkout/order/account/returns flow lives under `src/app/shop`, `src/app/cart`, `src/app/checkout`, `src/app/order/[id]`, `src/app/account`, and `src/app/returns`. Cart state is a Zustand store persisted to `localStorage` (`src/lib/cart.ts`). Bundle data is the single source of truth in `src/lib/bundles.ts`.
+
+### Required env vars (for real Stripe wiring)
+
+Set these in `.env.local` and on Vercel:
+
+```
+NEXT_PUBLIC_STRIPE_PK=pk_live_or_test_...
+STRIPE_SECRET_KEY=sk_live_or_test_...
+STRIPE_WEBHOOK_SECRET=whsec_...
+```
+
+Until these are set, `/checkout` runs in "test mode" — the `/api/checkout/create-intent` route returns a mocked `client_secret` + fake order id so the flow is end-to-end testable without charging cards. Orders are persisted to `localStorage` (`seaduced-orders` + `seaduced-order-<id>`).
+
+### Stripe TODOs
+
+- `src/lib/stripe.ts` — real publishable key lookup
+- `src/app/api/checkout/create-intent/route.ts` — real `stripe.paymentIntents.create`
+- `src/app/api/stripe/webhook/route.ts` — signature verify + event routing
+- `src/components/shop/CheckoutFlow.tsx` — mount real Stripe Elements (`@stripe/react-stripe-js`) in `PaymentStep`
+
 ## Getting Started
 
 First, run the development server:

@@ -72,6 +72,7 @@ export function Footer() {
     {
       title: "Legal",
       links: [
+        { label: "Shipping & Returns", href: "/returns" },
         { label: "Privacy", href: "/privacy" },
         { label: "Terms", href: "/terms" },
         { label: "Accessibility", href: "#" },
