@@ -235,6 +235,24 @@
   z-index: 2;
 }
 
+/* Parallax-specific override — the stock bg-luxe-teal pseudo-elements (cream
+   radial highlights + cream diagonal wash) read as a tan-on-blue patch
+   against the sea-moss splash frames. Replace with a deep-teal tint so the
+   section blends with the navy rounded backdrop panel placed behind the
+   frame stack (see ParallaxSplash.tsx). Julian 2026-04-21. */
+.parallax-splash.bg-luxe-teal::before {
+  opacity: 0.025;
+  mix-blend-mode: multiply;
+}
+.parallax-splash.bg-luxe-teal::after {
+  background: linear-gradient(
+    125deg,
+    rgba(38, 55, 71, 0) 0%,
+    rgba(38, 55, 71, 0.12) 45%,
+    rgba(38, 55, 71, 0) 100%
+  );
+}
+
 .bg-luxe-cream {
   position: relative;
   background:

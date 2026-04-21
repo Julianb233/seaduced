@@ -125,11 +125,19 @@ export function ParallaxSplash() {
   return (
     <section
       ref={containerRef}
-      className="bg-luxe-teal noise-overlay relative"
+      className="bg-luxe-teal parallax-splash noise-overlay relative"
       style={{ height: `${FRAMES.length * 100}vh` }}
       aria-label="Seaduced product story — parallax"
     >
       <div className="sticky top-0 h-screen w-full overflow-hidden">
+
+        {/* Dark navy rounded backdrop — sits behind the frame stack so the
+            bottle + splash float over a soft dark rounded panel, not the
+            tan-on-teal section bg. */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute left-[6%] right-[6%] top-[10%] bottom-[16%] rounded-[48px] bg-[#263747]/90 shadow-2xl shadow-[#263747]/30 backdrop-blur-[2px] z-0"
+        />
 
         {/* Frame stack */}
         {FRAMES.map((frame, i) => (
