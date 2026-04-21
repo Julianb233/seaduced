@@ -64,9 +64,10 @@ See `CODEBASE-COLOR-AUDIT.md` for the mapped list of pre-2026-04-21 colors that 
 
 ## Logo treatment
 
-- Primary logo: `public/brand/seaduced-logo-green-seamoss.png` — mermaid couple in sea-moss green texture
+- Primary logo: `public/brand/seaduced-logo-blue-seamoss.png` — mermaid couple in deep-teal/aqua sea-moss texture (matches the bottle's blue palette)
 - Reverse: `public/brand/seaduced-logo-white-royal.jpg` — white couple on royal blue background (for navy section use ONLY — royal background is not in our primary palette; treat as a legacy reverse-out only)
-- Logo on cream backgrounds → green-seamoss variant
+- Archive: `public/brand/seaduced-logo-green-seamoss.png` — original green sea-moss variant from Gina (kept on disk, not used on the site)
+- Logo on cream backgrounds → blue-seamoss variant
 - Logo on navy backgrounds → (ideally) a cream/white couple version. The white-on-royal JPG embeds a royal bg that doesn't match the palette — flag for Gina to have the designer export a transparent PNG of the couple in cream/white.
 
 ## Typography (unchanged, already aligned)
