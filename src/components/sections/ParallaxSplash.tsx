@@ -7,7 +7,6 @@ import Image from "next/image";
 const FRAMES = [
   { src: "/images/parallax/f1-mist.jpg", alt: "Seaduced bottle emerging from sea mist", eyebrow: "From the sea", title: "Emerge." },
   { src: "/images/parallax/f2-beauty.jpg", alt: "Seaduced bottle at rest on cream marble", eyebrow: "Naturally intimate", title: "At rest." },
-  { src: "/images/parallax/f3-primed.jpg", alt: "Seaduced bottle with gold halo on the pump", eyebrow: "Ready", title: "Primed." },
   { src: "/images/parallax/f4-bead.jpg", alt: "Seaduced bottle with first cream bead at the nozzle", eyebrow: "Begin", title: "A single bead." },
   { src: "/images/parallax/f5-stream.jpg", alt: "Seaduced cream stream arcing with sea-moss filaments", eyebrow: "Moment", title: "The pour." },
   { src: "/images/parallax/f6-splash.jpg", alt: "Seaduced peak splash with sea-moss strands", eyebrow: "Peak", title: "Naturally seaduced." },
