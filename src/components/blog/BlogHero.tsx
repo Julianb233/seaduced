@@ -1,0 +1,54 @@
+"use client";
+
+import { motion } from "framer-motion";
+
+export function BlogHero() {
+  return (
+    <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden noise-overlay pt-32 pb-20 bg-[#AACAD1]">
+      <div className="absolute inset-0 bg-gradient-to-br from-[#AACAD1] via-[#FDF8F0]/30 to-[#AACAD1]" />
+      <motion.div
+        className="absolute top-24 left-12 w-40 h-40 rounded-full bg-[#FDF8F0]/40 blur-3xl"
+        animate={{ x: [0, 30, 0], y: [0, -20, 0], scale: [1, 1.1, 1] }}
+        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+      />
+      <motion.div
+        className="absolute bottom-16 right-16 w-48 h-48 rounded-full bg-[#6793A0]/20 blur-3xl"
+        animate={{ x: [0, -30, 0], y: [0, 20, 0], scale: [1, 1.15, 1] }}
+        transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
+      />
+
+      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
+        <motion.span
+          className="inline-block font-mono text-[#325360]/70 text-xs tracking-[0.3em] uppercase mb-4"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          Editorial
+        </motion.span>
+
+        <div className="overflow-hidden">
+          <motion.h1
+            className="text-5xl md:text-7xl text-[#263747] leading-[1] tracking-tight"
+            style={{ fontFamily: "'Playfair Display', serif", fontWeight: 800 }}
+            initial={{ y: 80, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.7, ease: [0.25, 0.4, 0.25, 1] }}
+          >
+            Seaduced Journal
+          </motion.h1>
+        </div>
+
+        <motion.p
+          className="mt-6 text-lg md:text-xl text-[#263747]/80 max-w-2xl mx-auto leading-relaxed"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+        >
+          Honest essays on intimate wellness, rituals, and the science of
+          feeling good in the body you live in.
+        </motion.p>
+      </div>
+    </section>
+  );
+}
