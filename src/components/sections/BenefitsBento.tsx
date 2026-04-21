@@ -19,14 +19,14 @@ const features = [
     title: "pH",
     subtitle: "Balanced Formula",
     description: "Designed to work with you, never against",
-    accent: "#6793A0",
+    accent: "#325360",
   },
   {
     icon: Sparkles,
     title: "Zero",
     subtitle: "Parabens or Glycerin",
     description: "No fillers. No fragrance. No guessing.",
-    accent: "#325360",
+    accent: "#212837",
   },
   {
     icon: Heart,
@@ -92,7 +92,10 @@ function FeatureCard({ feature, index }: { feature: (typeof features)[0]; index:
       />
 
       {/* Glass card */}
-      <div className="glass-card relative rounded-2xl p-5 overflow-hidden h-full">
+      <div
+        className="glass-card relative rounded-2xl p-5 overflow-hidden h-full shadow-[inset_0_1px_0_0_rgba(255,255,255,0.6)]"
+        style={{ borderTop: `1px solid ${feature.accent}` }}
+      >
         {/* Shine effect on hover */}
         <motion.div
           className="absolute inset-0 opacity-0 group-hover:opacity-100"
@@ -136,7 +139,8 @@ function FeatureCard({ feature, index }: { feature: (typeof features)[0]; index:
           {/* Title with count-up feel */}
           <div className="flex-1">
             <motion.div
-              className="text-3xl font-black tracking-tight text-[#325360]"
+              className="text-3xl tracking-tight text-[#325360]"
+              style={{ fontWeight: 900 }}
               initial={{ opacity: 0, scale: 0.5 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
