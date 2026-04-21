@@ -226,7 +226,7 @@
   pointer-events: none;
   z-index: 0;
 }
-.bg-luxe-teal > * {
+.bg-luxe-teal > *:not(.sticky) {
   position: relative;
   z-index: 1;
 }
@@ -257,7 +257,7 @@
   pointer-events: none;
   z-index: 0;
 }
-.bg-luxe-cream > * {
+.bg-luxe-cream > *:not(.sticky) {
   position: relative;
   z-index: 1;
 }
@@ -292,7 +292,7 @@
   pointer-events: none;
   z-index: 0;
 }
-.bg-luxe-deep > * {
+.bg-luxe-deep > *:not(.sticky) {
   position: relative;
   z-index: 1;
 }
@@ -325,7 +325,7 @@
   pointer-events: none;
   z-index: 0;
 }
-.bg-luxe-footer > * {
+.bg-luxe-footer > *:not(.sticky) {
   position: relative;
   z-index: 1;
 }
