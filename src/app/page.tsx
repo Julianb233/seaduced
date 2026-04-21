@@ -7,7 +7,7 @@ import { Social } from "@/components/sections/Social";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#AACAD1] overflow-x-hidden">
+    <main className="min-h-screen bg-[#AACAD1] overflow-x-clip">
       <Hero />
       <ParallaxSplash />
       <ProductShowcase />

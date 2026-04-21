@@ -106,7 +106,7 @@
        Absolute-positioned bokeh/blur divs, parallax transforms, and the giant
        SEADUCED watermark in the footer all have the potential to exceed 100vw;
        clip at the root so no section can ever introduce a horizontal scrollbar. */
-    overflow-x: hidden;
+    overflow-x: clip;
     max-width: 100vw;
   }
   body {
