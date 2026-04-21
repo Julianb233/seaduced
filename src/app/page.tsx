@@ -7,7 +7,7 @@ import { Social } from "@/components/sections/Social";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen bg-[#AACAD1]">
       <Hero />
       <ParallaxSplash />
       <ProductShowcase />
