@@ -108,6 +108,13 @@ export const PAGE_SEO = {
     path: '/contact',
     ogImagePath: '/og-contact.png',
   },
+  ingredients: {
+    title: "Ingredients — What's Inside Seaduced",
+    description:
+      'Explore every ingredient in Seaduced sea moss lubricant. Organic Irish sea moss, aloe vera, hyaluronic acid, and more — clean, plant-based, transparent.',
+    path: '/ingredients',
+    ogImagePath: '/og-default.png',
+  },
 } as const
 
 export { BASE_URL }
