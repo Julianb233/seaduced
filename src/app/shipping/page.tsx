@@ -5,6 +5,7 @@ import { Timeline } from "@/components/shared/Timeline";
 import { ReturnsPolicy } from "@/components/shipping/ReturnsPolicy";
 import { FAQ } from "@/components/shared/FAQ";
 import { CTABand } from "@/components/shared/CTABand";
+import { LastUpdatedTag } from "@/components/shared/LastUpdatedTag";
 
 export const metadata: Metadata = {
   title: "Shipping & Returns — Seaduced",
@@ -124,6 +125,10 @@ export default function ShippingPage() {
         subtitle="Shipping, returns, stuck packages — email us and a real person will reply."
         primary={{ label: "Contact us", href: "/contact" }}
         secondary={{ label: "Back to shop", href: "/product" }}
+      />
+      <LastUpdatedTag
+        date="April 21, 2026"
+        note="Shipping windows are estimates. Email hello@seaducedproducts.com with order questions."
       />
     </>
   );
