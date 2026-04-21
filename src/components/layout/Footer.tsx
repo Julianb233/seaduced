@@ -54,6 +54,7 @@ export function Footer() {
       title: "About",
       links: [
         { label: "Our Story", href: "/about" },
+        { label: "Journal", href: "/blog" },
         { label: "Contact", href: "/contact" },
         { label: "Press", href: "#" },
         { label: "Partners", href: "#activations" },

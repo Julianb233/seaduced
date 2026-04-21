@@ -27,10 +27,11 @@ export function Navigation() {
     setMobileMenuOpen(false);
   };
 
-  const navLinks = [
+  const navLinks: { label: string; href: string; external?: boolean }[] = [
     { label: "Home", href: "#hero" },
     { label: "Product", href: "#product" },
     { label: "Benefits", href: "#benefits" },
+    { label: "Journal", href: "/blog", external: true },
     { label: "Activations", href: "#activations" },
     { label: "Community", href: "#community" },
   ];
@@ -75,34 +76,63 @@ export function Navigation() {
         </Link>
 
         <div className="hidden md:flex items-center gap-8">
-          {navLinks.map((item, i) => (
-            <motion.button
-              key={item.label}
-              onClick={() => scrollToSection(item.href)}
-              className={`text-sm font-medium tracking-wide transition-colors relative ${
-                scrolled
-                  ? "text-white/80 hover:text-[#AD9952]"
-                  : "text-[#263747]/80 hover:text-[#263747]"
-              }`}
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{
-                delay: i * 0.1,
-                duration: 0.4,
-                ease: [0.25, 0.4, 0.25, 1],
-              }}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              {item.label}
+          {navLinks.map((item, i) => {
+            const linkClass = `text-sm font-medium tracking-wide transition-colors relative ${
+              scrolled
+                ? "text-white/80 hover:text-[#AD9952]"
+                : "text-[#263747]/80 hover:text-[#263747]"
+            }`;
+            const underline = (
               <motion.span
                 className="absolute -bottom-1 left-0 w-full h-0.5 bg-[#AD9952] origin-left"
                 initial={{ scaleX: 0 }}
                 whileHover={{ scaleX: 1 }}
                 transition={{ duration: 0.3, ease: [0.25, 0.4, 0.25, 1] }}
               />
-            </motion.button>
-          ))}
+            );
+
+            if (item.external) {
+              return (
+                <motion.div
+                  key={item.label}
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{
+                    delay: i * 0.1,
+                    duration: 0.4,
+                    ease: [0.25, 0.4, 0.25, 1],
+                  }}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <Link href={item.href} className={linkClass}>
+                    {item.label}
+                    {underline}
+                  </Link>
+                </motion.div>
+              );
+            }
+
+            return (
+              <motion.button
+                key={item.label}
+                onClick={() => scrollToSection(item.href)}
+                className={linkClass}
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  delay: i * 0.1,
+                  duration: 0.4,
+                  ease: [0.25, 0.4, 0.25, 1],
+                }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                {item.label}
+                {underline}
+              </motion.button>
+            );
+          })}
         </div>
 
         <motion.button
@@ -171,18 +201,38 @@ export function Navigation() {
             className="md:hidden bg-[#263747]/95 backdrop-blur-md border-t border-white/10 overflow-hidden"
           >
             <div className="px-6 py-4 space-y-4">
-              {navLinks.map((item, i) => (
-                <motion.button
-                  key={item.label}
-                  onClick={() => scrollToSection(item.href)}
-                  className="block w-full text-left text-white/80 hover:text-[#AD9952] text-lg font-medium py-2"
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: i * 0.1 }}
-                >
-                  {item.label}
-                </motion.button>
-              ))}
+              {navLinks.map((item, i) => {
+                if (item.external) {
+                  return (
+                    <motion.div
+                      key={item.label}
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: i * 0.1 }}
+                    >
+                      <Link
+                        href={item.href}
+                        onClick={() => setMobileMenuOpen(false)}
+                        className="block w-full text-left text-white/80 hover:text-[#AD9952] text-lg font-medium py-2"
+                      >
+                        {item.label}
+                      </Link>
+                    </motion.div>
+                  );
+                }
+                return (
+                  <motion.button
+                    key={item.label}
+                    onClick={() => scrollToSection(item.href)}
+                    className="block w-full text-left text-white/80 hover:text-[#AD9952] text-lg font-medium py-2"
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: i * 0.1 }}
+                  >
+                    {item.label}
+                  </motion.button>
+                );
+              })}
               <motion.button
                 className="w-full bg-[#AD9952] text-[#263747] px-6 py-3 rounded-full font-bold text-sm tracking-wide mt-4"
                 initial={{ opacity: 0, y: 20 }}
