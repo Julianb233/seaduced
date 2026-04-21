@@ -3,6 +3,15 @@
 import { motion, useInView } from "framer-motion";
 import { useState, useRef } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { Instagram, Mail, ShoppingBag, Music } from "lucide-react";
+import {
+  GlassEffect,
+  GlassDock,
+  GlassButton,
+  GlassFilter,
+  type DockIcon,
+} from "@/components/ui/liquid-glass";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -29,6 +38,7 @@ const itemVariants = {
 };
 
 export function Footer() {
+  const router = useRouter();
   const [email, setEmail] = useState("");
   const [isHovering, setIsHovering] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -39,6 +49,29 @@ export function Footer() {
     setIsSubmitting(true);
     setTimeout(() => setIsSubmitting(false), 2000);
   };
+
+  const socialIcons: DockIcon[] = [
+    {
+      icon: <Instagram className="w-8 h-8 text-[#FAFBFB]" strokeWidth={1.5} />,
+      alt: "Instagram",
+      href: "https://instagram.com/seaduced",
+    },
+    {
+      icon: <Music className="w-8 h-8 text-[#FAFBFB]" strokeWidth={1.5} />,
+      alt: "TikTok",
+      href: "https://tiktok.com/@seaduced",
+    },
+    {
+      icon: <Mail className="w-8 h-8 text-[#FAFBFB]" strokeWidth={1.5} />,
+      alt: "Email",
+      href: "mailto:hello@seaducedproducts.com",
+    },
+    {
+      icon: <ShoppingBag className="w-8 h-8 text-[#FAFBFB]" strokeWidth={1.5} />,
+      alt: "Shop",
+      onClick: () => router.push("/shop"),
+    },
+  ];
 
   const footerLinks: { title: string; links: { label: string; href: string }[] }[] = [
     {
@@ -85,7 +118,10 @@ export function Footer() {
       ref={footerRef}
       className="bg-luxe-footer noise-overlay relative pt-16 pb-6 overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto px-6">
+      {/* SVG displacement filter for liquid-glass — mounted once */}
+      <GlassFilter />
+
+      <div className="max-w-7xl mx-auto px-6 relative">
         <motion.div
           initial={{ opacity: 0, y: 60 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -115,60 +151,51 @@ export function Footer() {
           </h2>
         </motion.div>
 
+        {/* Newsletter — liquid-glass panel */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="max-w-xl mx-auto mb-12"
+          className="max-w-xl mx-auto mb-10"
         >
-          <div className="flex flex-col sm:flex-row gap-3">
-            <motion.div className="flex-1 relative" whileFocus={{ scale: 1.02 }}>
-              <motion.input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="your@email.com"
-                aria-label="Email address"
-                className="w-full bg-white/5 border-2 border-white/20 rounded-xl px-4 py-3 text-white placeholder:text-white/40 font-mono text-sm focus:outline-none focus:border-[#AD9952] transition-all duration-300"
-                whileFocus={{ borderColor: "#AD9952" }}
-              />
-              <motion.div
-                className="absolute inset-0 rounded-xl pointer-events-none"
-                animate={
-                  email.length > 0
-                    ? { boxShadow: "0 0 20px rgba(197,165,90,0.25)" }
-                    : { boxShadow: "none" }
-                }
-              />
-            </motion.div>
-            <motion.button
-              className="bg-[#AD9952] text-[#FAFBFB] px-6 py-3 rounded-xl font-bold text-sm tracking-wide whitespace-nowrap relative overflow-hidden"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              transition={{ type: "spring", stiffness: 400, damping: 17 }}
-              onClick={handleSubmit}
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              handleSubmit();
+            }}
+          >
+            <GlassEffect
+              className="rounded-2xl p-2 w-full"
+              style={{ borderRadius: "1rem" }}
             >
-              <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent"
-                initial={{ x: "-100%" }}
-                whileHover={{ x: "100%" }}
-                transition={{ duration: 0.5 }}
-              />
-              <motion.span
-                className="relative z-10"
-                animate={isSubmitting ? { opacity: [1, 0.5, 1] } : {}}
-                transition={{
-                  duration: 0.5,
-                  repeat: isSubmitting ? Number.POSITIVE_INFINITY : 0,
-                }}
-              >
-                {isSubmitting ? "Joining..." : "Join the List"}
-              </motion.span>
-            </motion.button>
-          </div>
+              <div className="flex flex-col sm:flex-row gap-2 w-full items-stretch">
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="your@email.com"
+                  aria-label="Email address"
+                  className="flex-1 bg-transparent px-4 py-3 text-[#FAFBFB] placeholder:text-white/50 font-mono text-sm focus:outline-none"
+                />
+                <GlassButton
+                  type="submit"
+                  className="whitespace-nowrap rounded-xl"
+                  ariaLabel="Join the newsletter"
+                >
+                  <span
+                    className={
+                      isSubmitting ? "opacity-70 animate-pulse" : ""
+                    }
+                  >
+                    {isSubmitting ? "Joining..." : "Join the List"}
+                  </span>
+                </GlassButton>
+              </div>
+            </GlassEffect>
+          </form>
           <motion.p
-            className="text-white/50 font-mono text-xs mt-2 text-center"
+            className="text-white/60 font-mono text-xs mt-3 text-center"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -176,6 +203,17 @@ export function Footer() {
           >
             Get early drops, rituals, and 10% off your first bottle.
           </motion.p>
+        </motion.div>
+
+        {/* Social dock — liquid-glass */}
+        <motion.div
+          className="flex justify-center mb-12"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+        >
+          <GlassDock icons={socialIcons} />
         </motion.div>
 
         <motion.div
@@ -221,49 +259,57 @@ export function Footer() {
           ))}
         </motion.div>
 
+        {/* Copyright row — optional glass wrap */}
         <motion.div
-          className="flex flex-col md:flex-row justify-between items-center pt-6 border-t border-white/10 gap-3"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.5 }}
+          className="pt-6 border-t border-white/10"
         >
-          <motion.div
-            className="flex items-center gap-2"
-            whileHover={{ scale: 1.05 }}
-            transition={{ type: "spring", stiffness: 400, damping: 17 }}
+          <GlassEffect
+            className="rounded-2xl px-6 py-4 w-full"
+            style={{ borderRadius: "1rem" }}
           >
-            <span className="text-xl font-black">
-              <span className="text-white">SEA</span>
-              <span className="text-[#AD9952]">DUCED</span>
-            </span>
-          </motion.div>
+            <div className="flex flex-col md:flex-row justify-between items-center gap-3 w-full">
+              <motion.div
+                className="flex items-center gap-2"
+                whileHover={{ scale: 1.05 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
+              >
+                <span className="text-xl font-black">
+                  <span className="text-white">SEA</span>
+                  <span className="text-[#AD9952]">DUCED</span>
+                </span>
+              </motion.div>
 
-          <p className="text-white/50 font-mono text-xs">
-            &copy; 2026 Seaduced. All rights reserved.
-          </p>
+              <p className="text-white/70 font-mono text-xs">
+                &copy; 2026 Seaduced. All rights reserved.
+              </p>
 
-          <motion.p
-            className="text-white/30 font-mono text-xs cursor-pointer"
-            onHoverStart={() => setIsHovering(true)}
-            onHoverEnd={() => setIsHovering(false)}
-            animate={
-              isHovering
-                ? {
-                    rotate: [0, -5, 5, -5, 5, 0],
-                    scale: [1, 1.1, 1],
-                    color: "#AD9952",
-                  }
-                : {
-                    rotate: 0,
-                    scale: 1,
-                    color: "rgba(255,255,255,0.3)",
-                  }
-            }
-            transition={{ duration: 0.5 }}
-          >
-            made with care
-          </motion.p>
+              <motion.p
+                className="text-white/50 font-mono text-xs cursor-pointer"
+                onHoverStart={() => setIsHovering(true)}
+                onHoverEnd={() => setIsHovering(false)}
+                animate={
+                  isHovering
+                    ? {
+                        rotate: [0, -5, 5, -5, 5, 0],
+                        scale: [1, 1.1, 1],
+                        color: "#AD9952",
+                      }
+                    : {
+                        rotate: 0,
+                        scale: 1,
+                        color: "rgba(255,255,255,0.5)",
+                      }
+                }
+                transition={{ duration: 0.5 }}
+              >
+                made with care
+              </motion.p>
+            </div>
+          </GlassEffect>
         </motion.div>
       </div>
 
