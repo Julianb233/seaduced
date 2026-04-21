@@ -10,6 +10,16 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /* Seaduced brand palette */
+  --color-gold: #C5A55A;
+  --color-gold-dark: #a68a3e;
+  --color-charcoal: #1E1E2E;
+  --color-charcoal-light: #2a2a40;
+  --color-royal: #3B5EAB;
+  --color-royal-dark: #2d4a8a;
+  --color-teal: #1A6B5C;
+  --color-cream: #FDF8F0;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -99,4 +109,23 @@ body {
   opacity: 0.03;
   pointer-events: none;
   animation: grain 8s steps(10) infinite;
+}
+
+/* Gold text gradient utility */
+.text-gradient-gold {
+  background: linear-gradient(135deg, #C5A55A 0%, #E8D5A0 50%, #C5A55A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Custom font utilities */
+@utility font-brand {
+  font-weight: 900;
+  letter-spacing: -0.02em;
+}
+
+@utility font-tagline {
+  font-style: italic;
+  font-weight: 300;
 }
