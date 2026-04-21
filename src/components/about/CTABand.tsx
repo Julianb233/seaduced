@@ -48,7 +48,7 @@ export function CTABand() {
         <div className="overflow-hidden">
           <motion.h2
             className="text-4xl md:text-6xl lg:text-7xl text-[#263747] tracking-tight leading-[1]"
-            style={{ fontFamily: "var(--font-serif), 'Playfair Display', serif", fontWeight: 800 }}
+            style={{ fontFamily: "var(--font-sans)", fontWeight: 800 }}
             initial={{ y: 70, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}

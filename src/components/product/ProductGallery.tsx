@@ -79,8 +79,8 @@ export function ProductGallery() {
             </span>
             <div className="overflow-hidden mt-2">
               <motion.h2
-                className="text-3xl md:text-5xl font-serif text-[#263747] tracking-tight"
-                style={{ fontFamily: "'Playfair Display', serif" }}
+                className="text-3xl md:text-5xl font-black text-[#263747] tracking-tight"
+                style={{ fontFamily: "var(--font-sans)" }}
                 initial={{ y: 80 }}
                 whileInView={{ y: 0 }}
                 viewport={{ once: true }}
@@ -136,8 +136,8 @@ export function ProductGallery() {
                   </div>
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#263747]/80 via-[#263747]/20 to-transparent p-6">
                     <p
-                      className="text-[#FAFBFB] font-serif text-xl md:text-2xl tracking-tight"
-                      style={{ fontFamily: "'Playfair Display', serif" }}
+                      className="text-[#FAFBFB] font-black text-xl md:text-2xl tracking-tight"
+                      style={{ fontFamily: "var(--font-sans)" }}
                     >
                       {slide.caption}
                     </p>

@@ -99,8 +99,8 @@ function CaptionLayer({
         {eyebrow}
       </p>
       <h3
-        className="text-4xl md:text-6xl font-serif text-[#263747] leading-[1] tracking-tight"
-        style={{ fontFamily: "'Playfair Display', serif" }}
+        className="text-4xl md:text-6xl font-black text-[#263747] leading-[1] tracking-tight"
+        style={{ fontFamily: "var(--font-sans)" }}
       >
         {title}
       </h3>

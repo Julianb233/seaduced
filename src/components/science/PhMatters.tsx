@@ -41,7 +41,7 @@ export function PhMatters() {
           <div className="overflow-hidden">
             <motion.h2
               className="text-4xl md:text-6xl leading-[1.05] tracking-tight max-w-3xl mx-auto"
-              style={{ fontFamily: "'Playfair Display', serif" }}
+              style={{ fontFamily: "var(--font-sans)" }}
               initial={{ y: 80, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
@@ -120,7 +120,7 @@ export function PhMatters() {
               <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 whitespace-nowrap">
                 <span
                   className="text-lg text-[#AD9952]"
-                  style={{ fontFamily: "'Playfair Display', serif" }}
+                  style={{ fontFamily: "var(--font-sans)" }}
                 >
                   3.8 – 4.5
                 </span>
@@ -187,7 +187,7 @@ export function PhMatters() {
                 className={`text-4xl mb-2 ${
                   i === 0 ? "text-[#AD9952]" : "text-[#263747]/80"
                 }`}
-                style={{ fontFamily: "'Playfair Display', serif" }}
+                style={{ fontFamily: "var(--font-sans)" }}
               >
                 {c.n}
               </div>

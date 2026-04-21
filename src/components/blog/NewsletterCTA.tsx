@@ -38,7 +38,7 @@ export function NewsletterCTA() {
         </motion.span>
         <motion.h2
           className="text-3xl md:text-5xl text-[#263747] leading-[1.05] tracking-tight mb-5"
-          style={{ fontFamily: "'Playfair Display', serif", fontWeight: 800 }}
+          style={{ fontFamily: "var(--font-sans)", fontWeight: 800 }}
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

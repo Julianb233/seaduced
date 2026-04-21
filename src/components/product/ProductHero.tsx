@@ -67,8 +67,8 @@ export function ProductHero() {
 
           <div className="overflow-hidden">
             <motion.h1
-              className="text-5xl md:text-7xl lg:text-[5.5rem] font-serif text-[#263747] leading-[0.95] tracking-tight"
-              style={{ fontFamily: "'Playfair Display', serif" }}
+              className="text-5xl md:text-7xl lg:text-[5.5rem] font-black text-[#263747] leading-[0.95] tracking-tight"
+              style={{ fontFamily: "var(--font-sans)" }}
               initial={{ y: 80, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, ease: [0.25, 0.4, 0.25, 1] }}
@@ -154,7 +154,7 @@ export function ProductHero() {
             </div>
             <div
               className="text-3xl font-black text-[#AD9952] tracking-tight"
-              style={{ fontFamily: "'Playfair Display', serif" }}
+              style={{ fontFamily: "var(--font-sans)" }}
             >
               92
             </div>
@@ -170,7 +170,7 @@ export function ProductHero() {
             </div>
             <div
               className="text-2xl font-black tracking-tight"
-              style={{ fontFamily: "'Playfair Display', serif" }}
+              style={{ fontFamily: "var(--font-sans)" }}
             >
               3.8&ndash;4.5
             </div>

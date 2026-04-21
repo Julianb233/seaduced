@@ -23,7 +23,7 @@ export function RelatedReading({ posts }: { posts: BlogPost[] }) {
           </span>
           <h2
             className="text-3xl md:text-4xl text-[#263747] tracking-tight mt-2"
-            style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700 }}
+            style={{ fontFamily: "var(--font-sans)", fontWeight: 700 }}
           >
             More from the Journal
           </h2>
@@ -58,7 +58,7 @@ export function RelatedReading({ posts }: { posts: BlogPost[] }) {
                   <h3
                     className="text-lg text-[#263747] leading-tight tracking-tight mt-2 mb-2 group-hover:text-[#325360] transition-colors"
                     style={{
-                      fontFamily: "'Playfair Display', serif",
+                      fontFamily: "var(--font-sans)",
                       fontWeight: 700,
                     }}
                   >

@@ -185,8 +185,8 @@ function BundleGridCard({ bundle, index }: { bundle: Bundle; index: number }) {
         </div>
 
         <h3
-          className="text-xl md:text-2xl font-serif text-[#263747] tracking-tight"
-          style={{ fontFamily: "'Playfair Display', serif" }}
+          className="text-xl md:text-2xl font-black text-[#263747] tracking-tight"
+          style={{ fontFamily: "var(--font-sans)" }}
         >
           {bundle.name}
         </h3>
@@ -199,8 +199,8 @@ function BundleGridCard({ bundle, index }: { bundle: Bundle; index: number }) {
 
         <div className="flex items-baseline gap-2 mt-auto pt-2">
           <span
-            className="text-3xl md:text-4xl font-serif text-[#263747] tracking-tight"
-            style={{ fontFamily: "'Playfair Display', serif" }}
+            className="text-3xl md:text-4xl font-black text-[#263747] tracking-tight"
+            style={{ fontFamily: "var(--font-sans)" }}
           >
             ${bundle.price}
           </span>
@@ -262,8 +262,8 @@ export function PriceBreak() {
           </span>
           <div className="overflow-hidden mt-2">
             <motion.h2
-              className="text-3xl md:text-5xl font-serif text-[#263747] tracking-tight"
-              style={{ fontFamily: "'Playfair Display', serif" }}
+              className="text-3xl md:text-5xl font-black text-[#263747] tracking-tight"
+              style={{ fontFamily: "var(--font-sans)" }}
               initial={{ y: 80 }}
               whileInView={{ y: 0 }}
               viewport={{ once: true }}
@@ -311,8 +311,8 @@ export function PriceBreak() {
                 Every pack, every bottle
               </div>
               <h3
-                className="mt-3 text-2xl md:text-3xl font-serif text-[#263747] tracking-tight"
-                style={{ fontFamily: "'Playfair Display', serif" }}
+                className="mt-3 text-2xl md:text-3xl font-black text-[#263747] tracking-tight"
+                style={{ fontFamily: "var(--font-sans)" }}
               >
                 The same bottle, always.
               </h3>

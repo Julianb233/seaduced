@@ -142,7 +142,7 @@ export function LinkTree() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.15, ease: [0.25, 0.4, 0.25, 1] }}
           className="text-3xl md:text-4xl tracking-[0.12em] text-[#263747] text-center"
-          style={{ fontFamily: "'Playfair Display', serif" }}
+          style={{ fontFamily: "var(--font-sans)" }}
         >
           SEA<span className="text-[#AD9952]">DUCED</span>
         </motion.h1>

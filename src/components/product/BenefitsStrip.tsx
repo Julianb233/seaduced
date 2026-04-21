@@ -78,8 +78,8 @@ export function BenefitsStrip() {
                   <Icon className="w-5 h-5" style={{ color: pill.accent }} />
                 </div>
                 <div
-                  className="text-3xl md:text-4xl font-serif tracking-tight text-[#263747]"
-                  style={{ fontFamily: "'Playfair Display', serif" }}
+                  className="text-3xl md:text-4xl font-black tracking-tight text-[#263747]"
+                  style={{ fontFamily: "var(--font-sans)" }}
                 >
                   {pill.stat}
                 </div>

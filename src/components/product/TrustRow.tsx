@@ -119,8 +119,8 @@ export function TrustRow() {
             Seal of honesty
           </span>
           <h3
-            className="mt-2 text-2xl md:text-3xl font-serif text-[#263747] tracking-tight"
-            style={{ fontFamily: "'Playfair Display', serif" }}
+            className="mt-2 text-2xl md:text-3xl font-black text-[#263747] tracking-tight"
+            style={{ fontFamily: "var(--font-sans)" }}
           >
             What you won&apos;t find, and where we&apos;re from.
           </h3>

@@ -11,7 +11,7 @@ export function FounderNote() {
       {/* Decorative quote mark */}
       <motion.div
         className="absolute top-8 left-6 md:left-20 text-[12rem] md:text-[18rem] leading-none text-[#AD9952]/15 pointer-events-none select-none"
-        style={{ fontFamily: "var(--font-serif), 'Playfair Display', serif", fontWeight: 900 }}
+        style={{ fontFamily: "var(--font-sans)", fontWeight: 900 }}
         initial={{ opacity: 0, scale: 0.8, rotate: -10 }}
         whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
         viewport={{ once: true }}
@@ -37,7 +37,7 @@ export function FounderNote() {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8, ease: [0.25, 0.4, 0.25, 1] }}
           className="text-2xl md:text-4xl lg:text-5xl text-[#263747] leading-[1.2] tracking-tight"
-          style={{ fontFamily: "var(--font-serif), 'Playfair Display', serif", fontWeight: 500 }}
+          style={{ fontFamily: "var(--font-sans)", fontWeight: 500 }}
         >
           I built Seaduced because I couldn&apos;t find a product I trusted to
           put on the parts of me I care about most.

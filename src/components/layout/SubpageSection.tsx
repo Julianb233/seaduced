@@ -29,8 +29,8 @@ export function SubpageSection({
       <div className="max-w-3xl mx-auto px-6">
         {title && (
           <motion.h2
-            className="text-3xl md:text-4xl font-serif mb-8 tracking-tight"
-            style={{ fontFamily: "'Playfair Display', serif" }}
+            className="text-3xl md:text-4xl font-black mb-8 tracking-tight"
+            style={{ fontFamily: "var(--font-sans)" }}
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

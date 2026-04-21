@@ -90,17 +90,17 @@ function TiltCard({
           style={{ backgroundColor: step.accent }}
         />
         <div
-          className="font-serif text-6xl md:text-7xl tracking-tight opacity-80"
+          className="font-black text-6xl md:text-7xl tracking-tight opacity-80"
           style={{
-            fontFamily: "'Playfair Display', serif",
+            fontFamily: "var(--font-sans)",
             color: step.accent,
           }}
         >
           {step.num}
         </div>
         <div
-          className="mt-2 text-2xl md:text-3xl font-serif text-[#263747] tracking-tight"
-          style={{ fontFamily: "'Playfair Display', serif" }}
+          className="mt-2 text-2xl md:text-3xl font-black text-[#263747] tracking-tight"
+          style={{ fontFamily: "var(--font-sans)" }}
         >
           {step.title}
         </div>
@@ -141,8 +141,8 @@ export function HowToUse() {
           </span>
           <div className="overflow-hidden mt-2">
             <motion.h2
-              className="text-3xl md:text-5xl font-serif text-[#263747] tracking-tight"
-              style={{ fontFamily: "'Playfair Display', serif" }}
+              className="text-3xl md:text-5xl font-black text-[#263747] tracking-tight"
+              style={{ fontFamily: "var(--font-sans)" }}
               initial={{ y: 80 }}
               whileInView={{ y: 0 }}
               viewport={{ once: true }}

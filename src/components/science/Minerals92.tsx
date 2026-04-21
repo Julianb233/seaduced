@@ -30,7 +30,7 @@ export function Minerals92() {
               <div className="flex items-baseline gap-4">
                 <div
                   className="text-[140px] md:text-[180px] leading-none tracking-tighter"
-                  style={{ fontFamily: "'Playfair Display', serif" }}
+                  style={{ fontFamily: "var(--font-sans)" }}
                 >
                   92
                 </div>
@@ -61,7 +61,7 @@ export function Minerals92() {
                   >
                     <div
                       className="text-2xl text-[#AD9952]"
-                      style={{ fontFamily: "'Playfair Display', serif" }}
+                      style={{ fontFamily: "var(--font-sans)" }}
                     >
                       {m.el}
                     </div>
@@ -79,7 +79,7 @@ export function Minerals92() {
             <div className="overflow-hidden">
               <motion.h2
                 className="text-4xl md:text-5xl text-[#263747] leading-[1.05] tracking-tight mb-4"
-                style={{ fontFamily: "'Playfair Display', serif" }}
+                style={{ fontFamily: "var(--font-sans)" }}
                 initial={{ y: 80, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: true }}

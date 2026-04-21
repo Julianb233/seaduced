@@ -40,8 +40,8 @@ export function SubpageHeroTeal({
 
         <div className="overflow-hidden">
           <motion.h1
-            className="text-5xl md:text-7xl font-serif text-[#263747] leading-[1] tracking-tight"
-            style={{ fontFamily: "'Playfair Display', serif" }}
+            className="text-5xl md:text-7xl font-black text-[#263747] leading-[1] tracking-tight"
+            style={{ fontFamily: "var(--font-sans)" }}
             initial={{ y: 80, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.7, ease: [0.25, 0.4, 0.25, 1] }}

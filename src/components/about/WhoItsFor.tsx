@@ -63,7 +63,7 @@ export function WhoItsFor() {
           <div className="overflow-hidden">
             <motion.h2
               className="text-4xl md:text-5xl lg:text-6xl text-[#263747] tracking-tight"
-              style={{ fontFamily: "var(--font-serif), 'Playfair Display', serif", fontWeight: 800 }}
+              style={{ fontFamily: "var(--font-sans)", fontWeight: 800 }}
               initial={{ y: 60, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
@@ -115,7 +115,7 @@ export function WhoItsFor() {
               <div>
                 <h3
                   className="text-3xl md:text-4xl text-[#263747] leading-[1.05] tracking-tight mb-4"
-                  style={{ fontFamily: "var(--font-serif), 'Playfair Display', serif", fontWeight: 700 }}
+                  style={{ fontFamily: "var(--font-sans)", fontWeight: 700 }}
                 >
                   {persona.heading}
                 </h3>

@@ -47,8 +47,8 @@ export function Timeline({
         )}
         {title && (
           <motion.h2
-            className="text-3xl md:text-4xl font-serif text-[#263747] tracking-tight mb-12 md:mb-16"
-            style={{ fontFamily: "'Playfair Display', serif" }}
+            className="text-3xl md:text-4xl font-black text-[#263747] tracking-tight mb-12 md:mb-16"
+            style={{ fontFamily: "var(--font-sans)" }}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -95,8 +95,8 @@ export function Timeline({
                   )}
                 </div>
                 <h3
-                  className="text-xl md:text-2xl font-serif text-[#263747] mb-2"
-                  style={{ fontFamily: "'Playfair Display', serif" }}
+                  className="text-xl md:text-2xl font-black text-[#263747] mb-2"
+                  style={{ fontFamily: "var(--font-sans)" }}
                 >
                   {node.title}
                 </h3>

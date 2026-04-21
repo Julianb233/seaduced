@@ -41,7 +41,7 @@ export function SourcingStandards() {
           <div className="overflow-hidden">
             <motion.h2
               className="text-4xl md:text-5xl text-[#263747] leading-[1.05] tracking-tight mb-4"
-              style={{ fontFamily: "'Playfair Display', serif" }}
+              style={{ fontFamily: "var(--font-sans)" }}
               initial={{ y: 80, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
@@ -83,7 +83,7 @@ export function SourcingStandards() {
                 </div>
                 <h3
                   className="text-2xl text-[#263747] mb-3 tracking-tight"
-                  style={{ fontFamily: "'Playfair Display', serif" }}
+                  style={{ fontFamily: "var(--font-sans)" }}
                 >
                   {s.title}
                 </h3>

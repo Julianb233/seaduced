@@ -38,7 +38,7 @@ export function PressQuote() {
 
           <p
             className="text-2xl md:text-4xl text-[#263747] leading-[1.25] tracking-tight"
-            style={{ fontFamily: "var(--font-serif), 'Playfair Display', serif", fontWeight: 500 }}
+            style={{ fontFamily: "var(--font-sans)", fontWeight: 500 }}
           >
             &ldquo;Seaduced treats the body like a landscape worth protecting —
             and the ritual around it like something worth elevating.&rdquo;

@@ -53,8 +53,8 @@ export function ThreeCards() {
             Pick the right inbox
           </span>
           <h2
-            className="text-3xl md:text-4xl font-serif text-[#263747] tracking-tight"
-            style={{ fontFamily: "'Playfair Display', serif" }}
+            className="text-3xl md:text-4xl font-black text-[#263747] tracking-tight"
+            style={{ fontFamily: "var(--font-sans)" }}
           >
             Three ways to reach us.
           </h2>
@@ -82,8 +82,8 @@ export function ThreeCards() {
                     {card.eyebrow}
                   </span>
                   <h3
-                    className="mt-2 text-xl font-serif text-[#263747] leading-tight"
-                    style={{ fontFamily: "'Playfair Display', serif" }}
+                    className="mt-2 text-xl font-black text-[#263747] leading-tight"
+                    style={{ fontFamily: "var(--font-sans)" }}
                   >
                     {card.title}
                   </h3>

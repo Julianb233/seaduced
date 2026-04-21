@@ -17,8 +17,8 @@ export function LimitationOfLiability() {
           Limitation of liability
         </motion.span>
         <motion.h2
-          className="text-3xl md:text-4xl font-serif text-[#263747] tracking-tight mb-6"
-          style={{ fontFamily: "'Playfair Display', serif" }}
+          className="text-3xl md:text-4xl font-black text-[#263747] tracking-tight mb-6"
+          style={{ fontFamily: "var(--font-sans)" }}
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

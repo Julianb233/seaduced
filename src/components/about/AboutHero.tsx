@@ -37,8 +37,8 @@ export function AboutHero() {
 
         <div className="overflow-hidden">
           <motion.h1
-            className="font-serif text-5xl md:text-7xl lg:text-8xl text-[#263747] leading-[0.95] tracking-tight"
-            style={{ fontFamily: "var(--font-serif), 'Playfair Display', serif", fontWeight: 800 }}
+            className="font-black text-5xl md:text-7xl lg:text-8xl text-[#263747] leading-[0.95] tracking-tight"
+            style={{ fontFamily: "var(--font-sans)", fontWeight: 800 }}
             initial={{ y: 80, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, ease: [0.25, 0.4, 0.25, 1] }}

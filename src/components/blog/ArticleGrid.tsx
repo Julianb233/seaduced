@@ -66,7 +66,7 @@ export function ArticleGrid({ posts }: { posts: BlogPost[] }) {
                   <h3
                     className="text-xl md:text-2xl text-[#263747] leading-tight tracking-tight mb-3 group-hover:text-[#325360] transition-colors"
                     style={{
-                      fontFamily: "'Playfair Display', serif",
+                      fontFamily: "var(--font-sans)",
                       fontWeight: 700,
                     }}
                   >

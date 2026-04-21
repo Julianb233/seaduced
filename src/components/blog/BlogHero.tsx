@@ -29,7 +29,7 @@ export function BlogHero() {
         <div className="overflow-hidden">
           <motion.h1
             className="text-5xl md:text-7xl text-[#263747] leading-[1] tracking-tight"
-            style={{ fontFamily: "'Playfair Display', serif", fontWeight: 800 }}
+            style={{ fontFamily: "var(--font-sans)", fontWeight: 800 }}
             initial={{ y: 80, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.7, ease: [0.25, 0.4, 0.25, 1] }}
