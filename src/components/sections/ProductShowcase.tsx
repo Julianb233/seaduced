@@ -217,9 +217,20 @@ function BundleCard({ bundle, index }: { bundle: Bundle; index: number }) {
       >
         {/* Featured pill */}
         {bundle.featured ? (
-          <div className="absolute top-4 right-4 z-10 px-3 py-1 rounded-full bg-[#AD9952] text-white font-mono text-[10px] tracking-[0.25em] uppercase shadow-md shadow-[#AD9952]/40">
+          <div className="absolute top-4 left-4 z-10 px-3 py-1 rounded-full bg-[#AD9952] text-white font-mono text-[10px] tracking-[0.25em] uppercase shadow-md shadow-[#AD9952]/40">
             Best Value
           </div>
+        ) : null}
+
+        {/* Savings pill */}
+        {bundle.savings ? (
+          <motion.div
+            className="absolute top-4 right-4 z-10 -rotate-3 px-3 py-1 rounded-full bg-[#AD9952] text-[#FAFBFB] text-sm font-bold shadow-lg shadow-[#AD9952]/40"
+            animate={{ scale: [1, 1.08, 1] }}
+            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+          >
+            {bundle.savings}
+          </motion.div>
         ) : null}
 
         {/* Visual well */}
@@ -236,11 +247,6 @@ function BundleCard({ bundle, index }: { bundle: Bundle; index: number }) {
             >
               {bundle.eyebrow}
             </span>
-            {bundle.savings ? (
-              <span className="font-mono text-[10px] tracking-widest uppercase text-[#325360] bg-[#AACAD1]/50 px-2 py-1 rounded-full">
-                {bundle.savings}
-              </span>
-            ) : null}
           </div>
 
           <h3

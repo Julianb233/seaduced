@@ -21,7 +21,6 @@
 
 import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import Image from "next/image";
-import gsap from "gsap";
 
 // prefers-reduced-motion subscription (SSR-safe via useSyncExternalStore)
 const reducedMotionQuery = "(prefers-reduced-motion: reduce)";
@@ -39,11 +38,10 @@ function getReducedMotionServerSnapshot() {
   return false;
 }
 
-// Try the isolated bottle first; fall back to hero-bottle.png if the sibling
-// agent's deliverable hasn't landed yet. Both paths are validated at build time
-// via Next's Image component, which will log a 404 if the primary is missing.
-// We detect at mount so we don't ship a hard dependency on a file that may not
-// exist yet.
+// Try the high-res isolated bottle first, then standard isolated, then hero fallback.
+// HEAD probes upgrade the src at mount; we default to the standard isolated PNG
+// which is now guaranteed to exist in public/images/.
+const BOTTLE_HIGHRES = "/images/bottle-isolated-lg.png";
 const BOTTLE_PRIMARY = "/images/bottle-isolated.png";
 const BOTTLE_FALLBACK = "/images/hero-bottle.png";
 
@@ -62,60 +60,90 @@ export function HeroBottleAnimation() {
     getReducedMotionSnapshot,
     getReducedMotionServerSnapshot
   );
-  const [bottleSrc, setBottleSrc] = useState<string>(BOTTLE_FALLBACK);
+  // Default to the standard isolated bottle (guaranteed present). Probe upgrades
+  // to the high-res lg variant when available, and falls back to hero-bottle
+  // only if both isolated variants vanish.
+  const [bottleSrc, setBottleSrc] = useState<string>(BOTTLE_PRIMARY);
 
-  // Probe for the isolated bottle; fall back if absent
   useEffect(() => {
     if (typeof window === "undefined") return;
     let cancelled = false;
-    fetch(BOTTLE_PRIMARY, { method: "HEAD" })
-      .then((res) => {
-        if (!cancelled && res.ok) setBottleSrc(BOTTLE_PRIMARY);
-      })
-      .catch(() => {
-        // keep fallback
-      });
+
+    const probe = async () => {
+      // Prefer the high-res variant when available
+      try {
+        const hi = await fetch(BOTTLE_HIGHRES, { method: "HEAD" });
+        if (!cancelled && hi.ok) {
+          setBottleSrc(BOTTLE_HIGHRES);
+          return;
+        }
+      } catch {
+        // ignore
+      }
+      // Confirm the standard isolated bottle; fall back to hero only if missing
+      try {
+        const std = await fetch(BOTTLE_PRIMARY, { method: "HEAD" });
+        if (!cancelled) {
+          setBottleSrc(std.ok ? BOTTLE_PRIMARY : BOTTLE_FALLBACK);
+        }
+      } catch {
+        if (!cancelled) setBottleSrc(BOTTLE_FALLBACK);
+      }
+    };
+
+    probe();
     return () => {
       cancelled = true;
     };
   }, []);
 
-  // GSAP timeline
+  // GSAP timeline — gsap is dynamically imported so the reduced-motion fallback
+  // never loads it into the bundle's initial runtime path.
   useEffect(() => {
     if (reducedMotion) return;
     if (!bottleRef.current || !ribbonRef.current) return;
 
-    const ribbon = ribbonRef.current;
-    const ribbonHighlight = ribbonHighlightRef.current;
-    const mossPaths = mossRefs.current.filter(Boolean) as SVGPathElement[];
-    const droplets = dropletRefs.current.filter(Boolean) as SVGCircleElement[];
+    let tl: gsap.core.Timeline | null = null;
+    let cancelled = false;
 
-    // Prime path reveals
-    const ribbonLen = ribbon.getTotalLength();
-    ribbon.style.strokeDasharray = `${ribbonLen}`;
-    ribbon.style.strokeDashoffset = `${ribbonLen}`;
-    ribbon.style.opacity = "0";
+    const run = async () => {
+      const gsapMod = await import("gsap");
+      if (cancelled) return;
+      const gsap = gsapMod.default;
 
-    if (ribbonHighlight) {
-      const hlLen = ribbonHighlight.getTotalLength();
-      ribbonHighlight.style.strokeDasharray = `${hlLen}`;
-      ribbonHighlight.style.strokeDashoffset = `${hlLen}`;
-      ribbonHighlight.style.opacity = "0";
-    }
+      if (!bottleRef.current || !ribbonRef.current) return;
 
-    const mossLengths = mossPaths.map((p) => p.getTotalLength());
-    mossPaths.forEach((p, i) => {
-      p.style.strokeDasharray = `${mossLengths[i]}`;
-      p.style.strokeDashoffset = `${mossLengths[i]}`;
-      p.style.opacity = "0";
-    });
+      const ribbon = ribbonRef.current;
+      const ribbonHighlight = ribbonHighlightRef.current;
+      const mossPaths = mossRefs.current.filter(Boolean) as SVGPathElement[];
+      const droplets = dropletRefs.current.filter(Boolean) as SVGCircleElement[];
 
-    gsap.set(droplets, { scale: 0, opacity: 0, transformOrigin: "50% 50%" });
-    gsap.set(bottleRef.current, { y: 30, opacity: 0, scale: 0.96, rotation: 0 });
-    if (pumpRef.current) gsap.set(pumpRef.current, { y: 0 });
-    if (glowRef.current) gsap.set(glowRef.current, { opacity: 0.35, scale: 0.8 });
+      // Prime path reveals
+      const ribbonLen = ribbon.getTotalLength();
+      ribbon.style.strokeDasharray = `${ribbonLen}`;
+      ribbon.style.strokeDashoffset = `${ribbonLen}`;
+      ribbon.style.opacity = "0";
 
-    const tl = gsap.timeline({ repeat: -1, repeatDelay: 0.4 });
+      if (ribbonHighlight) {
+        const hlLen = ribbonHighlight.getTotalLength();
+        ribbonHighlight.style.strokeDasharray = `${hlLen}`;
+        ribbonHighlight.style.strokeDashoffset = `${hlLen}`;
+        ribbonHighlight.style.opacity = "0";
+      }
+
+      const mossLengths = mossPaths.map((p) => p.getTotalLength());
+      mossPaths.forEach((p, i) => {
+        p.style.strokeDasharray = `${mossLengths[i]}`;
+        p.style.strokeDashoffset = `${mossLengths[i]}`;
+        p.style.opacity = "0";
+      });
+
+      gsap.set(droplets, { scale: 0, opacity: 0, transformOrigin: "50% 50%" });
+      gsap.set(bottleRef.current, { y: 30, opacity: 0, scale: 0.96, rotation: 0 });
+      if (pumpRef.current) gsap.set(pumpRef.current, { y: 0 });
+      if (glowRef.current) gsap.set(glowRef.current, { opacity: 0.35, scale: 0.8 });
+
+      tl = gsap.timeline({ repeat: -1, repeatDelay: 0.4 });
 
     // 0.0 - 1.0 : entrance
     tl.to(
@@ -262,17 +290,21 @@ export function HeroBottleAnimation() {
       );
     }
 
-    // 4.8 - 6.0 : still + gentle breath, then reset droplets for next loop
-    tl.to(
-      bottleRef.current,
-      { y: -3, duration: 0.6, ease: "sine.inOut", yoyo: true, repeat: 1 },
-      4.8
-    );
-    // Reset droplet y offset for next loop (without animating visibly)
-    tl.set(droplets, { y: 0, scale: 0, opacity: 0 }, 5.9);
+      // 4.8 - 6.0 : still + gentle breath, then reset droplets for next loop
+      tl.to(
+        bottleRef.current,
+        { y: -3, duration: 0.6, ease: "sine.inOut", yoyo: true, repeat: 1 },
+        4.8
+      );
+      // Reset droplet y offset for next loop (without animating visibly)
+      tl.set(droplets, { y: 0, scale: 0, opacity: 0 }, 5.9);
+    };
+
+    run();
 
     return () => {
-      tl.kill();
+      cancelled = true;
+      tl?.kill();
     };
   }, [reducedMotion]);
 
