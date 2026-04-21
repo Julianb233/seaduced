@@ -125,13 +125,11 @@ export function ParallaxSplash() {
   return (
     <section
       ref={containerRef}
-      className="relative bg-[#AACAD1]"
+      className="bg-luxe-teal noise-overlay relative"
       style={{ height: `${FRAMES.length * 100}vh` }}
       aria-label="Seaduced product story — parallax"
     >
       <div className="sticky top-0 h-screen w-full overflow-hidden">
-        {/* Soft nautical gradient behind frames — light teal primary with subtle cream mid-highlight */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#AACAD1] via-[#FDF8F0]/30 to-[#AACAD1]" />
 
         {/* Frame stack */}
         {FRAMES.map((frame, i) => (

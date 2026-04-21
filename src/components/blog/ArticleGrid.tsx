@@ -24,7 +24,7 @@ const cardVariants = {
 
 export function ArticleGrid({ posts }: { posts: BlogPost[] }) {
   return (
-    <section className="bg-[#AACAD1] pb-20 md:pb-28 pt-8">
+    <section className=" relative bg-luxe-teal noise-overlay pb-20 md:pb-28 pt-8 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"

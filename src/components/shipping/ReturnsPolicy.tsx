@@ -23,7 +23,7 @@ const points = [
 
 export function ReturnsPolicy() {
   return (
-    <section className="bg-[#263747] py-20 md:py-28 relative overflow-hidden">
+    <section className="bg-luxe-deep noise-overlay text-[#263747] py-20 md:py-28 relative overflow-hidden">
       <motion.div
         className="absolute -right-24 top-1/2 -translate-y-1/2 w-96 h-96 rounded-full bg-[#AD9952]/8 blur-3xl pointer-events-none"
         animate={{ x: [0, -20, 0], scale: [1, 1.1, 1] }}
@@ -40,7 +40,7 @@ export function ReturnsPolicy() {
           Returns policy
         </motion.span>
         <motion.h2
-          className="text-3xl md:text-4xl font-serif text-[#FAFBFB] tracking-tight mb-4"
+          className="text-3xl md:text-4xl font-serif text-[#263747] tracking-tight mb-4"
           style={{ fontFamily: "'Playfair Display', serif" }}
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -50,7 +50,7 @@ export function ReturnsPolicy() {
           If something is not right, we will make it right.
         </motion.h2>
         <motion.p
-          className="text-[#FAFBFB]/75 max-w-2xl text-base md:text-lg leading-relaxed mb-10"
+          className="text-[#263747]/75 max-w-2xl text-base md:text-lg leading-relaxed mb-10"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -66,7 +66,7 @@ export function ReturnsPolicy() {
             return (
               <motion.div
                 key={p.title}
-                className="rounded-2xl bg-[#FAFBFB]/5 border border-[#FAFBFB]/12 p-6 backdrop-blur-sm"
+                className="rounded-2xl bg-white/55 backdrop-blur-md border border-white/65 p-6 backdrop-blur-sm"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-60px" }}
@@ -75,10 +75,10 @@ export function ReturnsPolicy() {
                 <div className="w-11 h-11 rounded-full bg-[#AD9952]/15 flex items-center justify-center mb-4">
                   <Icon className="w-5 h-5 text-[#AD9952]" />
                 </div>
-                <h3 className="text-lg font-semibold text-[#FAFBFB] mb-2">
+                <h3 className="text-lg font-semibold text-[#263747] mb-2">
                   {p.title}
                 </h3>
-                <p className="text-sm text-[#FAFBFB]/75 leading-relaxed">
+                <p className="text-sm text-[#263747]/75 leading-relaxed">
                   {p.body}
                 </p>
               </motion.div>

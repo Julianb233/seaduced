@@ -6,7 +6,7 @@ import { ShareRail } from "./ShareRail";
 
 export function ArticleBody({ post }: { post: BlogPost }) {
   return (
-    <section className="bg-[#FDF8F0] py-16 md:py-24">
+    <section className="relative bg-luxe-cream noise-overlay py-16 md:py-24 overflow-hidden">
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid md:grid-cols-[72px_minmax(0,1fr)] gap-8">
           <ShareRail title={post.title} />

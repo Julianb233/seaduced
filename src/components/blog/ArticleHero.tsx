@@ -6,7 +6,7 @@ import type { BlogPost } from "@/lib/blog-posts";
 
 export function ArticleHero({ post }: { post: BlogPost }) {
   return (
-    <section className="relative bg-[#AACAD1] pt-32 pb-12 md:pt-40 md:pb-16 overflow-hidden noise-overlay">
+    <section className="relative bg-luxe-teal noise-overlay pt-32 pb-12 md:pt-40 md:pb-16 overflow-hidden noise-overlay">
       <div className="absolute inset-0 bg-gradient-to-br from-[#AACAD1] via-[#FDF8F0]/30 to-[#AACAD1]" />
       <div className="relative max-w-4xl mx-auto px-6">
         <motion.div

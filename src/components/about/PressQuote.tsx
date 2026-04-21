@@ -12,7 +12,7 @@ import { motion } from "framer-motion";
  */
 export function PressQuote() {
   return (
-    <section className="relative py-20 md:py-24 bg-[#AACAD1]">
+    <section className=" relative py-20 md:py-24 bg-luxe-teal noise-overlay overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-[#AACAD1] via-[#AACAD1] to-[#AACAD1]" />
 
       <div className="relative z-10 max-w-4xl mx-auto px-6">

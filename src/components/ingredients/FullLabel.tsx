@@ -17,7 +17,7 @@ const INCI_LIST = [
 
 export function FullLabel() {
   return (
-    <section className="bg-[#FDF8F0] py-24 md:py-32">
+    <section className="relative bg-luxe-cream noise-overlay py-24 md:py-32 overflow-hidden">
       <div className="max-w-3xl mx-auto px-6">
         <div className="text-center mb-10">
           <div className="overflow-hidden">

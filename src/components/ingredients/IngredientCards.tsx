@@ -54,7 +54,7 @@ const INGREDIENTS = [
 
 export function IngredientCards() {
   return (
-    <section className="bg-[#FDF8F0] py-24 md:py-32">
+    <section className="relative bg-luxe-cream noise-overlay py-24 md:py-32 overflow-hidden">
       <div className="max-w-5xl mx-auto px-6">
         <div className="text-center mb-14">
           <div className="overflow-hidden">

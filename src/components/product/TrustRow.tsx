@@ -106,7 +106,7 @@ const trust: Trust[] = [
 
 export function TrustRow() {
   return (
-    <section className="relative py-16 md:py-20 bg-[#FDF8F0]">
+    <section className="relative py-16 md:py-20 bg-luxe-cream noise-overlay overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
           className="text-center mb-10"

@@ -25,9 +25,10 @@ Seaduced is a natural intimate wellness brand. The core product is a sea moss-ba
 
 ## Final logo (2026-04-21)
 
-Canonical logo is a mermaid COUPLE intertwined forming the S — supersedes the single-mermaid in the Aug 2024 V2 label comp PDF. Two variants saved:
+Canonical logo is a mermaid COUPLE intertwined forming the S — supersedes the single-mermaid in the Aug 2024 V2 label comp PDF. Variants saved:
+- `public/brand/seaduced-logo-blue-seamoss.png` / `.webp` — **PRIMARY** (teal/aqua sea-moss couple on transparent, matches bottle blue palette)
 - `public/brand/seaduced-logo-white-royal.jpg` (white couple on royal)
-- `public/brand/seaduced-logo-green-seamoss.png` (green sea-moss-textured couple on transparent)
+- `public/brand/seaduced-logo-green-seamoss.png` (archive — Gina's original green sea-moss-textured couple on transparent)
 
 ## Deployment
 

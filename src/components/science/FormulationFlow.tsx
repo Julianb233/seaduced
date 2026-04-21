@@ -32,7 +32,7 @@ const STEPS = [
 
 export function FormulationFlow() {
   return (
-    <section className="bg-[#FDF8F0] py-24 md:py-32 relative">
+    <section className="bg-luxe-cream noise-overlay py-24 md:py-32 relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
           <div className="overflow-hidden">

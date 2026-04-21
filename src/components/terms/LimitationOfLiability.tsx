@@ -5,7 +5,7 @@ import { Scale } from "lucide-react";
 
 export function LimitationOfLiability() {
   return (
-    <section className="bg-[#FDF8F0] py-20 md:py-28">
+    <section className="relative bg-luxe-cream noise-overlay py-20 md:py-28 overflow-hidden">
       <div className="max-w-3xl mx-auto px-6">
         <motion.span
           className="block font-mono text-xs tracking-[0.3em] uppercase text-[#325360] mb-3"

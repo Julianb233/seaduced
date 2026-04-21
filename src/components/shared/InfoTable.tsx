@@ -21,7 +21,7 @@ export function InfoTable({
   caption?: string;
 }) {
   return (
-    <section className="bg-[#AACAD1] py-20 md:py-28">
+    <section className=" relative bg-luxe-teal noise-overlay py-20 md:py-28 overflow-hidden">
       <div className="max-w-4xl mx-auto px-6">
         {eyebrow && (
           <motion.span

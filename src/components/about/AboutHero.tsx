@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export function AboutHero() {
   return (
-    <section className="relative min-h-[75vh] flex items-center justify-center overflow-hidden noise-overlay pt-32 pb-24 bg-[#AACAD1]">
+    <section className="relative min-h-[75vh] flex items-center justify-center overflow-hidden noise-overlay pt-32 pb-24 bg-luxe-teal noise-overlay">
       {/* Light teal primary + subtle cream-mist gradient (secondary accent) */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#AACAD1] via-[#FDF8F0]/25 to-[#AACAD1]" />
 

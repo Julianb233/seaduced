@@ -127,7 +127,7 @@ export function LinkTree() {
           className="mb-4"
         >
           <Image
-            src="/brand/seaduced-logo-green-seamoss.png"
+            src="/brand/seaduced-logo-blue-seamoss.png"
             alt="Seaduced"
             width={96}
             height={96}

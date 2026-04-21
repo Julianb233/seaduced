@@ -238,7 +238,7 @@ function BundleGridCard({ bundle, index }: { bundle: Bundle; index: number }) {
 
 export function PriceBreak() {
   return (
-    <section id="price" className="relative py-20 md:py-28 bg-[#AACAD1] overflow-hidden">
+    <section id="price" className="relative py-20 md:py-28 bg-luxe-teal noise-overlay overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-[#AACAD1] via-[#FDF8F0]/30 to-[#AACAD1]" />
       <motion.div
         className="absolute top-16 right-[10%] w-72 h-72 rounded-full bg-[#AD9952]/15 blur-3xl"

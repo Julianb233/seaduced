@@ -63,7 +63,7 @@ export function ProductGallery() {
   }, [emblaApi]);
 
   return (
-    <section id="gallery" className="relative bg-[#AACAD1] py-20 md:py-28 overflow-hidden">
+    <section id="gallery" className="relative bg-luxe-teal noise-overlay py-20 md:py-28 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-[#AACAD1] via-[#FDF8F0]/30 to-[#AACAD1]" />
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         <motion.div

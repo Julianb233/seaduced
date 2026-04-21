@@ -91,8 +91,8 @@ function FeatureCard({ feature, index }: { feature: (typeof features)[0]; index:
         }}
       />
 
-      {/* Card */}
-      <div className="relative bg-[#1a2a3a] rounded-2xl p-5 border border-white/10 overflow-hidden h-full">
+      {/* Glass card */}
+      <div className="glass-card relative rounded-2xl p-5 overflow-hidden h-full">
         {/* Shine effect on hover */}
         <motion.div
           className="absolute inset-0 opacity-0 group-hover:opacity-100"
@@ -101,8 +101,8 @@ function FeatureCard({ feature, index }: { feature: (typeof features)[0]; index:
             isHovered
               ? {
                   background: [
-                    "linear-gradient(105deg, transparent 20%, rgba(255,255,255,0.03) 25%, transparent 30%)",
-                    "linear-gradient(105deg, transparent 70%, rgba(255,255,255,0.03) 75%, transparent 80%)",
+                    "linear-gradient(105deg, transparent 20%, rgba(255,255,255,0.25) 25%, transparent 30%)",
+                    "linear-gradient(105deg, transparent 70%, rgba(255,255,255,0.25) 75%, transparent 80%)",
                   ],
                 }
               : {}
@@ -115,7 +115,7 @@ function FeatureCard({ feature, index }: { feature: (typeof features)[0]; index:
           {/* Icon with pulse animation */}
           <motion.div
             className="w-10 h-10 rounded-xl flex items-center justify-center mb-4 relative"
-            style={{ backgroundColor: `${feature.accent}20` }}
+            style={{ backgroundColor: `${feature.accent}22` }}
             whileHover={{ scale: 1.1 }}
             transition={{ type: "spring", stiffness: 400, damping: 17 }}
           >
@@ -125,7 +125,7 @@ function FeatureCard({ feature, index }: { feature: (typeof features)[0]; index:
               initial={{ opacity: 0, scale: 0.8 }}
               animate={
                 isHovered
-                  ? { opacity: [0.2, 0.4, 0.2], scale: [1, 1.2, 1] }
+                  ? { opacity: [0.15, 0.3, 0.15], scale: [1, 1.2, 1] }
                   : { opacity: 0, scale: 0.8 }
               }
               transition={{ duration: 1.5, repeat: Number.POSITIVE_INFINITY }}
@@ -136,7 +136,7 @@ function FeatureCard({ feature, index }: { feature: (typeof features)[0]; index:
           {/* Title with count-up feel */}
           <div className="flex-1">
             <motion.div
-              className="text-3xl font-black tracking-tight text-white"
+              className="text-3xl font-black tracking-tight text-[#325360]"
               initial={{ opacity: 0, scale: 0.5 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
@@ -147,16 +147,16 @@ function FeatureCard({ feature, index }: { feature: (typeof features)[0]; index:
                 delay: 0.2 + index * 0.1,
               }}
             >
-              <span style={{ color: feature.accent }}>{feature.title}</span>
+              <span style={{ color: feature.accent === "#AACAD1" ? "#325360" : feature.accent }}>{feature.title}</span>
             </motion.div>
-            <h3 className="text-sm font-semibold text-white mt-1">{feature.subtitle}</h3>
-            <p className="text-xs text-white/60 mt-1 font-mono">{feature.description}</p>
+            <h3 className="text-sm font-semibold text-[#263747] mt-1">{feature.subtitle}</h3>
+            <p className="text-xs text-[#263747]/70 mt-1 font-mono">{feature.description}</p>
           </div>
 
           {/* Bottom accent line */}
           <motion.div
             className="h-[2px] rounded-full mt-4"
-            style={{ backgroundColor: feature.accent }}
+            style={{ backgroundColor: feature.accent === "#AACAD1" ? "#325360" : feature.accent }}
             initial={{ scaleX: 0, originX: 0 }}
             whileInView={{ scaleX: 1 }}
             viewport={{ once: true }}
@@ -177,9 +177,7 @@ export function BenefitsBento() {
   const isInView = useInView(ref, { once: true, margin: "-50px" });
 
   return (
-    <section id="benefits" className="relative py-16 bg-[#263747] overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-[#263747] via-[#1a2a3a] to-[#263747]" />
-
+    <section id="benefits" className="bg-luxe-deep noise-overlay relative py-16 overflow-hidden">
       <div ref={ref} className="max-w-5xl mx-auto px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0 }}
@@ -198,7 +196,7 @@ export function BenefitsBento() {
 
           <div className="overflow-hidden mt-2">
             <motion.h2
-              className="text-3xl md:text-4xl font-black text-white tracking-tight"
+              className="text-3xl md:text-4xl font-black text-[#263747] tracking-tight"
               initial={{ y: 60 }}
               animate={isInView ? { y: 0 } : { y: 60 }}
               transition={{ duration: 0.6, ease: [0.25, 0.4, 0.25, 1], delay: 0.15 }}

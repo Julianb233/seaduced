@@ -82,7 +82,7 @@ export function Footer() {
   return (
     <footer
       ref={footerRef}
-      className="relative bg-[#263747] pt-16 pb-6 overflow-hidden"
+      className="bg-luxe-footer noise-overlay relative pt-16 pb-6 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-6">
         <motion.div

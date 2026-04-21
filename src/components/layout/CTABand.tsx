@@ -17,8 +17,7 @@ export function CTABand({
   secondary?: { label: string; href: string };
 }) {
   return (
-    <section className="bg-[#AACAD1] py-24 md:py-32 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-[#AACAD1] via-[#FDF8F0]/40 to-[#AACAD1]" />
+    <section className="bg-luxe-teal noise-overlay py-24 md:py-32 relative overflow-hidden">
       <motion.div
         className="absolute -top-24 -right-20 w-96 h-96 rounded-full bg-[#AD9952]/10 blur-3xl"
         animate={{ x: [0, 20, 0], y: [0, -15, 0] }}
