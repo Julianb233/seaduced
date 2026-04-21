@@ -22,16 +22,14 @@ export function CTABand() {
 
   return (
     <section className="bg-luxe-deep noise-overlay text-[#263747] relative py-24 md:py-32 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-[#263747] via-[#1a2a3a] to-[#263747]" />
-
       {/* Ambient color blobs */}
       <motion.div
-        className="absolute -top-20 left-1/4 w-96 h-96 rounded-full bg-[#6793A0]/20 blur-[100px]"
+        className="absolute -top-20 left-1/4 w-96 h-96 rounded-full bg-[#6793A0]/22 blur-[100px]"
         animate={{ x: [0, 40, 0], scale: [1, 1.1, 1] }}
         transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }}
       />
       <motion.div
-        className="absolute -bottom-20 right-1/4 w-96 h-96 rounded-full bg-[#AD9952]/15 blur-[100px]"
+        className="absolute -bottom-20 right-1/4 w-96 h-96 rounded-full bg-[#AD9952]/18 blur-[100px]"
         animate={{ x: [0, -40, 0], scale: [1, 1.15, 1] }}
         transition={{ duration: 16, repeat: Infinity, ease: "easeInOut" }}
       />
@@ -120,7 +118,7 @@ export function CTABand() {
           <motion.p
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="mt-5 font-mono text-xs tracking-[0.2em] uppercase text-[#AACAD1]"
+            className="mt-5 font-mono text-xs tracking-[0.2em] uppercase text-[#325360]"
           >
             You&apos;re in. We&apos;ll be in touch.
           </motion.p>
