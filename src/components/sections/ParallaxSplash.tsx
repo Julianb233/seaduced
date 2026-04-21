@@ -7,7 +7,6 @@ import Image from "next/image";
 const FRAMES = [
   { src: "/images/parallax/f1-mist.jpg", alt: "Seaduced bottle emerging from sea mist", eyebrow: "From the sea", title: "Emerge." },
   { src: "/images/parallax/f2-beauty.jpg", alt: "Seaduced bottle at rest on cream marble", eyebrow: "Naturally intimate", title: "At rest." },
-  { src: "/images/parallax/f3-primed.jpg", alt: "Seaduced bottle with gold halo on the pump", eyebrow: "Ready", title: "Primed." },
   { src: "/images/parallax/f4-bead.jpg", alt: "Seaduced bottle with first cream bead at the nozzle", eyebrow: "Begin", title: "A single bead." },
   { src: "/images/parallax/f5-stream.jpg", alt: "Seaduced cream stream arcing with sea-moss filaments", eyebrow: "Moment", title: "The pour." },
   { src: "/images/parallax/f6-splash.jpg", alt: "Seaduced peak splash with sea-moss strands", eyebrow: "Peak", title: "Naturally seaduced." },
@@ -126,13 +125,13 @@ export function ParallaxSplash() {
   return (
     <section
       ref={containerRef}
-      className="relative bg-[#FDF8F0]"
+      className="relative bg-[#AACAD1]"
       style={{ height: `${FRAMES.length * 100}vh` }}
       aria-label="Seaduced product story — parallax"
     >
       <div className="sticky top-0 h-screen w-full overflow-hidden">
-        {/* Soft nautical gradient behind frames */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#FDF8F0] via-[#AACAD1]/25 to-[#FDF8F0]" />
+        {/* Soft nautical gradient behind frames — light teal primary with subtle cream mid-highlight */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#AACAD1] via-[#FDF8F0]/30 to-[#AACAD1]" />
 
         {/* Frame stack */}
         {FRAMES.map((frame, i) => (

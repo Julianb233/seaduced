@@ -32,7 +32,11 @@
   --royal: #263747;
   --ocean: #325360;
   --teal: #6793A0;
+  --aqua-pale: #AACAD1;
   --cream: #FDF8F0;
+  /* Primary light background (2026-04-21: promoted from cream to light teal per Julian) */
+  --primary-light-bg: #AACAD1;
+  --accent-light-bg: #FDF8F0;
 }
 
 .dark {
@@ -88,6 +92,7 @@
   --color-royal: var(--royal);
   --color-ocean: var(--ocean);
   --color-teal: var(--teal);
+  --color-aqua-pale: var(--aqua-pale);
   --color-cream: var(--cream);
 }
 

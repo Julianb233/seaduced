@@ -60,10 +60,10 @@ export function Hero() {
     <section
       id="hero"
       ref={ref}
-      className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-[#FDF8F0] noise-overlay"
+      className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-[#AACAD1] noise-overlay"
     >
-      {/* Subtle gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#FDF8F0] via-[#AD9952]/10 to-[#FDF8F0]" />
+      {/* Subtle gradient background — light teal with cream mid-highlight */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#AACAD1] via-[#FDF8F0]/40 to-[#AACAD1]" />
 
       <motion.div
         className="absolute top-20 left-10 w-24 h-24 rounded-full bg-[#AD9952]/20 blur-3xl"
