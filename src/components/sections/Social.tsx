@@ -62,7 +62,7 @@ export function Social() {
   const isInView = useInView(ref, { once: true, margin: "-50px" });
 
   return (
-    <section id="community" className="relative py-16 bg-gradient-to-br from-[#FDF8F0] via-[#AACAD1]/20 to-[#FDF8F0] overflow-hidden">
+    <section id="community" className="relative py-16 bg-gradient-to-br from-[#AACAD1] via-[#FDF8F0]/30 to-[#AACAD1] overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 40 }}

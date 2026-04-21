@@ -15,15 +15,15 @@ export function SubpageHero({
   children?: ReactNode;
 }) {
   return (
-    <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden noise-overlay pt-32 pb-20">
-      <div className="absolute inset-0 bg-gradient-to-br from-[#FDF8F0] via-[#AD9952]/5 to-[#FDF8F0]" />
+    <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden noise-overlay pt-32 pb-20 bg-[#AACAD1]">
+      <div className="absolute inset-0 bg-gradient-to-br from-[#AACAD1] via-[#FDF8F0]/30 to-[#AACAD1]" />
       <motion.div
-        className="absolute top-24 left-12 w-32 h-32 rounded-full bg-[#AD9952]/15 blur-3xl"
+        className="absolute top-24 left-12 w-32 h-32 rounded-full bg-[#6793A0]/25 blur-3xl"
         animate={{ x: [0, 30, 0], y: [0, -20, 0], scale: [1, 1.1, 1] }}
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
       />
       <motion.div
-        className="absolute bottom-16 right-16 w-40 h-40 rounded-full bg-[#263747]/10 blur-3xl"
+        className="absolute bottom-16 right-16 w-40 h-40 rounded-full bg-[#325360]/15 blur-3xl"
         animate={{ x: [0, -30, 0], y: [0, 20, 0], scale: [1, 1.15, 1] }}
         transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
       />
