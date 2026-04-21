@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <main className="bg-[#AACAD1]">
+    <main className="bg-[#AACAD1] overflow-x-hidden">
       <AboutHero />
       <OriginStory />
       <ValuesGrid />
