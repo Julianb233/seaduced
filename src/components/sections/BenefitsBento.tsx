@@ -92,7 +92,7 @@ function FeatureCard({ feature, index }: { feature: (typeof features)[0]; index:
       />
 
       {/* Card */}
-      <div className="relative bg-[#2a2a3e] rounded-2xl p-5 border border-white/10 overflow-hidden h-full">
+      <div className="relative bg-[#1a2a3a] rounded-2xl p-5 border border-white/10 overflow-hidden h-full">
         {/* Shine effect on hover */}
         <motion.div
           className="absolute inset-0 opacity-0 group-hover:opacity-100"
@@ -188,7 +188,7 @@ export function BenefitsBento() {
           className="text-center mb-10"
         >
           <motion.span
-            className="inline-block font-mono text-[#C5A55A] text-[10px] tracking-[0.3em] uppercase"
+            className="inline-block font-mono text-[#AD9952] text-[10px] tracking-[0.3em] uppercase"
             initial={{ opacity: 0, y: 10 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
             transition={{ delay: 0.1 }}
@@ -209,7 +209,7 @@ export function BenefitsBento() {
 
           {/* Animated underline */}
           <motion.div
-            className="h-[2px] w-12 bg-[#C5A55A] mx-auto mt-3 rounded-full"
+            className="h-[2px] w-12 bg-[#AD9952] mx-auto mt-3 rounded-full"
             initial={{ scaleX: 0 }}
             animate={isInView ? { scaleX: 1 } : { scaleX: 0 }}
             transition={{ duration: 0.6, delay: 0.4, ease: [0.25, 0.4, 0.25, 1] }}

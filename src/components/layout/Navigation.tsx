@@ -42,7 +42,7 @@ export function Navigation() {
       transition={{ type: "spring", stiffness: 100, damping: 20 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-[#1E1E2E]/95 backdrop-blur-md border-b border-white/10"
+          ? "bg-[#263747]/95 backdrop-blur-md border-b border-white/10"
           : "bg-transparent"
       }`}
     >
@@ -53,11 +53,11 @@ export function Navigation() {
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 400, damping: 17 }}
           >
-            <span className={scrolled ? "text-white" : "text-[#1E1E2E]"}>
+            <span className={scrolled ? "text-white" : "text-[#263747]"}>
               SEA
             </span>
             <motion.span
-              className="text-[#C5A55A]"
+              className="text-[#AD9952]"
               animate={{
                 textShadow: scrolled
                   ? [
@@ -81,8 +81,8 @@ export function Navigation() {
               onClick={() => scrollToSection(item.href)}
               className={`text-sm font-medium tracking-wide transition-colors relative ${
                 scrolled
-                  ? "text-white/80 hover:text-[#C5A55A]"
-                  : "text-[#1E1E2E]/80 hover:text-[#1E1E2E]"
+                  ? "text-white/80 hover:text-[#AD9952]"
+                  : "text-[#263747]/80 hover:text-[#263747]"
               }`}
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
@@ -96,7 +96,7 @@ export function Navigation() {
             >
               {item.label}
               <motion.span
-                className="absolute -bottom-1 left-0 w-full h-0.5 bg-[#C5A55A] origin-left"
+                className="absolute -bottom-1 left-0 w-full h-0.5 bg-[#AD9952] origin-left"
                 initial={{ scaleX: 0 }}
                 whileHover={{ scaleX: 1 }}
                 transition={{ duration: 0.3, ease: [0.25, 0.4, 0.25, 1] }}
@@ -106,7 +106,7 @@ export function Navigation() {
         </div>
 
         <motion.button
-          className="hidden md:block bg-[#C5A55A] text-[#1E1E2E] px-6 py-2.5 rounded-full font-bold text-sm tracking-wide relative overflow-hidden"
+          className="hidden md:block bg-[#AD9952] text-[#263747] px-6 py-2.5 rounded-full font-bold text-sm tracking-wide relative overflow-hidden"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           transition={{ type: "spring", stiffness: 400, damping: 17 }}
@@ -144,7 +144,7 @@ export function Navigation() {
                 exit={{ rotate: 90, opacity: 0 }}
                 transition={{ duration: 0.2 }}
               >
-                <X className={scrolled ? "text-white" : "text-[#1E1E2E]"} />
+                <X className={scrolled ? "text-white" : "text-[#263747]"} />
               </motion.div>
             ) : (
               <motion.div
@@ -154,7 +154,7 @@ export function Navigation() {
                 exit={{ rotate: -90, opacity: 0 }}
                 transition={{ duration: 0.2 }}
               >
-                <Menu className={scrolled ? "text-white" : "text-[#1E1E2E]"} />
+                <Menu className={scrolled ? "text-white" : "text-[#263747]"} />
               </motion.div>
             )}
           </AnimatePresence>
@@ -168,14 +168,14 @@ export function Navigation() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: [0.25, 0.4, 0.25, 1] }}
-            className="md:hidden bg-[#1E1E2E]/95 backdrop-blur-md border-t border-white/10 overflow-hidden"
+            className="md:hidden bg-[#263747]/95 backdrop-blur-md border-t border-white/10 overflow-hidden"
           >
             <div className="px-6 py-4 space-y-4">
               {navLinks.map((item, i) => (
                 <motion.button
                   key={item.label}
                   onClick={() => scrollToSection(item.href)}
-                  className="block w-full text-left text-white/80 hover:text-[#C5A55A] text-lg font-medium py-2"
+                  className="block w-full text-left text-white/80 hover:text-[#AD9952] text-lg font-medium py-2"
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: i * 0.1 }}
@@ -184,7 +184,7 @@ export function Navigation() {
                 </motion.button>
               ))}
               <motion.button
-                className="w-full bg-[#C5A55A] text-[#1E1E2E] px-6 py-3 rounded-full font-bold text-sm tracking-wide mt-4"
+                className="w-full bg-[#AD9952] text-[#263747] px-6 py-3 rounded-full font-bold text-sm tracking-wide mt-4"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}

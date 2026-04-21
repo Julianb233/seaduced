@@ -39,7 +39,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#C5A55A",
+  themeColor: "#AD9952",
 };
 
 export default function RootLayout({
@@ -54,7 +54,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col font-sans bg-background text-foreground">
         <ClickSpark
-          sparkColor="#C5A55A"
+          sparkColor="#6793A0"
           sparkSize={12}
           sparkRadius={20}
           sparkCount={8}

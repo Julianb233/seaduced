@@ -19,7 +19,7 @@ export default function IngredientsPage() {
       <SubpageSection title="What&apos;s in every 5 oz bottle">
         <ul className="space-y-5">
           <li>
-            <strong className="text-[#C5A55A]">Sea moss (Chondrus crispus) extract</strong>
+            <strong className="text-[#AD9952]">Sea moss (Chondrus crispus) extract</strong>
             <p className="mt-1">
               The hero. A red algae that carries 92 of the 102 minerals your
               body needs, and produces natural carrageenan — the silky gel
@@ -27,27 +27,27 @@ export default function IngredientsPage() {
             </p>
           </li>
           <li>
-            <strong className="text-[#C5A55A]">Aloe barbadensis (aloe vera) leaf juice</strong>
+            <strong className="text-[#AD9952]">Aloe barbadensis (aloe vera) leaf juice</strong>
             <p className="mt-1">
               Soothing, calming, and hydrating. Absorbs cleanly. No sticky
               finish.
             </p>
           </li>
           <li>
-            <strong className="text-[#C5A55A]">Hyaluronic acid (plant-derived)</strong>
+            <strong className="text-[#AD9952]">Hyaluronic acid (plant-derived)</strong>
             <p className="mt-1">
               Holds up to 1,000 times its weight in water — keeps moisture
               locked in where you need it.
             </p>
           </li>
           <li>
-            <strong className="text-[#C5A55A]">Vitamin E (tocopherol)</strong>
+            <strong className="text-[#AD9952]">Vitamin E (tocopherol)</strong>
             <p className="mt-1">
               Antioxidant, natural preservative, skin-friendly.
             </p>
           </li>
           <li>
-            <strong className="text-[#C5A55A]">Purified water</strong>
+            <strong className="text-[#AD9952]">Purified water</strong>
             <p className="mt-1">
               The base. Nothing fancy — just clean.
             </p>

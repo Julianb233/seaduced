@@ -102,7 +102,7 @@ export function Footer() {
               READY TO
             </motion.span>
             <motion.span
-              className="block text-[#C5A55A]"
+              className="block text-[#AD9952]"
               initial={{ y: 100 }}
               whileInView={{ y: 0 }}
               viewport={{ once: true }}
@@ -128,8 +128,8 @@ export function Footer() {
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="your@email.com"
                 aria-label="Email address"
-                className="w-full bg-white/5 border-2 border-white/20 rounded-xl px-4 py-3 text-white placeholder:text-white/40 font-mono text-sm focus:outline-none focus:border-[#C5A55A] transition-all duration-300"
-                whileFocus={{ borderColor: "#C5A55A" }}
+                className="w-full bg-white/5 border-2 border-white/20 rounded-xl px-4 py-3 text-white placeholder:text-white/40 font-mono text-sm focus:outline-none focus:border-[#AD9952] transition-all duration-300"
+                whileFocus={{ borderColor: "#AD9952" }}
               />
               <motion.div
                 className="absolute inset-0 rounded-xl pointer-events-none"
@@ -207,7 +207,7 @@ export function Footer() {
                     >
                       <Link
                         href={item.href}
-                        className="text-white/60 hover:text-[#C5A55A] font-mono text-xs transition-colors inline-block"
+                        className="text-white/60 hover:text-[#AD9952] font-mono text-xs transition-colors inline-block"
                       >
                         {item.label}
                       </Link>
@@ -233,7 +233,7 @@ export function Footer() {
           >
             <span className="text-xl font-black">
               <span className="text-white">SEA</span>
-              <span className="text-[#C5A55A]">DUCED</span>
+              <span className="text-[#AD9952]">DUCED</span>
             </span>
           </motion.div>
 
@@ -250,7 +250,7 @@ export function Footer() {
                 ? {
                     rotate: [0, -5, 5, -5, 5, 0],
                     scale: [1, 1.1, 1],
-                    color: "#C5A55A",
+                    color: "#AD9952",
                   }
                 : {
                     rotate: 0,

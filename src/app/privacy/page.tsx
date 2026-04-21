@@ -19,17 +19,17 @@ export default function PrivacyPage() {
       <SubpageSection title="What we collect">
         <ul className="space-y-3">
           <li>
-            <strong className="text-[#C5A55A]">When you place an order:</strong>{" "}
+            <strong className="text-[#AD9952]">When you place an order:</strong>{" "}
             Name, shipping address, email, payment information (handled
             securely by Stripe — we never see or store your card number).
           </li>
           <li>
-            <strong className="text-[#C5A55A]">When you subscribe:</strong>{" "}
+            <strong className="text-[#AD9952]">When you subscribe:</strong>{" "}
             Your email and whatever you tell us about yourself (birthday,
             preferences, etc. — all optional).
           </li>
           <li>
-            <strong className="text-[#C5A55A]">When you browse:</strong>{" "}
+            <strong className="text-[#AD9952]">When you browse:</strong>{" "}
             Standard site analytics (anonymous page views, device type) to
             understand what&apos;s working. We don&apos;t use invasive tracking.
           </li>
@@ -47,7 +47,7 @@ export default function PrivacyPage() {
         <p>
           You can request a copy of your data, ask us to delete it, or
           unsubscribe at any time. Email{" "}
-          <a href="mailto:hello@seaducedproducts.com" className="text-[#C5A55A] underline decoration-[#C5A55A]/40 hover:decoration-[#C5A55A] underline-offset-4">
+          <a href="mailto:hello@seaducedproducts.com" className="text-[#AD9952] underline decoration-[#AD9952]/40 hover:decoration-[#AD9952] underline-offset-4">
             hello@seaducedproducts.com
           </a>
           . We&apos;ll confirm within 48 hours.

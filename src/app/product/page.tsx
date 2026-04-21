@@ -33,20 +33,20 @@ export default function ProductPage() {
       <SubpageSection title="What&apos;s inside" background="charcoal">
         <ul className="space-y-4">
           <li>
-            <strong className="text-[#C5A55A]">Sea moss extract</strong> — 92 of
+            <strong className="text-[#AD9952]">Sea moss extract</strong> — 92 of
             the 102 essential minerals; natural carrageenan for silk-smooth
             slip.
           </li>
           <li>
-            <strong className="text-[#C5A55A]">Aloe leaf juice</strong> —
+            <strong className="text-[#AD9952]">Aloe leaf juice</strong> —
             soothing, water-based hydration that absorbs without residue.
           </li>
           <li>
-            <strong className="text-[#C5A55A]">Plant-based humectants</strong> —
+            <strong className="text-[#AD9952]">Plant-based humectants</strong> —
             keeps moisture where you need it.
           </li>
           <li>
-            <strong className="text-[#C5A55A]">Nothing hiding</strong> — no
+            <strong className="text-[#AD9952]">Nothing hiding</strong> — no
             petroleum, parabens, glycerin, artificial fragrance, or dyes.
           </li>
         </ul>

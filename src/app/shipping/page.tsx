@@ -19,21 +19,21 @@ export default function ShippingPage() {
       <SubpageSection title="Shipping">
         <ul className="space-y-4">
           <li>
-            <strong className="text-[#C5A55A]">Standard US shipping</strong> —
+            <strong className="text-[#AD9952]">Standard US shipping</strong> —
             3–5 business days. Ships from our partner fulfillment center in
             Southern California.
           </li>
           <li>
-            <strong className="text-[#C5A55A]">Discreet packaging</strong> —
+            <strong className="text-[#AD9952]">Discreet packaging</strong> —
             Plain exterior box. No &quot;Seaduced&quot; branding, no ingredient
             descriptions, no clues for whoever picks up your mail.
           </li>
           <li>
-            <strong className="text-[#C5A55A]">Tracking</strong> — Sent to your
+            <strong className="text-[#AD9952]">Tracking</strong> — Sent to your
             email as soon as your order ships.
           </li>
           <li>
-            <strong className="text-[#C5A55A]">International</strong> — Not yet,
+            <strong className="text-[#AD9952]">International</strong> — Not yet,
             but on the roadmap. Sign up for the newsletter and we&apos;ll tell
             you the day we turn it on.
           </li>
@@ -45,7 +45,7 @@ export default function ShippingPage() {
           returns on <strong>unopened, sealed</strong> bottles within 30 days
           of delivery. If your order arrives damaged or defective, we&apos;ll
           replace it — email{" "}
-          <a href="mailto:hello@seaducedproducts.com" className="text-[#C5A55A] underline decoration-[#C5A55A]/40 hover:decoration-[#C5A55A] underline-offset-4">
+          <a href="mailto:hello@seaducedproducts.com" className="text-[#AD9952] underline decoration-[#AD9952]/40 hover:decoration-[#AD9952] underline-offset-4">
             hello@seaducedproducts.com
           </a>{" "}
           with your order number and a photo and we&apos;ll make it right.

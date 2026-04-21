@@ -15,8 +15,8 @@ const products = [
     description:
       "Our debut formulation in deep royal — the ritual bottle you'll reach for again and again.",
     image: "/images/hero-bottle.png",
-    bgColor: "from-[#1B2F6B]/25 via-[#1B2F6B]/10 to-transparent",
-    accentColor: "#1B2F6B",
+    bgColor: "from-[#263747]/25 via-[#263747]/10 to-transparent",
+    accentColor: "#263747",
   },
   {
     id: 2,
@@ -25,8 +25,8 @@ const products = [
     description:
       "USDA organic sea moss + ocean minerals, double-distilled to nourish without residue.",
     image: "/images/bottle-v2.png",
-    bgColor: "from-[#0D7C8A]/25 via-[#14B8A6]/10 to-transparent",
-    accentColor: "#0D7C8A",
+    bgColor: "from-[#325360]/25 via-[#6793A0]/10 to-transparent",
+    accentColor: "#325360",
   },
   {
     id: 3,
@@ -35,8 +35,8 @@ const products = [
     description:
       "A collector's bottle in embossed gold — same formula, heirloom presentation.",
     image: "/images/hero-bottle.png",
-    bgColor: "from-[#C5A55A]/30 via-[#C5A55A]/10 to-transparent",
-    accentColor: "#C5A55A",
+    bgColor: "from-[#AD9952]/30 via-[#AD9952]/10 to-transparent",
+    accentColor: "#AD9952",
   },
 ];
 
@@ -104,7 +104,7 @@ export function ProductShowcase() {
   const prevProduct = () => paginate(-1);
 
   return (
-    <section id="product" className="relative py-16 bg-[#F5ECD9] overflow-hidden">
+    <section id="product" className="relative py-16 bg-[#FDF8F0] overflow-hidden">
       <motion.div
         className={`absolute inset-0 bg-gradient-to-br ${currentProduct.bgColor}`}
         initial={{ opacity: 0 }}
@@ -122,7 +122,7 @@ export function ProductShowcase() {
           className="text-center mb-10"
         >
           <motion.span
-            className="font-mono text-[#1E1E2E]/60 text-xs tracking-widest"
+            className="font-mono text-[#263747]/60 text-xs tracking-widest"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -130,7 +130,7 @@ export function ProductShowcase() {
           >
             THE COLLECTION
           </motion.span>
-          <h2 className="text-3xl md:text-5xl font-black text-[#1E1E2E] tracking-tighter mt-2 overflow-hidden">
+          <h2 className="text-3xl md:text-5xl font-black text-[#263747] tracking-tighter mt-2 overflow-hidden">
             <motion.span
               className="inline-block"
               initial={{ y: 80 }}
@@ -159,7 +159,7 @@ export function ProductShowcase() {
             <motion.button
               onClick={prevProduct}
               aria-label="Previous product"
-              className="hidden md:flex w-12 h-12 rounded-full border-2 border-[#1E1E2E] items-center justify-center hover:bg-[#1E1E2E] hover:text-white transition-colors"
+              className="hidden md:flex w-12 h-12 rounded-full border-2 border-[#263747] items-center justify-center hover:bg-[#263747] hover:text-white transition-colors"
               whileHover={{ scale: 1.1, rotate: -5 }}
               whileTap={{ scale: 0.9 }}
               transition={{ type: "spring", stiffness: 400, damping: 17 }}
@@ -179,7 +179,7 @@ export function ProductShowcase() {
                 style={{ perspective: 1000 }}
               >
                 <motion.div
-                  className="bg-white rounded-3xl p-6 md:p-8 border-2 border-[#1E1E2E]/10 shadow-xl"
+                  className="bg-white rounded-3xl p-6 md:p-8 border-2 border-[#263747]/10 shadow-xl"
                   style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
                   onMouseMove={handleMouseMove}
                   onMouseLeave={handleMouseLeave}
@@ -211,7 +211,7 @@ export function ProductShowcase() {
                           {currentProduct.tagline}
                         </motion.span>
                         <motion.h3
-                          className="text-3xl md:text-4xl font-black text-[#1E1E2E] tracking-tighter mt-1"
+                          className="text-3xl md:text-4xl font-black text-[#263747] tracking-tighter mt-1"
                           initial={{ opacity: 0, y: 20 }}
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ delay: 0.3, type: "spring", stiffness: 100 }}
@@ -221,7 +221,7 @@ export function ProductShowcase() {
                       </div>
 
                       <motion.p
-                        className="text-sm text-[#1E1E2E]/70 font-mono"
+                        className="text-sm text-[#263747]/70 font-mono"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.4 }}
@@ -239,7 +239,7 @@ export function ProductShowcase() {
                           (badge) => (
                             <span
                               key={badge}
-                              className="px-2 py-1 bg-[#1E1E2E]/5 rounded-full text-xs font-mono text-[#1E1E2E]/70"
+                              className="px-2 py-1 bg-[#263747]/5 rounded-full text-xs font-mono text-[#263747]/70"
                             >
                               {badge}
                             </span>
@@ -276,7 +276,7 @@ export function ProductShowcase() {
             <motion.button
               onClick={nextProduct}
               aria-label="Next product"
-              className="hidden md:flex w-12 h-12 rounded-full border-2 border-[#1E1E2E] items-center justify-center hover:bg-[#1E1E2E] hover:text-white transition-colors"
+              className="hidden md:flex w-12 h-12 rounded-full border-2 border-[#263747] items-center justify-center hover:bg-[#263747] hover:text-white transition-colors"
               whileHover={{ scale: 1.1, rotate: 5 }}
               whileTap={{ scale: 0.9 }}
               transition={{ type: "spring", stiffness: 400, damping: 17 }}
@@ -289,7 +289,7 @@ export function ProductShowcase() {
             <motion.button
               onClick={prevProduct}
               aria-label="Previous product"
-              className="w-10 h-10 rounded-full border-2 border-[#1E1E2E] flex items-center justify-center"
+              className="w-10 h-10 rounded-full border-2 border-[#263747] flex items-center justify-center"
               whileTap={{ scale: 0.9 }}
             >
               <ChevronLeft className="w-4 h-4" />
@@ -297,7 +297,7 @@ export function ProductShowcase() {
             <motion.button
               onClick={nextProduct}
               aria-label="Next product"
-              className="w-10 h-10 rounded-full border-2 border-[#1E1E2E] flex items-center justify-center"
+              className="w-10 h-10 rounded-full border-2 border-[#263747] flex items-center justify-center"
               whileTap={{ scale: 0.9 }}
             >
               <ChevronRight className="w-4 h-4" />
@@ -317,7 +317,7 @@ export function ProductShowcase() {
                 className="h-2 rounded-full transition-all"
                 style={{
                   backgroundColor:
-                    index === currentIndex ? product.accentColor : "#1E1E2E20",
+                    index === currentIndex ? product.accentColor : "#26374720",
                 }}
                 animate={{
                   width: index === currentIndex ? 28 : 10,

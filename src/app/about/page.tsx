@@ -44,7 +44,7 @@ export default function AboutPage() {
           community. For anyone who wants something they can trust on the most
           intimate part of their body.
         </p>
-        <p className="text-[#C5A55A]">
+        <p className="text-[#AD9952]">
           You deserve ingredients you can read. You deserve a brand that
           doesn&apos;t talk down to you. You deserve to feel good.
         </p>

@@ -61,7 +61,7 @@ export function Activations() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="activations" className="relative py-16 bg-[#F5ECD9] overflow-hidden">
+    <section id="activations" className="relative py-16 bg-[#FDF8F0] overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -71,7 +71,7 @@ export function Activations() {
           className="text-center mb-10"
         >
           <motion.span
-            className="font-mono text-[#1E1E2E]/60 text-xs tracking-widest inline-block"
+            className="font-mono text-[#263747]/60 text-xs tracking-widest inline-block"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -79,7 +79,7 @@ export function Activations() {
           >
             PARTNERSHIPS
           </motion.span>
-          <h2 className="text-3xl md:text-5xl font-black text-[#1E1E2E] tracking-tighter mt-2 overflow-hidden">
+          <h2 className="text-3xl md:text-5xl font-black text-[#263747] tracking-tighter mt-2 overflow-hidden">
             <motion.span
               className="inline-block"
               initial={{ y: 100 }}
@@ -90,7 +90,7 @@ export function Activations() {
               BRING{" "}
             </motion.span>
             <motion.span
-              className="text-[#C5A55A] inline-block"
+              className="text-[#AD9952] inline-block"
               initial={{ y: 100 }}
               whileInView={{ y: 0 }}
               viewport={{ once: true }}
@@ -109,7 +109,7 @@ export function Activations() {
             </motion.span>
           </h2>
           <motion.p
-            className="text-sm text-[#1E1E2E]/70 font-mono mt-2 max-w-xl mx-auto"
+            className="text-sm text-[#263747]/70 font-mono mt-2 max-w-xl mx-auto"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}

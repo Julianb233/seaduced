@@ -128,7 +128,7 @@ export function Social() {
                 className="object-cover saturate-90 group-hover:saturate-100 transition-all duration-500"
               />
               <motion.div
-                className="absolute inset-0 bg-[#C5A55A]/0 group-hover:bg-[#C5A55A]/25 flex items-center justify-center"
+                className="absolute inset-0 bg-[#AD9952]/0 group-hover:bg-[#AD9952]/25 flex items-center justify-center"
                 initial={{ opacity: 0 }}
                 whileHover={{ opacity: 1 }}
                 transition={{ duration: 0.3 }}

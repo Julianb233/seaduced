@@ -5,54 +5,54 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #1E1E2E;
+  --foreground: #263747;
   --card: #ffffff;
-  --card-foreground: #1E1E2E;
+  --card-foreground: #263747;
   --popover: #ffffff;
-  --popover-foreground: #1E1E2E;
-  --primary: #1E1E2E;
+  --popover-foreground: #263747;
+  --primary: #263747;
   --primary-foreground: #ffffff;
   --secondary: #f5f5f5;
-  --secondary-foreground: #1E1E2E;
+  --secondary-foreground: #263747;
   --muted: #f5f5f5;
   --muted-foreground: #666666;
-  --accent: #C5A55A;
-  --accent-foreground: #1E1E2E;
+  --accent: #AD9952;
+  --accent-foreground: #263747;
   --destructive: #dc2626;
   --destructive-foreground: #ffffff;
   --border: #e5e5e5;
   --input: #e5e5e5;
-  --ring: #C5A55A;
+  --ring: #AD9952;
   --radius: 0.5rem;
 
   /* Seaduced brand palette */
-  --gold: #C5A55A;
+  --gold: #AD9952;
   --gold-rgb: 197, 165, 90;
-  --charcoal: #1E1E2E;
-  --royal: #1B2F6B;
-  --ocean: #0D7C8A;
-  --teal: #14B8A6;
-  --cream: #F5ECD9;
+  --charcoal: #263747;
+  --royal: #263747;
+  --ocean: #325360;
+  --teal: #6793A0;
+  --cream: #FDF8F0;
 }
 
 .dark {
-  --background: #1E1E2E;
-  --foreground: #F5ECD9;
-  --card: #1E1E2E;
-  --card-foreground: #F5ECD9;
-  --popover: #1E1E2E;
-  --popover-foreground: #F5ECD9;
-  --primary: #F5ECD9;
-  --primary-foreground: #1E1E2E;
-  --secondary: #2a2a3e;
-  --secondary-foreground: #F5ECD9;
-  --muted: #2a2a3e;
+  --background: #263747;
+  --foreground: #FDF8F0;
+  --card: #263747;
+  --card-foreground: #FDF8F0;
+  --popover: #263747;
+  --popover-foreground: #FDF8F0;
+  --primary: #FDF8F0;
+  --primary-foreground: #263747;
+  --secondary: #1a2a3a;
+  --secondary-foreground: #FDF8F0;
+  --muted: #1a2a3a;
   --muted-foreground: #a3a3a3;
-  --accent: #C5A55A;
-  --accent-foreground: #1E1E2E;
-  --border: #2a2a3e;
-  --input: #2a2a3e;
-  --ring: #C5A55A;
+  --accent: #AD9952;
+  --accent-foreground: #263747;
+  --border: #1a2a3a;
+  --input: #1a2a3a;
+  --ring: #AD9952;
 }
 
 @theme inline {

@@ -49,7 +49,7 @@ export default function SciencePage() {
           acidic. Many commercial lubricants are formulated alkaline
           (pH 7+), which can disrupt the microbiome and trigger irritation.
         </p>
-        <p className="text-[#C5A55A]">
+        <p className="text-[#AD9952]">
           Seaduced is formulated at pH 4.2 — matched to your body&apos;s natural
           state so nothing feels off after.
         </p>
