@@ -12,12 +12,14 @@ export function SubpageSection({
   children: ReactNode;
   background?: "cream" | "charcoal" | "white";
 }) {
+  // Note: the "cream" variant now renders light teal #AACAD1 as of 2026-04-21
+  // palette promotion. API signature preserved for backward compat with subpages.
   const bg =
     background === "charcoal"
       ? "bg-[#263747] text-[#FDF8F0]"
       : background === "white"
       ? "bg-white text-[#263747]"
-      : "bg-[#FDF8F0] text-[#263747]";
+      : "bg-[#AACAD1] text-[#263747]";
 
   return (
     <section className={`${bg} py-20 md:py-28`}>

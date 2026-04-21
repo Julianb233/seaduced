@@ -61,7 +61,7 @@ export function Activations() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="activations" className="relative py-16 bg-[#FDF8F0] overflow-hidden">
+    <section id="activations" className="relative py-16 bg-[#AACAD1] overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
