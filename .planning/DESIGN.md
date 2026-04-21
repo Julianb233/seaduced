@@ -15,8 +15,8 @@ Beach theme with nautical colors. Light, clean, editorial. Every palette decisio
 | Token | Hex | RGB | Source pixel on bottle | Role |
 |---|---|---|---|---|
 | `--white` | `#FAFBFB` | rgb(250,251,251) | bottle body (92% of pixels) | Near-white body, primary surface |
-| `--cream` | `#FDF8F0` | rgb(253,248,240) | background of bottle photograph | Primary light background |
-| `--aqua-pale` | `#AACAD1` | rgb(170,202,209) | wrap light highlights | Soft highlights, secondary surface |
+| `--aqua-pale` | `#AACAD1` | rgb(170,202,209) | wrap light highlights | **PRIMARY light background** (updated 2026-04-21 per Julian) |
+| `--cream` | `#FDF8F0` | rgb(253,248,240) | background of bottle photograph | Secondary / accent surface only (was primary, demoted) |
 | `--aqua-mid` | `#6793A0` | rgb(103,147,160) | wrap mid-tone | **Primary accent** (replaces gold as primary) |
 | `--teal-deep` | `#325360` | rgb(50,83,96) | wrap transitional deep | Deep accent, headings on light bg |
 | `--slate` | `#4E646B` | rgb(78,100,107) | mid-slate in wrap | Secondary text, muted accents |
@@ -36,18 +36,20 @@ Beach theme with nautical colors. Light, clean, editorial. Every palette decisio
 
 Changed from gold `#AD9952` to aqua `#6793A0` to represent the water/splash character of the product, not the collar metal.
 
-## Section color rules
+## Section color rules (UPDATED 2026-04-21 — primary light bg is light teal, not cream)
 
 | Section | Background | Primary text | Accent |
 |---|---|---|---|
-| Hero | `#FDF8F0` cream | `#212837` near-black | `#AD9952` gold (SEADUCED wordmark only) + `#325360` deep teal (secondary CTA outline) |
-| ParallaxSplash | `#FDF8F0` cream with `#AACAD1/25` pale-aqua gradient | `#263747` ocean navy | `#6793A0` aqua + `#AD9952` gold (progress bar only) |
-| ProductShowcase | cream | navy | per-variant accent (royal / teal / gold) |
-| BenefitsBento | `#263747` navy | `#FAFBFB` near-white | rotate: gold / aqua / deep-teal / pale-aqua (not all gold) |
-| Activations | cream (section) + navy (cards) | cream text on cards | gold icons, aqua hover-invert |
-| Social | `#FDF8F0` → `#AACAD1/20` → `#FDF8F0` gradient | navy | muted gold CTA + aqua Follow button |
+| Hero | `#AACAD1` light teal (with subtle `#FDF8F0` cream-mist gradient) | `#263747` ocean navy | `#AD9952` gold (SEADUCED wordmark) + `#325360` deep teal (secondary CTA outline) |
+| ParallaxSplash | `#AACAD1` light teal with `#FDF8F0/30` cream-mist gradient | `#263747` navy | `#6793A0` aqua + `#AD9952` gold (progress bar only) |
+| ProductShowcase | `#AACAD1` light teal | navy | per-variant accent (royal / teal / gold) |
+| BenefitsBento | `#263747` navy | `#FAFBFB` near-white | rotate: gold / aqua / deep-teal / pale-aqua |
+| Activations | `#AACAD1` light teal (section) + navy (cards) | near-white on cards | gold icons, aqua hover-invert |
+| Social | `#AACAD1` light teal → `#FDF8F0/30` → `#AACAD1` gradient | navy | muted gold CTA + aqua Follow button |
 | Footer | `#263747` navy | near-white | gold newsletter submit, aqua link hover |
-| Subpages | cream + occasional navy section | navy | aqua + gold accents |
+| Subpages | `#AACAD1` light teal + occasional navy section | navy | aqua + gold accents |
+
+**Cream `#FDF8F0` role:** now ONLY used as a subtle secondary surface (card fills, mid-gradient highlight, quote pullout background). Never as the dominant large-surface background.
 
 ## Contrast rules
 
