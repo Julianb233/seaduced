@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export function SeaMossIntro() {
   return (
-    <section className="bg-[#AACAD1] py-24 md:py-32 relative overflow-hidden">
+    <section className="bg-luxe-teal noise-overlay py-24 md:py-32 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-[#AACAD1] via-[#FDF8F0]/20 to-[#AACAD1]" />
       <div className="relative max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 md:gap-16 items-center">
         <div>

@@ -9,7 +9,7 @@ export function RelatedReading({ posts }: { posts: BlogPost[] }) {
   if (posts.length === 0) return null;
 
   return (
-    <section className="bg-[#AACAD1] py-16 md:py-24">
+    <section className=" relative bg-luxe-teal noise-overlay py-16 md:py-24 overflow-hidden">
       <div className="max-w-6xl mx-auto px-6">
         <motion.div
           className="mb-10"

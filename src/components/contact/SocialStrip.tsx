@@ -15,7 +15,7 @@ const tiles = [
 
 export function SocialStrip() {
   return (
-    <section className="bg-[#AACAD1] py-20 md:py-24">
+    <section className=" relative bg-luxe-teal noise-overlay py-20 md:py-24 overflow-hidden">
       <div className="max-w-6xl mx-auto px-6">
         <motion.div
           className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10"

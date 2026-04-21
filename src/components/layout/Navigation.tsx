@@ -43,9 +43,18 @@ export function Navigation() {
       transition={{ type: "spring", stiffness: 100, damping: 20 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-[#263747]/95 backdrop-blur-md border-b border-white/10"
+          ? "backdrop-blur-md border-b border-white/10"
           : "bg-transparent"
       }`}
+      style={
+        scrolled
+          ? {
+              background:
+                "linear-gradient(135deg, rgba(50,83,96,0.92) 0%, rgba(38,55,71,0.95) 50%, rgba(50,83,96,0.92) 100%)",
+              boxShadow: "0 4px 24px -8px rgba(38,55,71,0.35)",
+            }
+          : undefined
+      }
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2">

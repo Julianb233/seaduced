@@ -16,7 +16,7 @@ const FREE_FROM = [
 
 export function Allergens() {
   return (
-    <section className="bg-[#FDF8F0] py-24 md:py-32">
+    <section className="relative bg-luxe-cream noise-overlay py-24 md:py-32 overflow-hidden">
       <div className="max-w-5xl mx-auto px-6 grid md:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)] gap-12 md:gap-16 items-start">
         <div>
           <div className="overflow-hidden">

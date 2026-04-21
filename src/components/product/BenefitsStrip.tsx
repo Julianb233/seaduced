@@ -36,7 +36,7 @@ const pills = [
 
 export function BenefitsStrip() {
   return (
-    <section className="relative py-14 md:py-20 bg-[#FDF8F0]">
+    <section className="relative py-14 md:py-20 bg-luxe-cream noise-overlay overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
           className="mb-8 text-center"

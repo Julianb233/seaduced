@@ -43,7 +43,7 @@ export function ContactForm() {
   };
 
   return (
-    <section className="bg-[#FDF8F0] py-20 md:py-28">
+    <section className="relative bg-luxe-cream noise-overlay py-20 md:py-28 overflow-hidden">
       <div className="max-w-3xl mx-auto px-6">
         <motion.div
           className="mb-10"

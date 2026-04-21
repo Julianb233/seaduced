@@ -11,7 +11,7 @@ export function Minerals92() {
   const cells = Array.from({ length: TOTAL }, (_, i) => i < PRESENT);
 
   return (
-    <section className="bg-[#FDF8F0] py-24 md:py-32 relative">
+    <section className="bg-luxe-cream noise-overlay py-24 md:py-32 relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] gap-12 md:gap-16 items-center">
           {/* Big-number card */}

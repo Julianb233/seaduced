@@ -23,7 +23,7 @@ const bullets = [
 
 export function WhatWeCollect() {
   return (
-    <section className="bg-[#AACAD1] py-20 md:py-28">
+    <section className=" relative bg-luxe-teal noise-overlay py-20 md:py-28 overflow-hidden">
       <div className="max-w-5xl mx-auto px-6">
         <motion.span
           className="block font-mono text-xs tracking-[0.3em] uppercase text-[#325360] mb-3"

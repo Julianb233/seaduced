@@ -21,10 +21,9 @@ const PH_STOPS = [
 
 export function PhMatters() {
   return (
-    <section className="bg-[#263747] text-[#FAFBFB] py-24 md:py-32 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-[#263747] via-[#212837] to-[#263747]" />
-      <div className="absolute -top-32 -left-20 w-96 h-96 rounded-full bg-[#6793A0]/15 blur-3xl" />
-      <div className="absolute -bottom-32 -right-20 w-96 h-96 rounded-full bg-[#AD9952]/10 blur-3xl" />
+    <section className="bg-luxe-deep noise-overlay text-[#263747] py-24 md:py-32 relative overflow-hidden">
+      <div className="absolute -top-32 -left-20 w-96 h-96 rounded-full bg-[#6793A0]/25 blur-3xl pointer-events-none" />
+      <div className="absolute -bottom-32 -right-20 w-96 h-96 rounded-full bg-[#AD9952]/18 blur-3xl pointer-events-none" />
 
       <div className="relative max-w-5xl mx-auto px-6">
         <div className="text-center mb-16">
@@ -56,7 +55,7 @@ export function PhMatters() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="mt-6 text-[#FAFBFB]/80 text-lg leading-relaxed max-w-2xl mx-auto"
+            className="mt-6 text-[#263747]/80 text-lg leading-relaxed max-w-2xl mx-auto"
           >
             Healthy intimate pH sits between{" "}
             <span className="text-[#AD9952] font-medium">3.8 and 4.5</span> —
@@ -72,9 +71,9 @@ export function PhMatters() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className="rounded-2xl bg-[#FAFBFB]/5 ring-1 ring-[#FAFBFB]/10 backdrop-blur-sm p-6 md:p-10"
+          className="rounded-2xl bg-white/55 ring-1 ring-white/70 backdrop-blur-md p-6 md:p-10 shadow-lg"
         >
-          <div className="flex items-center justify-between font-mono text-[10px] tracking-[0.2em] uppercase text-[#FAFBFB]/60 mb-3">
+          <div className="flex items-center justify-between font-mono text-[10px] tracking-[0.2em] uppercase text-[#325360]/70 mb-3">
             <span>Acidic</span>
             <span>Neutral</span>
             <span>Alkaline</span>
@@ -82,7 +81,7 @@ export function PhMatters() {
 
           {/* scale bar */}
           <div className="relative">
-            <div className="flex h-12 rounded-full overflow-hidden ring-1 ring-[#FAFBFB]/10">
+            <div className="flex h-12 rounded-full overflow-hidden ring-1 ring-[#325360]/20">
               {PH_STOPS.slice(0, -1).map((stop, i) => {
                 const next = PH_STOPS[i + 1];
                 const width = ((next.v - stop.v) / 14) * 100;
@@ -142,7 +141,7 @@ export function PhMatters() {
           </div>
 
           {/* tick labels */}
-          <div className="flex justify-between mt-14 font-mono text-[10px] tracking-[0.15em] text-[#FAFBFB]/50">
+          <div className="flex justify-between mt-14 font-mono text-[10px] tracking-[0.15em] text-[#325360]/60">
             {[0, 2, 4, 6, 7, 8, 10, 12, 14].map((v) => (
               <span key={v} className="tabular-nums">
                 {v}
@@ -181,21 +180,21 @@ export function PhMatters() {
               className={`rounded-xl p-6 border ${
                 i === 0
                   ? "bg-[#AD9952]/10 border-[#AD9952]/40"
-                  : "bg-[#FAFBFB]/5 border-[#FAFBFB]/10"
+                  : "bg-white/50 border-white/60 backdrop-blur-md"
               }`}
             >
               <div
                 className={`text-4xl mb-2 ${
-                  i === 0 ? "text-[#AD9952]" : "text-[#FAFBFB]/80"
+                  i === 0 ? "text-[#AD9952]" : "text-[#263747]/80"
                 }`}
                 style={{ fontFamily: "'Playfair Display', serif" }}
               >
                 {c.n}
               </div>
-              <div className="font-mono text-[10px] tracking-[0.2em] uppercase text-[#FAFBFB]/60 mb-2">
+              <div className="font-mono text-[10px] tracking-[0.2em] uppercase text-[#325360]/70 mb-2">
                 {c.label}
               </div>
-              <p className="text-sm text-[#FAFBFB]/80 leading-relaxed">
+              <p className="text-sm text-[#263747]/80 leading-relaxed">
                 {c.body}
               </p>
             </div>

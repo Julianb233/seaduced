@@ -61,7 +61,7 @@ export function Activations() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="activations" className="relative py-16 bg-[#AACAD1] overflow-hidden">
+    <section id="activations" className="bg-luxe-teal noise-overlay relative py-16 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -138,16 +138,22 @@ export function Activations() {
                   scale: 1.02,
                   transition: { type: "spring", stiffness: 400, damping: 17 },
                 }}
-                className="group bg-[#263747] rounded-2xl p-6 cursor-pointer relative overflow-hidden"
+                className="group rounded-2xl p-6 cursor-pointer relative overflow-hidden border border-white/30"
+                style={{
+                  background:
+                    "linear-gradient(155deg, #325360 0%, #3F6775 45%, #2D4A58 100%)",
+                  boxShadow:
+                    "0 1px 0 rgba(255,255,255,0.08) inset, 0 14px 32px -14px rgba(38,55,71,0.35), 0 2px 8px -2px rgba(173,153,82,0.10)",
+                }}
               >
                 <motion.div
-                  className="absolute inset-0 bg-[#6793A0]/0 group-hover:bg-[#6793A0]"
+                  className="absolute inset-0 bg-gradient-to-br from-[#6793A0]/0 via-[#AACAD1]/0 to-[#6793A0]/0 group-hover:from-[#6793A0] group-hover:via-[#AACAD1] group-hover:to-[#6793A0]"
                   transition={{ duration: 0.4 }}
                 />
 
                 <div className="relative z-10">
                   <motion.div
-                    className="w-11 h-11 rounded-xl bg-[#AD9952] flex items-center justify-center mb-4 group-hover:bg-[#263747] transition-colors duration-300"
+                    className="w-11 h-11 rounded-xl bg-gradient-to-br from-[#C5B375] via-[#AD9952] to-[#8C7A3A] flex items-center justify-center mb-4 group-hover:from-[#263747] group-hover:via-[#263747] group-hover:to-[#263747] transition-all duration-300"
                     whileHover={{ rotate: 10, scale: 1.1 }}
                     transition={{ type: "spring", stiffness: 400, damping: 17 }}
                   >
@@ -157,7 +163,7 @@ export function Activations() {
                   <h3 className="text-lg font-black text-[#FAFBFB] group-hover:text-[#263747] tracking-tight mb-2 transition-colors duration-300">
                     {activation.title}
                   </h3>
-                  <p className="text-[#FAFBFB]/70 group-hover:text-[#263747]/80 font-mono text-xs leading-relaxed mb-4 transition-colors duration-300">
+                  <p className="text-[#FAFBFB]/80 group-hover:text-[#263747]/85 font-mono text-xs leading-relaxed mb-4 transition-colors duration-300">
                     {activation.description}
                   </p>
 

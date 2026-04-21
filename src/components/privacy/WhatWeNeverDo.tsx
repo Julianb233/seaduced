@@ -24,7 +24,7 @@ const items = [
 
 export function WhatWeNeverDo() {
   return (
-    <section className="bg-[#263747] py-20 md:py-28 relative overflow-hidden">
+    <section className="bg-luxe-deep noise-overlay text-[#263747] py-20 md:py-28 relative overflow-hidden">
       <motion.div
         className="absolute -left-20 top-0 w-80 h-80 rounded-full bg-[#AD9952]/8 blur-3xl pointer-events-none"
         animate={{ y: [0, 40, 0], scale: [1, 1.1, 1] }}
@@ -41,7 +41,7 @@ export function WhatWeNeverDo() {
           What we never do
         </motion.span>
         <motion.h2
-          className="text-3xl md:text-4xl font-serif text-[#FAFBFB] tracking-tight mb-10"
+          className="text-3xl md:text-4xl font-serif text-[#263747] tracking-tight mb-10"
           style={{ fontFamily: "'Playfair Display', serif" }}
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -55,7 +55,7 @@ export function WhatWeNeverDo() {
           {items.map((item, idx) => (
             <motion.li
               key={item.title}
-              className="flex gap-4 rounded-2xl bg-[#FAFBFB]/5 border border-[#FAFBFB]/10 p-6"
+              className="flex gap-4 rounded-2xl bg-white/55 border border-white/65 backdrop-blur-md shadow-md p-6"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
@@ -65,10 +65,10 @@ export function WhatWeNeverDo() {
                 <X className="w-4 h-4 text-[#AD9952]" aria-hidden />
               </div>
               <div>
-                <h3 className="text-[#FAFBFB] font-semibold mb-1">
+                <h3 className="text-[#263747] font-semibold mb-1">
                   {item.title}
                 </h3>
-                <p className="text-[#FAFBFB]/70 text-sm leading-relaxed">
+                <p className="text-[#263747]/75 text-sm leading-relaxed">
                   {item.body}
                 </p>
               </div>

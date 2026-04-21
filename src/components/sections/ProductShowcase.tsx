@@ -104,7 +104,7 @@ export function ProductShowcase() {
   const prevProduct = () => paginate(-1);
 
   return (
-    <section id="product" className="relative py-16 bg-[#AACAD1] overflow-hidden">
+    <section id="product" className="bg-luxe-teal noise-overlay relative py-16 overflow-hidden">
       <motion.div
         className={`absolute inset-0 bg-gradient-to-br ${currentProduct.bgColor}`}
         initial={{ opacity: 0 }}

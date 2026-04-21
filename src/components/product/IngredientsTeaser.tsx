@@ -35,7 +35,7 @@ const ingredients = [
 
 export function IngredientsTeaser() {
   return (
-    <section className="relative py-20 md:py-28 bg-[#AACAD1] overflow-hidden">
+    <section className="relative py-20 md:py-28 bg-luxe-teal noise-overlay overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-[#AACAD1] via-[#FDF8F0]/25 to-[#AACAD1]" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6">

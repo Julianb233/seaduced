@@ -20,13 +20,15 @@ export function CTABand({
   variant?: "light" | "navy";
 }) {
   const isNavy = variant === "navy";
-  const bg = isNavy ? "bg-[#263747]" : "bg-[#AACAD1]";
-  const heading = isNavy ? "text-[#FAFBFB]" : "text-[#263747]";
-  const sub = isNavy ? "text-[#FAFBFB]/75" : "text-[#263747]/75";
-  const eyeColor = isNavy ? "text-[#AD9952]" : "text-[#325360]";
+  // 2026-04-21: "navy" variant lightened per Julian's directive — now uses
+  // luxe-deep (aqua gradient) with navy text for contrast.
+  const bg = isNavy ? "bg-luxe-deep" : "bg-luxe-teal";
+  const heading = "text-[#263747]";
+  const sub = "text-[#263747]/75";
+  const eyeColor = isNavy ? "text-[#325360]" : "text-[#325360]";
 
   return (
-    <section className={`${bg} py-20 md:py-24 relative overflow-hidden`}>
+    <section className={`${bg} noise-overlay py-20 md:py-24 relative overflow-hidden`}>
       <motion.div
         className={`absolute -left-20 top-1/2 -translate-y-1/2 w-72 h-72 rounded-full blur-3xl pointer-events-none ${
           isNavy ? "bg-[#AD9952]/10" : "bg-[#FDF8F0]/50"
@@ -84,11 +86,7 @@ export function CTABand({
           {secondary && (
             <Link
               href={secondary.href}
-              className={`inline-flex items-center gap-2 border-2 px-6 py-3 rounded-full font-bold text-sm tracking-wide transition-colors ${
-                isNavy
-                  ? "border-[#FAFBFB]/70 text-[#FAFBFB] hover:bg-[#FAFBFB] hover:text-[#263747]"
-                  : "border-[#325360] text-[#325360] hover:bg-[#325360] hover:text-[#FDF8F0]"
-              }`}
+              className="inline-flex items-center gap-2 border-2 border-[#325360] text-[#325360] hover:bg-[#325360] hover:text-[#FDF8F0] px-6 py-3 rounded-full font-bold text-sm tracking-wide transition-colors"
             >
               {secondary.label}
             </Link>

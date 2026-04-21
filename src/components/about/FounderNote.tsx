@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export function FounderNote() {
   return (
-    <section className="relative py-24 md:py-32 bg-[#AACAD1] overflow-hidden">
+    <section className="relative py-24 md:py-32 bg-luxe-teal noise-overlay overflow-hidden">
       {/* Cream accent gradient — cream is SECONDARY only */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#AACAD1] via-[#FDF8F0]/40 to-[#AACAD1]" />
 

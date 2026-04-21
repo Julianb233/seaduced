@@ -127,7 +127,7 @@ function TiltCard({
 
 export function HowToUse() {
   return (
-    <section className="relative py-20 md:py-28 bg-[#FDF8F0] overflow-hidden">
+    <section className="relative py-20 md:py-28 bg-luxe-cream noise-overlay overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
           className="text-center mb-12 md:mb-14"

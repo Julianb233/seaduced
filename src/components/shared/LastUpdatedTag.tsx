@@ -12,7 +12,7 @@ export function LastUpdatedTag({
   note?: string;
 }) {
   return (
-    <section className="bg-[#AACAD1] py-14 border-t border-[#263747]/10">
+    <section className=" relative bg-luxe-teal noise-overlay py-14 border-t border-[#263747]/10 overflow-hidden">
       <div className="max-w-3xl mx-auto px-6">
         <motion.div
           className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 rounded-2xl border border-[#263747]/15 bg-[#FDF8F0]/70 backdrop-blur-sm px-6 py-5"

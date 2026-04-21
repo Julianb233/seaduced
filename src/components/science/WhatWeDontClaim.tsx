@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export function WhatWeDontClaim() {
   return (
-    <section className="bg-[#AACAD1] py-24 md:py-32 relative">
+    <section className=" bg-luxe-teal noise-overlay py-24 md:py-32 relative overflow-hidden">
       <div className="max-w-3xl mx-auto px-6 text-center">
         <div className="overflow-hidden">
           <motion.span

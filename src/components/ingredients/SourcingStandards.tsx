@@ -23,7 +23,7 @@ const STANDARDS = [
 
 export function SourcingStandards() {
   return (
-    <section className="bg-[#AACAD1] py-24 md:py-32 relative overflow-hidden">
+    <section className="bg-luxe-teal noise-overlay py-24 md:py-32 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-[#AACAD1] via-[#FDF8F0]/30 to-[#AACAD1]" />
       <div className="relative max-w-5xl mx-auto px-6">
         <div className="text-center mb-16 max-w-2xl mx-auto">
