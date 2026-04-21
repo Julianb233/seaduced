@@ -125,7 +125,7 @@ export function Social() {
                 alt={`Instagram post ${index + 1}`}
                 fill
                 sizes="(max-width: 768px) 50vw, 200px"
-                className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                className="object-cover saturate-90 group-hover:saturate-100 transition-all duration-500"
               />
               <motion.div
                 className="absolute inset-0 bg-[#C5A55A]/0 group-hover:bg-[#C5A55A]/25 flex items-center justify-center"
