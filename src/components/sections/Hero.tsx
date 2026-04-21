@@ -140,7 +140,7 @@ export function Hero() {
                   className="inline-block"
                   style={{
                     backgroundImage:
-                      "linear-gradient(90deg, #325360 0%, #325360 18%, #FAFBFB 50%, #325360 82%, #325360 100%)",
+                      "linear-gradient(90deg, #325360 0%, #6793A0 28%, #AD9952 50%, #6793A0 72%, #325360 100%)",
                     WebkitBackgroundClip: "text",
                     backgroundClip: "text",
                     color: "transparent",
