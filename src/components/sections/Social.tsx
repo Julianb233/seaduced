@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 /* -------------------------------------------------------------------------- */
 /*  Instagram SVG — lucide-react doesn't export one in the installed version   */
@@ -24,7 +25,7 @@ function IgIcon({ className }: { className?: string }) {
 }
 
 /* -------------------------------------------------------------------------- */
-/*  Animation config (inlined — the shared motion lib lives on another branch) */
+/*  Animation config                                                           */
 /* -------------------------------------------------------------------------- */
 const viewportOnce = { once: true, margin: "-80px" as const };
 const easeSmooth: [number, number, number, number] = [0.25, 0.4, 0.25, 1];
@@ -45,19 +46,22 @@ const staggerItem = {
 };
 
 /* -------------------------------------------------------------------------- */
-/*  Grid data — gradient placeholders until Gina provides real IG images       */
+/*  Grid data — 6 placeholder JPGs in /public/images/social/                   */
+/*  Swap for real IG content when Gina provides the handle / API key.          */
 /* -------------------------------------------------------------------------- */
+const INSTAGRAM_URL = "https://instagram.com/seaduced.wellness";
+
 const socialImages = [
-  { id: 1, gradient: "from-[#3B5EAB]/40 to-[#1A6B5C]/40", label: "Ocean Fresh", alt: "Sea moss wellness lifestyle" },
-  { id: 2, gradient: "from-[#C5A55A]/40 to-[#3B5EAB]/30", label: "Natural Texture", alt: "Ocean-inspired natural beauty" },
-  { id: 3, gradient: "from-[#1A6B5C]/40 to-[#C5A55A]/30", label: "Naturally Intimate", alt: "Clean intimate wellness" },
-  { id: 4, gradient: "from-[#3B5EAB]/30 to-[#1A6B5C]/50", label: "Sustainably Sourced", alt: "Natural plant-based care" },
-  { id: 5, gradient: "from-[#C5A55A]/30 to-[#3B5EAB]/40", label: "Plant-Based", alt: "Seaduced intimate wellness" },
-  { id: 6, gradient: "from-[#1A6B5C]/30 to-[#C5A55A]/40", label: "Connection", alt: "Clean beauty essentials" },
-] as const;
+  { src: "/images/social/social-01.jpg", alt: "Sea moss wellness lifestyle" },
+  { src: "/images/social/social-02.jpg", alt: "Ocean-inspired natural beauty" },
+  { src: "/images/social/social-03.jpg", alt: "Clean intimate wellness" },
+  { src: "/images/social/social-04.jpg", alt: "Natural plant-based care" },
+  { src: "/images/social/social-05.jpg", alt: "Seaduced intimate wellness" },
+  { src: "/images/social/social-06.jpg", alt: "Clean beauty essentials" },
+];
 
 /* -------------------------------------------------------------------------- */
-/*  Social section — Instagram grid with gold hover overlay                    */
+/*  Social section — Instagram grid with gold overlay + grayscale hover        */
 /* -------------------------------------------------------------------------- */
 export function Social() {
   return (
@@ -83,7 +87,7 @@ export function Social() {
           transition={{ duration: 0.6 }}
         >
           <motion.span
-            className="inline-block text-[10px] font-semibold uppercase tracking-[0.3em] text-[#C5A55A]"
+            className="inline-block font-mono text-[10px] font-semibold uppercase tracking-[0.3em] text-[#C5A55A]"
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={viewportOnce}
@@ -114,7 +118,7 @@ export function Social() {
           />
         </motion.div>
 
-        {/* Instagram Grid 3x2 */}
+        {/* Instagram Grid — 3x2 with stagger spring entry */}
         <motion.div
           className="grid grid-cols-2 gap-3 sm:grid-cols-3"
           variants={staggerContainer}
@@ -124,31 +128,25 @@ export function Social() {
         >
           {socialImages.map((img) => (
             <motion.a
-              key={img.id}
-              href="#"
-              aria-label={img.alt}
+              key={img.src}
+              href={INSTAGRAM_URL}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label={img.alt}
               className="group relative aspect-square overflow-hidden rounded-2xl"
               variants={staggerItem}
             >
-              {/* Placeholder gradient */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${img.gradient}`} />
+              {/* Image — grayscale by default, full color on hover */}
+              <Image
+                src={img.src}
+                alt={img.alt}
+                fill
+                sizes="(max-width: 640px) 50vw, 33vw"
+                className="object-cover transition-all duration-500 grayscale group-hover:grayscale-0 group-hover:scale-105"
+              />
 
-              {/* Dot-grid pattern */}
-              <div className="absolute inset-0 opacity-20">
-                <div className="h-full w-full bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[length:20px_20px]" />
-              </div>
-
-              {/* Placeholder label */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <span className="text-sm font-medium text-white/40 transition-opacity duration-300 group-hover:opacity-0">
-                  {img.label}
-                </span>
-              </div>
-
-              {/* Gold gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#C5A55A]/40 via-[#C5A55A]/10 to-transparent transition-opacity duration-500" />
+              {/* Gold gradient overlay — visible by default, fades on hover */}
+              <div className="absolute inset-0 bg-gradient-to-t from-[#C5A55A]/40 via-[#C5A55A]/10 to-transparent transition-opacity duration-500 group-hover:opacity-0" />
 
               {/* Instagram icon on hover */}
               <div className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
@@ -163,7 +161,7 @@ export function Social() {
           ))}
         </motion.div>
 
-        {/* CTA */}
+        {/* CTA — gold pill */}
         <motion.div
           className="mt-10 flex justify-center"
           initial={{ opacity: 0, y: 16 }}
@@ -172,7 +170,7 @@ export function Social() {
           transition={{ duration: 0.5, delay: 0.6, ease: easeSmooth }}
         >
           <a
-            href="#"
+            href={INSTAGRAM_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="group inline-flex items-center gap-2.5 rounded-full bg-[#C5A55A] px-8 py-3.5 text-sm font-bold tracking-wide text-[#1E1E2E] transition-colors hover:bg-[#d4b76a]"
