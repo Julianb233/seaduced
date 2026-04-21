@@ -24,12 +24,12 @@ function Instagram({ className }: { className?: string }) {
 }
 
 const instagramPosts = [
-  { image: "/images/social/placeholder-1.jpg", likes: "2.4k" },
-  { image: "/images/social/placeholder-2.jpg", likes: "1.8k" },
-  { image: "/images/social/placeholder-3.jpg", likes: "3.2k" },
-  { image: "/images/social/placeholder-4.jpg", likes: "956" },
-  { image: "/images/social/placeholder-5.jpg", likes: "1.5k" },
-  { image: "/images/social/placeholder-6.jpg", likes: "2.1k" },
+  { image: "/images/social/tile-01-ocean-seaweed.png", likes: "2.4k" },
+  { image: "/images/social/tile-02-woman-morning-light.png", likes: "1.8k" },
+  { image: "/images/social/tile-03-bathroom-marble.png", likes: "3.2k" },
+  { image: "/images/social/tile-04-couple-hands.png", likes: "956" },
+  { image: "/images/social/tile-05-marble-drops.png", likes: "1.5k" },
+  { image: "/images/social/tile-06-ocean-horizon.png", likes: "2.1k" },
 ];
 
 const containerVariants = {
