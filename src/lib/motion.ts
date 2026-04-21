@@ -1,30 +1,79 @@
+/**
+ * Motion Primitives — Seaduced
+ *
+ * Centralised framer-motion variants, transitions, and helpers.
+ * Import from "@/lib/motion" to keep animation behaviour consistent
+ * across sections and layout components.
+ */
+
 import type { Variants, Transition } from "framer-motion";
 
-// ---------------------------------------------------------------------------
-// Shared spring configs — reuse across all animation primitives
-// ---------------------------------------------------------------------------
+/* ═══════════════════════════════════════════════════════════
+   SPRING CONFIGS
+   ═══════════════════════════════════════════════════════════ */
+
+/** Snappy interactive spring — buttons, logos, small interactive elements */
+export const springSnap = {
+  type: "spring" as const,
+  stiffness: 400,
+  damping: 17,
+};
+
+/** Standard spring — slide/enter animations, page transitions */
+export const springMedium = {
+  type: "spring" as const,
+  stiffness: 300,
+  damping: 30,
+};
+
+/** Soft spring — large layout shifts, stat counter reveals */
+export const springSoft = {
+  type: "spring" as const,
+  stiffness: 200,
+  damping: 20,
+};
+
+/** Item-level spring — grid children, stagger items */
+export const springItem = {
+  type: "spring" as const,
+  stiffness: 300,
+  damping: 24,
+};
+
+/** Parallax-ready spring */
 export const springConfig = {
   stiffness: 100,
   damping: 30,
   restDelta: 0.001,
 } as const;
 
-export const snappySpring: Transition = {
-  type: "spring",
-  stiffness: 300,
-  damping: 30,
+/* ═══════════════════════════════════════════════════════════
+   EASE CURVES
+   ═══════════════════════════════════════════════════════════ */
+
+/** Smooth cubic for reveal/fade animations */
+export const easeSmooth: [number, number, number, number] = [0.25, 0.4, 0.25, 1];
+
+/** Ease-reveal transition preset */
+export const easeReveal: Transition = {
+  duration: 0.6,
+  ease: easeSmooth,
 };
 
-export const gentleSpring: Transition = {
-  type: "spring",
-  stiffness: 100,
-  damping: 20,
+/* ═══════════════════════════════════════════════════════════
+   FADE / REVEAL VARIANTS
+   ═══════════════════════════════════════════════════════════ */
+
+/** Simple fade in (opacity only) */
+export const fadeIn: Variants = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { duration: 0.5 } },
 };
 
-// ---------------------------------------------------------------------------
-// fadeUpVariants — hero headline / eyebrow / CTA / benefits entrance
-// Usage: pass `custom={i}` on each <motion.*> to stagger by i * 0.1s
-// ---------------------------------------------------------------------------
+/**
+ * Fade-up with optional stagger index.
+ * Usage: custom={i} on each element to stagger by i * 0.1s.
+ */
 export const fadeUpVariants: Variants = {
   hidden: { opacity: 0, y: 40 },
   visible: (i: number = 0) => ({
@@ -33,43 +82,113 @@ export const fadeUpVariants: Variants = {
     transition: {
       delay: i * 0.1,
       duration: 0.6,
-      ease: [0.25, 0.4, 0.25, 1],
+      ease: easeSmooth,
     },
   }),
 };
 
-// ---------------------------------------------------------------------------
-// fadeInVariants — simple fade without vertical movement
-// ---------------------------------------------------------------------------
-export const fadeInVariants: Variants = {
-  hidden: { opacity: 0 },
-  visible: (i: number = 0) => ({
+/** Fade-up (simple, no custom index) */
+export const fadeUp: Variants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
     opacity: 1,
-    transition: {
-      delay: i * 0.12,
-      duration: 0.5,
-      ease: "easeOut",
-    },
-  }),
+    y: 0,
+    transition: { duration: 0.5, ease: easeSmooth },
+  },
 };
 
-// ---------------------------------------------------------------------------
-// scaleInVariants — product image entrance (scale + rotate spring)
-// ---------------------------------------------------------------------------
+/** Fade-down (for nav/header drops) */
+export const fadeDown: Variants = {
+  hidden: { opacity: 0, y: -20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.4, ease: easeSmooth },
+  },
+};
+
+/** Scale-in with rotate (product image entrance) */
 export const scaleInVariants: Variants = {
   hidden: { opacity: 0, scale: 0.8, rotate: -10 },
   visible: {
     opacity: 1,
     scale: 1,
     rotate: 0,
-    transition: { type: "spring", stiffness: 100, damping: 20 },
+    transition: { type: "spring" as const, stiffness: 100, damping: 20 },
   },
 };
 
-// ---------------------------------------------------------------------------
-// slideVariants — carousel with custom direction
-// Pass `custom={direction}` (1 or -1) to control slide direction.
-// ---------------------------------------------------------------------------
+/** Scale + fade (stats, badges, icons) */
+export const scaleFade: Variants = {
+  hidden: { opacity: 0, scale: 0.5 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: springSoft,
+  },
+};
+
+/* ═══════════════════════════════════════════════════════════
+   STAGGER CONTAINERS
+   ═══════════════════════════════════════════════════════════ */
+
+/** Stagger children by 80ms with 150ms initial delay */
+export const containerVariants: Variants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.08,
+      delayChildren: 0.15,
+    },
+  },
+};
+
+/** Stagger children by 80ms, no initial delay */
+export const staggerContainer: Variants = {
+  hidden: {},
+  visible: {
+    transition: { staggerChildren: 0.08 },
+  },
+};
+
+/** Stagger children by 120ms (slower pacing) */
+export const staggerContainerSlow: Variants = {
+  hidden: {},
+  visible: {
+    transition: { staggerChildren: 0.12 },
+  },
+};
+
+/** Grid item entrance (y + scale spring) */
+export const itemVariants: Variants = {
+  hidden: { opacity: 0, y: 24, scale: 0.9 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: { type: "spring" as const, stiffness: 100, damping: 20 },
+  },
+};
+
+/** Stagger child: fade + slide-up with snappier spring */
+export const staggerItem: Variants = {
+  hidden: { opacity: 0, y: 30, scale: 0.95 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: springItem,
+  },
+};
+
+/* ═══════════════════════════════════════════════════════════
+   SLIDE VARIANTS (Carousel / transitions)
+   ═══════════════════════════════════════════════════════════ */
+
+/**
+ * Directional slide with 3D tilt.
+ * Usage: custom={direction} where direction = 1 (next) or -1 (prev).
+ */
 export const slideVariants: Variants = {
   enter: (direction: number) => ({
     x: direction > 0 ? 300 : -300,
@@ -82,86 +201,122 @@ export const slideVariants: Variants = {
     opacity: 1,
     scale: 1,
     rotateY: 0,
-    transition: { type: "spring", stiffness: 300, damping: 30 },
+    transition: springMedium,
   },
   exit: (direction: number) => ({
     x: direction > 0 ? -300 : 300,
     opacity: 0,
     scale: 0.9,
     rotateY: direction > 0 ? -15 : 15,
-    transition: { type: "spring", stiffness: 300, damping: 30 },
+    transition: springMedium,
   }),
 };
 
-// ---------------------------------------------------------------------------
-// containerVariants — stagger wrapper for grid / list parents
-// ---------------------------------------------------------------------------
-export const containerVariants: Variants = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.08,
-      delayChildren: 0.15,
+/**
+ * Factory: build custom slide variants with configurable distance/tilt.
+ */
+export function makeSlideVariants(distance = 300, tilt = 15): Variants {
+  return {
+    enter: (dir: number) => ({
+      x: dir > 0 ? distance : -distance,
+      opacity: 0,
+      scale: 0.9,
+      rotateY: dir > 0 ? tilt : -tilt,
+    }),
+    center: {
+      x: 0,
+      opacity: 1,
+      scale: 1,
+      rotateY: 0,
+      transition: springMedium,
     },
-  },
-};
+    exit: (dir: number) => ({
+      x: dir > 0 ? -distance : distance,
+      opacity: 0,
+      scale: 0.9,
+      rotateY: dir > 0 ? -tilt : tilt,
+      transition: springMedium,
+    }),
+  };
+}
 
-// ---------------------------------------------------------------------------
-// itemVariants — grid item entrance (y + scale spring)
-// ---------------------------------------------------------------------------
-export const itemVariants: Variants = {
-  hidden: { opacity: 0, y: 24, scale: 0.9 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    scale: 1,
-    transition: { type: "spring", stiffness: 100, damping: 20 },
-  },
-};
+/* ═══════════════════════════════════════════════════════════
+   MOBILE MENU VARIANTS
+   ═══════════════════════════════════════════════════════════ */
 
-// ---------------------------------------------------------------------------
-// mobileMenuVariants — expand / collapse for mobile navigation
-// ---------------------------------------------------------------------------
+/** Slide-in panel from right */
 export const mobileMenuVariants: Variants = {
-  closed: { height: 0, opacity: 0, overflow: "hidden" as const },
+  closed: {
+    x: "100%",
+    transition: springMedium,
+  },
   open: {
-    height: "auto",
-    opacity: 1,
-    overflow: "hidden" as const,
-    transition: { duration: 0.3, ease: [0.25, 0.4, 0.25, 1] },
+    x: 0,
+    transition: springMedium,
   },
 };
 
-// ---------------------------------------------------------------------------
-// parallaxRange — helper for scroll-linked parallax
-// Returns a MotionValue-compatible range for useTransform
-// ---------------------------------------------------------------------------
-export const PARALLAX_OFFSET = { slow: 50, medium: 100, fast: 200 } as const;
+/** Individual mobile link stagger (pass custom={index}) */
+export const mobileLinkVariants: Variants = {
+  closed: { opacity: 0, x: 30 },
+  open: (i: number) => ({
+    opacity: 1,
+    x: 0,
+    transition: { delay: 0.1 + i * 0.06, duration: 0.3, ease: "easeOut" as const },
+  }),
+};
 
-// ---------------------------------------------------------------------------
-// hoverScale — quick whileHover / whileTap presets for interactive elements
-// ---------------------------------------------------------------------------
+/** Backdrop overlay */
+export const backdropVariants: Variants = {
+  closed: { opacity: 0 },
+  open: { opacity: 1 },
+};
+
+/* ═══════════════════════════════════════════════════════════
+   LINE / UNDERLINE REVEALS
+   ═══════════════════════════════════════════════════════════ */
+
+/** Horizontal line from left (scaleX 0 to 1) */
+export const lineReveal: Variants = {
+  hidden: { scaleX: 0, originX: 0 },
+  visible: {
+    scaleX: 1,
+    transition: { duration: 0.8, ease: easeSmooth },
+  },
+};
+
+/* ═══════════════════════════════════════════════════════════
+   HOVER / TAP PRESETS
+   ═══════════════════════════════════════════════════════════ */
+
+/** Card lift (y:-8, scale:1.02) */
+export const hoverLift = {
+  whileHover: { y: -8, scale: 1.02 },
+} as const;
+
+/** Button/logo scale (1.04 hover, 0.97 tap) */
 export const hoverScale = {
-  whileHover: { scale: 1.05 },
+  whileHover: { scale: 1.04 },
   whileTap: { scale: 0.97 },
-  transition: gentleSpring,
+  transition: springSnap,
 } as const;
 
-export const hoverScaleSubtle = {
-  whileHover: { scale: 1.02 },
-  whileTap: { scale: 0.98 },
-  transition: gentleSpring,
-} as const;
+/* ═══════════════════════════════════════════════════════════
+   TILT CARD SPRING CONFIGS
+   ═══════════════════════════════════════════════════════════ */
 
-// ---------------------------------------------------------------------------
-// viewport defaults — shared IntersectionObserver-like trigger config
-// ---------------------------------------------------------------------------
-export const viewportOnce = {
-  once: true,
-  margin: "-80px" as const,
-};
+/** Default tilt spring (light) */
+export const tiltSpring = { stiffness: 150, damping: 20 } as const;
 
-export const viewportRepeat = {
-  once: false,
-  margin: "-80px" as const,
-};
+/** Strong tilt spring */
+export const tiltSpringStrong = { stiffness: 300, damping: 30 } as const;
+
+/* ═══════════════════════════════════════════════════════════
+   VIEWPORT DEFAULTS
+   ═══════════════════════════════════════════════════════════ */
+
+/** Fire once, -50px trigger margin */
+export const viewportOnce = { once: true, margin: "-50px" as const };
+
+/** Fire once, 20% visible */
+export const viewportPartial = { once: true, amount: 0.2 as const };
