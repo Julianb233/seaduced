@@ -42,7 +42,7 @@ export function CTABand() {
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           One 5 oz bottle. 92 minerals. No mystery ingredients.
-          Made for every body, every chapter.
+          Start your ritual, or stock your ocean.
         </motion.p>
 
         <motion.div
@@ -55,15 +55,17 @@ export function CTABand() {
           <a
             href="#price"
             className="group relative inline-flex items-center gap-3 px-8 py-4 rounded-full bg-[#AD9952] text-[#FAFBFB] font-semibold text-sm tracking-wide shadow-lg shadow-[#AD9952]/25 hover:shadow-xl hover:shadow-[#AD9952]/35 transition-shadow overflow-hidden"
+            aria-label="Shop the packs"
           >
-            <span className="relative">Add to cart &mdash; $28</span>
+            <span className="relative">Shop the packs</span>
           </a>
           <a
             href="#price"
             className="inline-flex items-center gap-2 px-7 py-4 rounded-full border border-[#325360]/50 text-[#325360] font-medium text-sm tracking-wide hover:bg-[#325360] hover:text-[#FAFBFB] transition-colors"
+            aria-label="Send the Gift Set"
           >
             <Gift className="w-4 h-4" />
-            Send as a gift
+            Send the Gift Set
           </a>
         </motion.div>
 

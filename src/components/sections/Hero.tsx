@@ -2,7 +2,7 @@
 
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { useRef } from "react";
-import { HeroBottleAnimation } from "./HeroBottleAnimation";
+import Image from "next/image";
 
 const springConfig = { stiffness: 100, damping: 30, restDelta: 0.001 };
 
@@ -224,14 +224,43 @@ export function Hero() {
             </motion.div>
           </motion.div>
 
-          <motion.div
-            style={{ y, scale }}
-            variants={scaleInVariants}
-            initial="hidden"
-            animate="visible"
-            className="relative flex justify-center items-center min-h-[420px] md:min-h-[560px]"
-          >
-            <HeroBottleAnimation />
+          <motion.div style={{ y, scale }} className="relative flex justify-center">
+            <motion.div
+              variants={scaleInVariants}
+              initial="hidden"
+              animate="visible"
+              className="relative"
+            >
+              <motion.div
+                className="absolute inset-0 bg-[#AD9952]/40 blur-[80px] rounded-full scale-75"
+                animate={{
+                  scale: [0.75, 0.85, 0.75],
+                  opacity: [0.3, 0.5, 0.3],
+                }}
+                transition={{ duration: 4, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
+              />
+
+              <motion.div
+                animate={{
+                  y: [0, -15, 0],
+                  rotate: [0, 2, 0],
+                }}
+                transition={{
+                  duration: 6,
+                  repeat: Number.POSITIVE_INFINITY,
+                  ease: "easeInOut",
+                }}
+              >
+                <Image
+                  src="/images/bottle-isolated.png"
+                  alt="Seaduced Sea Moss Intimate Wellness Bottle"
+                  width={350}
+                  height={525}
+                  className="relative z-10 drop-shadow-2xl"
+                  priority
+                />
+              </motion.div>
+            </motion.div>
           </motion.div>
         </div>
 
