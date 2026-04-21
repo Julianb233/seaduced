@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, JetBrains_Mono } from "next/font/google";
+import { Inter, JetBrains_Mono, Playfair_Display, Dancing_Script } from "next/font/google";
 import { LenisProvider } from "@/components/layout/LenisProvider";
 import ClickSpark from "@/components/layout/ClickSpark";
 import { Navigation } from "@/components/layout/Navigation";
@@ -15,6 +15,20 @@ const inter = Inter({
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   variable: "--font-mono",
+  display: "swap",
+});
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-serif",
+  weight: ["400", "700", "800", "900"],
+  display: "swap",
+});
+
+const dancing = Dancing_Script({
+  subsets: ["latin"],
+  variable: "--font-script",
+  weight: ["400", "700"],
   display: "swap",
 });
 
@@ -50,7 +64,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${jetbrainsMono.variable} h-full antialiased`}
+      className={`${inter.variable} ${jetbrainsMono.variable} ${playfair.variable} ${dancing.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-sans bg-background text-foreground">
         <ClickSpark
