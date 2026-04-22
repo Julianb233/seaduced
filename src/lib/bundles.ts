@@ -74,10 +74,10 @@ export const bundles: Bundle[] = [
   {
     slug: "single",
     name: "Single",
-    tagline: "Start the ritual",
+    tagline: "Start here",
     shortDescription: "One 5 oz bottle — everything you need to begin.",
     description:
-      "The Single is one 5 oz pump bottle of our sea moss-infused personal lubricant. It's the simplest way to start the ritual — a single clean, plant-based bottle delivered in discreet, unbranded packaging.",
+      "The Single is one 5 oz pump bottle of our sea moss-infused personal lubricant. It's the simplest way to start — a single clean, plant-based bottle delivered in discreet, unbranded packaging.",
     price: 28,
     compareAtPrice: null,
     save: null,
@@ -105,11 +105,11 @@ export const bundles: Bundle[] = [
   },
   {
     slug: "ritual-3-pack",
-    name: "Ritual 3-Pack",
+    name: "Daily 3-Pack",
     tagline: "For the routine",
     shortDescription: "Three 5 oz bottles — save $9 vs singles.",
     description:
-      "The Ritual 3-Pack is three 5 oz bottles for $75 — enough to stock a nightstand, a drawer, and a travel bag. Same clean, plant-based formula, now at a routine-friendly price. Save $9 vs buying three singles.",
+      "The Daily 3-Pack is three 5 oz bottles for $75 — enough to stock a nightstand, a drawer, and a travel bag. Same clean, plant-based formula, now at a routine-friendly price. Save $9 vs buying three singles.",
     price: 75,
     compareAtPrice: 84,
     save: "Save $9",
@@ -141,7 +141,7 @@ export const bundles: Bundle[] = [
     tagline: "Share the wave",
     shortDescription: "Six 5 oz bottles — best value per bottle.",
     description:
-      "The Wave 6-Pack is six 5 oz bottles for $140 — our best per-bottle value. Ideal for households, co-founders of a shared ritual, or anyone who wants to stay stocked for the long haul. Save $28 vs buying six singles.",
+      "The Wave 6-Pack is six 5 oz bottles for $140 — our best per-bottle value. Ideal for households, co-founders of a shared self-care routine, or anyone who wants to stay stocked for the long haul. Save $28 vs buying six singles.",
     price: 140,
     compareAtPrice: 168,
     save: "Save $28",

@@ -99,7 +99,7 @@ export function ProductHero() {
               href="#price"
               className="group relative inline-flex items-center gap-3 px-7 py-3.5 rounded-full bg-[#AD9952] text-[#FAFBFB] font-medium text-sm tracking-wide shadow-lg shadow-[#AD9952]/20 hover:shadow-xl hover:shadow-[#AD9952]/30 transition-shadow"
             >
-              <span>Add to Ritual</span>
+              <span>Add to Cart</span>
               <span className="font-mono text-[#FAFBFB]/80">$28</span>
               <span className="absolute inset-0 rounded-full ring-1 ring-inset ring-white/20" />
             </a>

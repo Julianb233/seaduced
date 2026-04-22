@@ -22,7 +22,7 @@ const bundles: Bundle[] = [
   {
     id: "single",
     name: "Single",
-    eyebrow: "Start the ritual",
+    eyebrow: "Start here",
     contents: "1 x 5 oz bottle",
     price: 28,
     compareAt: null,
@@ -32,13 +32,13 @@ const bundles: Bundle[] = [
   },
   {
     id: "ritual-3",
-    name: "Ritual 3-Pack",
+    name: "Daily 3-Pack",
     eyebrow: "For the routine",
     contents: "3 x 5 oz bottles",
     price: 75,
     compareAt: 84,
     savings: "Save $9",
-    pitch: "Stock the drawer, the nightstand, the travel bag. Enough to make the ritual a habit.",
+    pitch: "Stock the drawer, the nightstand, the travel bag. Enough to make self-care a habit.",
     visual: "triple",
   },
   {
@@ -280,7 +280,7 @@ function BundleCard({ bundle, index }: { bundle: Bundle; index: number }) {
 
           <motion.button
             type="button"
-            aria-label={`Add ${bundle.name} to ritual — $${bundle.price}`}
+            aria-label={`Add ${bundle.name} to cart — $${bundle.price}`}
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             transition={{ type: "spring", stiffness: 400, damping: 17 }}
@@ -296,7 +296,7 @@ function BundleCard({ bundle, index }: { bundle: Bundle; index: number }) {
               whileHover={{ x: "110%" }}
               transition={{ duration: 0.6 }}
             />
-            <span className="relative">Add to Ritual</span>
+            <span className="relative">Add to Cart</span>
           </motion.button>
         </div>
       </motion.div>
@@ -352,7 +352,7 @@ export function ProductShowcase() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, ease: [0.25, 0.4, 0.25, 1], delay: 0.1 }}
             >
-              ritual
+              bottle
             </motion.span>
           </h2>
           <motion.p

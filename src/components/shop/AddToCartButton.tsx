@@ -49,7 +49,7 @@ export function AddToCartButton({
     if (!bundle) return;
     addItem(slug, qty);
     setAdded(true);
-    toast.success(`${bundle.name} added to your ritual`, {
+    toast.success(`${bundle.name} added to your cart`, {
       description: `${qty} x ${bundle.name} — $${bundle.price * qty}`,
     });
     window.setTimeout(() => setAdded(false), 1600);

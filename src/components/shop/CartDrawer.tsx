@@ -75,7 +75,7 @@ export function CartDrawer({
           >
             <div className="flex items-center justify-between px-6 py-5 border-b border-[#263747]/10">
               <h2 className="font-black text-lg tracking-tight text-[#263747]">
-                Your ritual
+                Your cart
               </h2>
               <button
                 type="button"
@@ -93,7 +93,7 @@ export function CartDrawer({
                   <div className="w-16 h-16 rounded-full bg-[#AACAD1]/50 flex items-center justify-center mb-4">
                     <ShoppingBag className="w-7 h-7 text-[#325360]" />
                   </div>
-                  <p className="text-[#263747] font-bold text-lg">Your ritual is empty.</p>
+                  <p className="text-[#263747] font-bold text-lg">Your cart is empty.</p>
                   <p className="text-[#263747]/60 text-sm mt-1 mb-5">Start with one bottle.</p>
                   <Link
                     href="/shop"

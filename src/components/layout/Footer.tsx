@@ -201,7 +201,7 @@ export function Footer() {
             viewport={{ once: true }}
             transition={{ delay: 0.4 }}
           >
-            Get early drops, rituals, and 10% off your first bottle.
+            Get early drops, self-care notes, and 10% off your first bottle.
           </motion.p>
         </motion.div>
 

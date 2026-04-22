@@ -42,7 +42,7 @@ export function CTABand() {
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           One 5 oz bottle. 92 minerals. No mystery ingredients.
-          Start your ritual, or stock your ocean.
+          Start here, or stock your ocean.
         </motion.p>
 
         <motion.div

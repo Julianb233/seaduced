@@ -7,13 +7,13 @@ import { NewsletterCTA } from "@/components/blog/NewsletterCTA";
 import { BLOG_POSTS } from "@/lib/blog-posts";
 
 export const metadata: Metadata = {
-  title: "Seaduced Journal — Intimate Wellness Essays, Rituals, and Ingredient Deep-Dives",
+  title: "Seaduced Journal — Intimate Wellness Essays, Self-Care, and Ingredient Deep-Dives",
   description:
     "Honest essays on self-care, menopause, inclusive intimate wellness, and the science of feeling good in the body you live in.",
   openGraph: {
     title: "Seaduced Journal",
     description:
-      "Honest essays on intimate wellness, rituals, and the science of feeling good in the body you live in.",
+      "Honest essays on intimate wellness, self-care, and the science of feeling good in the body you live in.",
     type: "website",
   },
 };

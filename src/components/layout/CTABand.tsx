@@ -7,7 +7,7 @@ export function CTABand({
   eyebrow = "Ready to Feel Seaduced",
   title,
   subtitle,
-  primary = { label: "Add to Ritual", href: "/product" },
+  primary = { label: "Add to Cart", href: "/product" },
   secondary,
 }: {
   eyebrow?: string;

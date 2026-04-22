@@ -21,7 +21,7 @@ const bundles: Bundle[] = [
   {
     id: "single",
     name: "Single",
-    eyebrow: "Start the ritual",
+    eyebrow: "Start here",
     contents: "1 x 5 oz bottle",
     price: 28,
     compareAt: null,
@@ -31,7 +31,7 @@ const bundles: Bundle[] = [
   },
   {
     id: "ritual-3",
-    name: "Ritual 3-Pack",
+    name: "Daily 3-Pack",
     eyebrow: "For the routine",
     contents: "3 x 5 oz bottles",
     price: 75,
@@ -213,7 +213,7 @@ function BundleGridCard({ bundle, index }: { bundle: Bundle; index: number }) {
 
         <motion.button
           type="button"
-          aria-label={`Add ${bundle.name} to ritual — $${bundle.price}`}
+          aria-label={`Add ${bundle.name} to cart — $${bundle.price}`}
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
           transition={{ type: "spring", stiffness: 400, damping: 17 }}

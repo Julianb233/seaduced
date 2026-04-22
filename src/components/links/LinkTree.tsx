@@ -14,7 +14,7 @@ type Destination = {
 
 const DESTINATIONS: Destination[] = [
   {
-    label: "Shop the Ritual",
+    label: "Shop Seaduced",
     href: "/product",
     description: "5 oz sea-moss-infused personal lubricant. $20-$35.",
     variant: "primary",
