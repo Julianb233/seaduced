@@ -41,7 +41,7 @@ export function PressQuote() {
             style={{ fontFamily: "var(--font-sans)", fontWeight: 500 }}
           >
             &ldquo;Seaduced treats the body like a landscape worth protecting —
-            and the ritual around it like something worth elevating.&rdquo;
+            and the care around it like something worth elevating.&rdquo;
           </p>
 
           <div className="mt-8 flex items-center gap-3">

@@ -148,7 +148,7 @@ export function HowToUse() {
               viewport={{ once: true }}
               transition={{ duration: 0.7, ease: [0.25, 0.4, 0.25, 1] }}
             >
-              A three&#8209;step ritual.
+              A three&#8209;step practice.
             </motion.h2>
           </div>
           <p className="mt-4 text-[#263747]/70 max-w-xl mx-auto">

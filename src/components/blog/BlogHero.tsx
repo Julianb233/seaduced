@@ -44,7 +44,7 @@ export function BlogHero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
-          Honest essays on intimate wellness, rituals, and the science of
+          Honest essays on intimate wellness, self-care, and the science of
           feeling good in the body you live in.
         </motion.p>
       </div>

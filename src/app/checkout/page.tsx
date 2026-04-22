@@ -3,7 +3,7 @@ import { CheckoutFlow } from "@/components/shop/CheckoutFlow";
 
 export const metadata: Metadata = {
   title: "Checkout — Seaduced",
-  description: "Secure, discreet checkout. Your ritual, on the way.",
+  description: "Secure, discreet checkout. Your order, on the way.",
 };
 
 export default function CheckoutPage() {

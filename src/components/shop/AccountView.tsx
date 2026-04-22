@@ -66,7 +66,7 @@ export function AccountView({ tab }: { tab: Tab }) {
           Account
         </span>
         <h1 className="mt-2 text-3xl md:text-5xl font-black text-[#263747] tracking-tight">
-          Your ritual archive.
+          Your order history.
         </h1>
       </div>
 
@@ -205,7 +205,7 @@ function OrdersPanel({
             href="/shop"
             className="mt-4 inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#AD9952] text-white font-bold text-xs"
           >
-            Start your ritual
+            Start shopping
           </Link>
         </div>
       ) : (

@@ -78,7 +78,7 @@ export function Social() {
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
           >
-            FOLLOW THE RITUAL
+            FOLLOW THE WAVE
           </motion.span>
           <h2 className="text-3xl md:text-5xl font-black text-[#263747] tracking-tighter mt-2 overflow-hidden">
             <motion.span

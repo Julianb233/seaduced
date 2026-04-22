@@ -3,7 +3,7 @@ import { OrderConfirmation } from "@/components/shop/OrderConfirmation";
 
 export const metadata: Metadata = {
   title: "Order Confirmation — Seaduced",
-  description: "Thank you. Your Seaduced ritual is on the way.",
+  description: "Thank you. Your Seaduced order is on the way.",
   robots: { index: false, follow: false },
 };
 

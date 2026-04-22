@@ -53,7 +53,7 @@ export function NewsletterCTA() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
         >
-          Essays, rituals, and ingredient deep-dives — once a month, never
+          Essays, self-care notes, and ingredient deep-dives — once a month, never
           overwrought, always worth reading.
         </motion.p>
 

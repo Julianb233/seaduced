@@ -24,7 +24,7 @@ export function ArticleCTA({ post }: { post: BlogPost }) {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          Ready for your ritual?
+          Ready to feel Seaduced?
         </motion.span>
 
         <motion.p

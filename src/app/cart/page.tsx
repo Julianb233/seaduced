@@ -3,7 +3,7 @@ import { CartView } from "@/components/shop/CartView";
 
 export const metadata: Metadata = {
   title: "Your Cart — Seaduced",
-  description: "Review your Seaduced ritual before checkout.",
+  description: "Review your Seaduced order before checkout.",
 };
 
 export default function CartPage() {

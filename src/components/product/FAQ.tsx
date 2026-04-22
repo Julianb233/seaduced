@@ -31,7 +31,7 @@ const faqs = [
   },
   {
     q: "What's the difference between Single, 3-Pack, 6-Pack, and Gift Set?",
-    a: "Same bottle, same formula — the only difference is quantity and presentation. A Single is one 5 oz bottle at $28 to start the ritual. The Ritual 3-Pack is three bottles for $75 (save $9, about 11%) — enough to stock a drawer, a nightstand, and a travel bag. The Wave 6-Pack is six bottles for $140 (save $28, about 17%) — our best per-bottle value, ideal for a household or a long supply. The Gift Set is one bottle at $45 presented in a linen-textured box with satin ribbon and an optional hand-written card.",
+    a: "Same bottle, same formula — the only difference is quantity and presentation. A Single is one 5 oz bottle at $28 to start here. The Daily 3-Pack is three bottles for $75 (save $9, about 11%) — enough to stock a drawer, a nightstand, and a travel bag. The Wave 6-Pack is six bottles for $140 (save $28, about 17%) — our best per-bottle value, ideal for a household or a long supply. The Gift Set is one bottle at $45 presented in a linen-textured box with satin ribbon and an optional hand-written card.",
   },
 ];
 

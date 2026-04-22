@@ -43,7 +43,7 @@ export function CartView() {
           <ShoppingBag className="w-9 h-9 text-[#325360]" />
         </div>
         <h1 className="text-4xl md:text-5xl font-black text-[#263747] tracking-tight">
-          Your ritual is empty.
+          Your cart is empty.
         </h1>
         <p className="mt-3 text-[#263747]/70 max-w-md mx-auto">
           Pick the bottle that fits your routine — a Single to start, a 3-Pack for the drawer,
@@ -76,7 +76,7 @@ export function CartView() {
           The cart
         </span>
         <h1 className="mt-2 text-4xl md:text-5xl font-black text-[#263747] tracking-tight">
-          Your ritual.
+          Your cart.
         </h1>
       </div>
 

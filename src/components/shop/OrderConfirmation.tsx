@@ -109,7 +109,7 @@ export function OrderConfirmation({ orderId }: { orderId: string }) {
           Thank you, {firstName}.
         </h1>
         <p className="mt-3 text-[#263747]/70 max-w-xl mx-auto">
-          Your ritual is on the way. We&rsquo;ve sent a confirmation to{" "}
+          Your order is on the way. We&rsquo;ve sent a confirmation to{" "}
           <span className="font-bold text-[#263747]">{order.email}</span>.
         </p>
         <p className="mt-2 font-mono text-xs tracking-widest uppercase text-[#325360]">
@@ -258,7 +258,7 @@ export function OrderConfirmation({ orderId }: { orderId: string }) {
           <div className="bg-gradient-to-br from-[#263747] to-[#325360] text-white rounded-2xl p-6">
             <h3 className="font-black text-sm">Stay in the wave</h3>
             <p className="mt-1 text-sm text-white/70">
-              Follow along for early drops and rituals.
+              Follow along for early drops and notes.
             </p>
             <a
               href="https://instagram.com/seaduced"

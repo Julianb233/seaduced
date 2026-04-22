@@ -180,7 +180,7 @@ export function Hero() {
                   whileHover={{ x: "200%" }}
                   transition={{ duration: 0.6 }}
                 />
-                <span className="relative z-10">Shop the Ritual</span>
+                <span className="relative z-10">Shop Seaduced</span>
                 <motion.svg
                   className="w-4 h-4 relative z-10"
                   fill="none"

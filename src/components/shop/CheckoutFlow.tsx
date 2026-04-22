@@ -81,7 +81,7 @@ export function CheckoutFlow() {
     return (
       <div className="max-w-3xl mx-auto px-6 text-center">
         <h1 className="text-3xl font-black text-[#263747]">
-          Your ritual is empty.
+          Your cart is empty.
         </h1>
         <p className="mt-3 text-[#263747]/70">
           Add a bottle before checking out.
@@ -355,7 +355,7 @@ function InfoStep({
             {...register("newsletter")}
             className="w-4 h-4 rounded border-[#263747]/20 text-[#AD9952] focus:ring-[#AD9952]"
           />
-          Email me early drops, rituals, and 10% off my next bottle.
+          Email me early drops, self-care notes, and 10% off my next bottle.
         </label>
 
         <div className="pt-2 flex justify-end">
@@ -489,7 +489,7 @@ function ShippingStep({
               <Package className="w-3.5 h-3.5" /> Discreet, unbranded packaging
             </span>
             <span className="block text-xs text-[#263747]/60 mt-0.5">
-              No brand markings outside. Just a plain box and your ritual inside.
+              No brand markings outside. Just a plain box and your bottle inside.
             </span>
           </span>
         </label>

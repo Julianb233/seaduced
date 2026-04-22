@@ -14,7 +14,7 @@ export type BlogCategory =
   | "Menopause"
   | "LGBTQ+"
   | "Science"
-  | "Rituals"
+  | "Practices"
   | "Ingredients";
 
 export type BlogSection =
@@ -42,25 +42,25 @@ export type BlogPost = {
 export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "ritual-you-didnt-know-you-needed",
-    title: "The Ritual You Didn't Know You Needed",
+    title: "The Self-Care Practice You Didn't Know You Needed",
     dek: "Redesigning self-care for the parts of your body that carry you through intimacy, sleep, and pleasure.",
     hook: "Most self-care stops at the neck. The parts of you that carry you through intimacy, sleep, and the quiet tender hours of the day are handed over to whatever cheap, petroleum-based thing happens to be on the drugstore shelf. This is not that.",
-    category: "Rituals",
+    category: "Practices",
     readingTimeMin: 6,
     heroImage: "/images/social/tile-02-woman-morning-light.png",
     emotionalDriver: "Permission + Discovery",
     buyingEmotion:
-      "I deserve a ritual that treats my whole body with the same care as my face.",
-    ctaLabel: "Begin your ritual",
+      "I deserve a practice that treats my whole body with the same care as my face.",
+    ctaLabel: "Begin your practice",
     ctaHref: "/product",
     body: [
       {
         kind: "heading",
-        text: "What a ritual is (and isn't)",
+        text: "What a self-care practice is (and isn't)",
       },
       {
         kind: "paragraph",
-        text: "A ritual isn't another line on your to-do list — it's the moment you stop performing and start listening. It has a shape, a scent, and a texture. // TODO: expand with 3–4 paragraphs on ritual design + the neuroscience-lite argument for intentional cues.",
+        text: "A self-care practice isn't another line on your to-do list — it's the moment you stop performing and start listening. It has a shape, a scent, and a texture. // TODO: expand with 3-4 paragraphs on practice design + the neuroscience-lite argument for intentional cues.",
       },
       {
         kind: "heading",
@@ -72,7 +72,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         kind: "heading",
-        text: "A five-minute body ritual anyone can start tonight",
+        text: "A five-minute body routine anyone can start tonight",
       },
       {
         kind: "list",
@@ -390,16 +390,16 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "the-quiet-ritual",
-    title: "The Quiet Ritual",
-    dek: "Five science-lite cues that transform an intimate moment into a ritual — candle, water glass, soft light, phone face-down, something silky on your skin.",
-    hook: "A ritual isn't elaborate. Most of what separates a throwaway moment from a sacred one is lighting, attention, and one small cue that says to your body: this is care.",
-    category: "Rituals",
+    title: "The Quiet Practice",
+    dek: "Five science-lite cues that transform an intimate moment into a care practice — candle, water glass, soft light, phone face-down, something silky on your skin.",
+    hook: "A care practice isn't elaborate. Most of what separates a throwaway moment from an intentional one is lighting, attention, and one small cue that says to your body: this is care.",
+    category: "Practices",
     readingTimeMin: 5,
     heroImage: "/images/social/tile-03-bathroom-marble.png",
     emotionalDriver: "Permission + Discovery",
     buyingEmotion:
       "I want my intimate moments to feel as considered as my morning coffee.",
-    ctaLabel: "The silky bottle your ritual was missing",
+    ctaLabel: "The silky bottle your routine was missing",
     ctaHref: "/product",
     body: [
       {
@@ -426,7 +426,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         kind: "heading",
-        text: "A ritual is a promise to yourself",
+        text: "A practice is a promise to yourself",
       },
       {
         kind: "paragraph",
@@ -509,6 +509,6 @@ export const BLOG_CATEGORIES: BlogCategory[] = [
   "Menopause",
   "LGBTQ+",
   "Science",
-  "Rituals",
+  "Practices",
   "Ingredients",
 ];
