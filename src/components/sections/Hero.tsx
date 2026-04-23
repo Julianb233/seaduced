@@ -170,7 +170,7 @@ export function Hero() {
               className="flex flex-wrap gap-3 pt-2"
             >
               <motion.button
-                className="bg-[#AD9952] text-[#263747] px-6 py-3 rounded-full font-bold text-sm tracking-wide flex items-center gap-2 group relative overflow-hidden"
+                className="bg-[#AD9952] text-[#263747] px-6 py-3 rounded-full font-bold text-sm tracking-wide flex items-center gap-2 group relative glow-gold-pulse"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}

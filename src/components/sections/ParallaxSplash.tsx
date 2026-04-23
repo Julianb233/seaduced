@@ -160,7 +160,7 @@ export function ParallaxSplash() {
         {/* Scroll progress bar — nautical gradient */}
         <div className="absolute bottom-6 left-1/2 -translate-x-1/2 w-48 h-[2px] bg-[#325360]/15 rounded-full overflow-hidden z-10">
           <motion.div
-            className="h-full bg-gradient-to-r from-[#6793A0] to-[#AD9952] origin-left"
+            className="h-full bg-gradient-to-r from-[#6793A0] to-[#AD9952] origin-left shadow-[0_0_12px_rgba(103,147,160,0.8),0_0_20px_rgba(173,153,82,0.4)]"
             style={{ scaleX: smooth, originX: 0 }}
           />
         </div>

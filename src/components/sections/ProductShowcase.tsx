@@ -217,7 +217,7 @@ function BundleCard({ bundle, index }: { bundle: Bundle; index: number }) {
       >
         {/* Featured pill */}
         {bundle.featured ? (
-          <div className="absolute top-4 left-4 z-10 px-3 py-1 rounded-full bg-[#AD9952] text-white font-mono text-[10px] tracking-[0.25em] uppercase shadow-md shadow-[#AD9952]/40">
+          <div className= relative shimmer-gold"absolute top-4 left-4 z-10 px-3 py-1 rounded-full bg-[#AD9952] text-white font-mono text-[10px] tracking-[0.25em] uppercase shadow-md shadow-[#AD9952]/40">
             Best Value
           </div>
         ) : null}
