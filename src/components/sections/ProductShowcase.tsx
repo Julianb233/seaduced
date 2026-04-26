@@ -329,7 +329,7 @@ export function ProductShowcase() {
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
           >
-            One bottle. Four ways in.
+            One bottle. Four ways to stock it.
           </motion.span>
           <h2
             id="bundles-heading"

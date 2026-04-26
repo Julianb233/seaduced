@@ -5,7 +5,6 @@ import { useRef } from "react";
 import Image from "next/image";
 
 const FRAMES = [
-  { src: "/images/parallax/f1-mist.jpg", alt: "Seaduced bottle emerging from sea mist", eyebrow: "From the sea", title: "Emerge." },
   { src: "/images/parallax/f2-beauty.jpg", alt: "Seaduced bottle at rest on cream marble", eyebrow: "Naturally intimate", title: "At rest." },
   { src: "/images/parallax/f4-bead.jpg", alt: "Seaduced bottle with first cream bead at the nozzle", eyebrow: "Begin", title: "A single bead." },
   { src: "/images/parallax/f5-stream.jpg", alt: "Seaduced cream stream arcing with sea-moss filaments", eyebrow: "Moment", title: "The pour." },

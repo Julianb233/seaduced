@@ -260,11 +260,12 @@ export function Hero() {
                 }}
               >
                 <Image
-                  src="/images/bottle-isolated.png"
+                  src="/images/bottle-isolated-lg.png"
                   alt="Seaduced Sea Moss Intimate Wellness Bottle"
                   width={350}
                   height={525}
-                  className="relative z-10 drop-shadow-2xl"
+                  sizes="(max-width: 768px) 280px, 350px"
+                  className="relative z-10"
                   priority
                 />
               </motion.div>
